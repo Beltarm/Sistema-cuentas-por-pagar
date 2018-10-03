@@ -39,8 +39,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.pnMantenimientos1 = new CuentasPorPagar.PnMantenimientos();
             this.pnPrincipal1 = new CuentasPorPagar.pnPrincipal();
+            this.pnMantenimientos1 = new CuentasPorPagar.PnMantenimientos();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -165,19 +165,19 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // pnMantenimientos1
-            // 
-            this.pnMantenimientos1.Location = new System.Drawing.Point(263, 207);
-            this.pnMantenimientos1.Name = "pnMantenimientos1";
-            this.pnMantenimientos1.Size = new System.Drawing.Size(891, 512);
-            this.pnMantenimientos1.TabIndex = 4;
-            // 
             // pnPrincipal1
             // 
             this.pnPrincipal1.Location = new System.Drawing.Point(263, 207);
             this.pnPrincipal1.Name = "pnPrincipal1";
             this.pnPrincipal1.Size = new System.Drawing.Size(891, 512);
             this.pnPrincipal1.TabIndex = 5;
+            // 
+            // pnMantenimientos1
+            // 
+            this.pnMantenimientos1.Location = new System.Drawing.Point(263, 207);
+            this.pnMantenimientos1.Name = "pnMantenimientos1";
+            this.pnMantenimientos1.Size = new System.Drawing.Size(891, 512);
+            this.pnMantenimientos1.TabIndex = 4;
             // 
             // Form1
             // 
