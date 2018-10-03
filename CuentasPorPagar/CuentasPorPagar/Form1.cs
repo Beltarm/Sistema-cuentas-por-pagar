@@ -15,6 +15,30 @@ namespace CuentasPorPagar
         public Form1()
         {
             InitializeComponent();
+            Selector.Height = btnPanelPrincipal.Height;
+            Selector.Top = btnPanelPrincipal.Top;
+            pnPrincipal1.BringToFront();
         }
+
+        private void btnPanelPrincipal_Click(object sender, EventArgs e)
+        {
+            Selector.Height = btnPanelPrincipal.Height;
+            Selector.Top = btnPanelPrincipal.Top;
+            pnPrincipal1.BringToFront();
+        }
+
+        private void btnPanelMantenimientos_Click(object sender, EventArgs e)
+        {
+            Selector.Height = btnPanelMantenimientos.Height;
+            Selector.Top = btnPanelMantenimientos.Top;
+            pnMantenimientos1.BringToFront();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+       
     }
 }

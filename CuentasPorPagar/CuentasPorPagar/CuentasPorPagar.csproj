@@ -51,8 +51,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PnMantenimientos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PnMantenimientos.Designer.cs">
+      <DependentUpon>PnMantenimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pnPrincipal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pnPrincipal.Designer.cs">
+      <DependentUpon>pnPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PnMantenimientos.resx">
+      <DependentUpon>PnMantenimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pnPrincipal.resx">
+      <DependentUpon>pnPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
