@@ -88,7 +88,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(585, 70);
+            this.button4.Location = new System.Drawing.Point(585, 69);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(250, 316);
             this.button4.TabIndex = 1;
