@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pnPrincipal1 = new CuentasPorPagar.pnPrincipal();
             this.btnPanelMantenimientos = new System.Windows.Forms.Button();
             this.Selector = new System.Windows.Forms.Panel();
             this.btnPanelPrincipal = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.pnPrincipal1 = new CuentasPorPagar.pnPrincipal();
             this.pnMantenimientos1 = new CuentasPorPagar.PnMantenimientos();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -68,6 +68,14 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(257, 731);
             this.panel5.TabIndex = 4;
+            // 
+            // pnPrincipal1
+            // 
+            this.pnPrincipal1.BackColor = System.Drawing.Color.Transparent;
+            this.pnPrincipal1.Location = new System.Drawing.Point(263, 147);
+            this.pnPrincipal1.Name = "pnPrincipal1";
+            this.pnPrincipal1.Size = new System.Drawing.Size(891, 572);
+            this.pnPrincipal1.TabIndex = 5;
             // 
             // btnPanelMantenimientos
             // 
@@ -166,18 +174,11 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // pnPrincipal1
-            // 
-            this.pnPrincipal1.Location = new System.Drawing.Point(263, 207);
-            this.pnPrincipal1.Name = "pnPrincipal1";
-            this.pnPrincipal1.Size = new System.Drawing.Size(891, 512);
-            this.pnPrincipal1.TabIndex = 5;
-            // 
             // pnMantenimientos1
             // 
-            this.pnMantenimientos1.Location = new System.Drawing.Point(263, 207);
+            this.pnMantenimientos1.Location = new System.Drawing.Point(263, 147);
             this.pnMantenimientos1.Name = "pnMantenimientos1";
-            this.pnMantenimientos1.Size = new System.Drawing.Size(891, 512);
+            this.pnMantenimientos1.Size = new System.Drawing.Size(891, 572);
             this.pnMantenimientos1.TabIndex = 4;
             // 
             // Form1

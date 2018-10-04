@@ -46,7 +46,7 @@ namespace CuentasPorPagar
             Selector.Height = btnPanelMantenimientos.Height;
             Selector.Top = btnPanelMantenimientos.Top;
             pnMantenimientos1.BringToFront();
-        }        
+        }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {

@@ -75,7 +75,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(310, 77);
+            this.button3.Location = new System.Drawing.Point(310, 70);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(250, 316);
             this.button3.TabIndex = 1;
@@ -88,7 +88,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(585, 77);
+            this.button4.Location = new System.Drawing.Point(585, 70);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(250, 316);
             this.button4.TabIndex = 1;
@@ -101,7 +101,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(38, 77);
+            this.button2.Location = new System.Drawing.Point(38, 70);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(250, 316);
             this.button2.TabIndex = 1;
@@ -118,7 +118,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel2);
             this.Name = "PnMantenimientos";
-            this.Size = new System.Drawing.Size(891, 512);
+            this.Size = new System.Drawing.Size(891, 572);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
