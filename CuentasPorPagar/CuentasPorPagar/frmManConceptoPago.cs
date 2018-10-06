@@ -19,11 +19,6 @@ namespace CuentasPorPagar
             InitializeComponent();
         }
 
-        private void frmManConceptoPago_Load(object sender, EventArgs e)
-        {
-            ejecutarConsulta();
-        }
-
         private void ejecutarConsulta()
         {
             try
@@ -54,6 +49,7 @@ namespace CuentasPorPagar
                 da.Fill(dt);
                 DgbConceptoDePago.DataSource = dt;
                 DgbConceptoDePago.Refresh();
+                alternarColor(DgbConceptoDePago);
             }
             catch (Exception ex)
             {
@@ -64,6 +60,45 @@ namespace CuentasPorPagar
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
             ejecutarConsulta();
+        }
+
+        private void alternarColor(DataGridView dataGrid)
+        {
+            dataGrid.RowsDefaultCellStyle.BackColor = Color.White;
+            dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(234, 235, 237);
+        }
+
+        private void cmdAgregar_Click(object sender, EventArgs e)
+        {
+            frmConceptoPago frm = new frmConceptoPago();
+            frm.modo = "C";
+            frm.conn = conn;
+            frm.ShowDialog();
+        }
+
+        private void frmManEstudiante_Activated(object sender, EventArgs e)
+        {
+            ejecutarConsulta();
+        }
+
+        private void DgbConceptoDePago_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = this.DgbConceptoDePago.SelectedRows[0];
+                frmConceptoPago frm = new frmConceptoPago();
+                frm.ID = row.Cells[0].Value.ToString();
+                frm.Descripcion = row.Cells[1].Value.ToString();
+                frm.Estado = row.Cells[2].Value.ToString();
+                frm.modo = "U";
+                frm.conn = conn;
+
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al editar registro " + ex.Message);
+            }
         }
     }
 }
