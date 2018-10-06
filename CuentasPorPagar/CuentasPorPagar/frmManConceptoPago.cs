@@ -33,10 +33,19 @@ namespace CuentasPorPagar
 
                 /***************CONSULTA*****************/
                 string sql = "SELECT * FROM CONCEPTO_PAGO";
+                string criterio;
                 if (cbxCriterio.Text.Length > 0)
                 {
-                    sql += " WHERE " + cbxCriterio.Text + " LIKE '%" + txtBuscar.Text + "%'";
-                    sql += " ORDER BY " + cbxCriterio.Text;
+                    if(cbxCriterio.SelectedIndex == 0)
+                    {
+                        criterio = "Id_Concepto_Pago";
+                    }
+                    else
+                    {
+                        criterio = cbxCriterio.Text;
+                    }
+                    sql += " WHERE " + criterio + " LIKE '%" + txtBuscar.Text + "%'";
+                    sql += " ORDER BY " + criterio;
                 }
                 /*******************************************/
 

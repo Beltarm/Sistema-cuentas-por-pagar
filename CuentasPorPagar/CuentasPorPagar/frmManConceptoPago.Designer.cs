@@ -39,6 +39,7 @@
             // 
             this.DgbConceptoDePago.AllowUserToAddRows = false;
             this.DgbConceptoDePago.AllowUserToDeleteRows = false;
+            this.DgbConceptoDePago.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgbConceptoDePago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgbConceptoDePago.Location = new System.Drawing.Point(46, 105);
             this.DgbConceptoDePago.Name = "DgbConceptoDePago";
@@ -49,14 +50,15 @@
             // 
             // cbxCriterio
             // 
+            this.cbxCriterio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCriterio.FormattingEnabled = true;
             this.cbxCriterio.Items.AddRange(new object[] {
-            "Id_Concepto_Pago",
+            "ID",
             "Descripcion",
             "Estado"});
             this.cbxCriterio.Location = new System.Drawing.Point(68, 36);
             this.cbxCriterio.Name = "cbxCriterio";
-            this.cbxCriterio.Size = new System.Drawing.Size(121, 24);
+            this.cbxCriterio.Size = new System.Drawing.Size(165, 33);
             this.cbxCriterio.TabIndex = 1;
             // 
             // txtBuscar
@@ -69,9 +71,9 @@
             // 
             // cmdBuscar
             // 
-            this.cmdBuscar.Location = new System.Drawing.Point(527, 36);
+            this.cmdBuscar.Location = new System.Drawing.Point(519, 37);
             this.cmdBuscar.Name = "cmdBuscar";
-            this.cmdBuscar.Size = new System.Drawing.Size(75, 23);
+            this.cmdBuscar.Size = new System.Drawing.Size(75, 30);
             this.cmdBuscar.TabIndex = 3;
             this.cmdBuscar.Text = "button1";
             this.cmdBuscar.UseVisualStyleBackColor = true;
