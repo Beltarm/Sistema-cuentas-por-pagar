@@ -16,5 +16,11 @@ namespace CuentasPorPagar
         {
             InitializeComponent();
         }
+
+        private void btnManConceptoPago_Click(object sender, EventArgs e)
+        {
+            frmManConceptoPago frm = new frmManConceptoPago();
+            frm.ShowDialog();
+        }
     }
 }

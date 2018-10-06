@@ -51,6 +51,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmManConceptoPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManConceptoPago.Designer.cs">
+      <DependentUpon>frmManConceptoPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="PnMantenimientos.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManConceptoPago.resx">
+      <DependentUpon>frmManConceptoPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PnMantenimientos.resx">
       <DependentUpon>PnMantenimientos.cs</DependentUpon>
