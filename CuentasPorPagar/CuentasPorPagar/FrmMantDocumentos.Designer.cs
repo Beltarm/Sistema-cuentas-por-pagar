@@ -51,9 +51,10 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.cbxCriterio);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(13, 13);
+            this.panel1.Location = new System.Drawing.Point(17, 16);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(636, 64);
+            this.panel1.Size = new System.Drawing.Size(848, 79);
             this.panel1.TabIndex = 0;
             // 
             // cmdAgregar
@@ -64,10 +65,10 @@
             this.cmdAgregar.ForeColor = System.Drawing.Color.SeaGreen;
             this.cmdAgregar.Image = ((System.Drawing.Image)(resources.GetObject("cmdAgregar.Image")));
             this.cmdAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdAgregar.Location = new System.Drawing.Point(512, 9);
-            this.cmdAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.cmdAgregar.Location = new System.Drawing.Point(683, 11);
+            this.cmdAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmdAgregar.Name = "cmdAgregar";
-            this.cmdAgregar.Size = new System.Drawing.Size(112, 42);
+            this.cmdAgregar.Size = new System.Drawing.Size(149, 52);
             this.cmdAgregar.TabIndex = 5;
             this.cmdAgregar.Text = "Agregar";
             this.cmdAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -83,10 +84,10 @@
             this.cmdBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(139)))), ((int)(((byte)(202)))));
             this.cmdBuscar.Image = ((System.Drawing.Image)(resources.GetObject("cmdBuscar.Image")));
             this.cmdBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdBuscar.Location = new System.Drawing.Point(396, 9);
-            this.cmdBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.cmdBuscar.Location = new System.Drawing.Point(528, 11);
+            this.cmdBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmdBuscar.Name = "cmdBuscar";
-            this.cmdBuscar.Size = new System.Drawing.Size(112, 42);
+            this.cmdBuscar.Size = new System.Drawing.Size(149, 52);
             this.cmdBuscar.TabIndex = 4;
             this.cmdBuscar.Text = "Filtrar";
             this.cmdBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -95,18 +96,20 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(277, 23);
+            this.txtBuscar.Location = new System.Drawing.Point(369, 28);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(132, 22);
             this.txtBuscar.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(218, 24);
+            this.label2.Location = new System.Drawing.Point(291, 30);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 21);
+            this.label2.Size = new System.Drawing.Size(61, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "Texto";
             // 
@@ -123,27 +126,30 @@
             "Fecha Registro ",
             "Nombre Proveedor",
             "Estado"});
-            this.cbxCriterio.Location = new System.Drawing.Point(82, 23);
+            this.cbxCriterio.Location = new System.Drawing.Point(109, 28);
+            this.cbxCriterio.Margin = new System.Windows.Forms.Padding(4);
             this.cbxCriterio.Name = "cbxCriterio";
-            this.cbxCriterio.Size = new System.Drawing.Size(121, 21);
+            this.cbxCriterio.Size = new System.Drawing.Size(160, 24);
             this.cbxCriterio.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 22);
+            this.label1.Location = new System.Drawing.Point(20, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 21);
+            this.label1.Size = new System.Drawing.Size(77, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Criterio";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dgvResultados);
-            this.panel2.Location = new System.Drawing.Point(13, 93);
+            this.panel2.Location = new System.Drawing.Point(17, 114);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(636, 325);
+            this.panel2.Size = new System.Drawing.Size(848, 400);
             this.panel2.TabIndex = 1;
             // 
             // dgvResultados
@@ -151,20 +157,25 @@
             this.dgvResultados.AllowUserToAddRows = false;
             this.dgvResultados.AllowUserToDeleteRows = false;
             this.dgvResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResultados.Location = new System.Drawing.Point(3, 3);
+            this.dgvResultados.Location = new System.Drawing.Point(4, 4);
+            this.dgvResultados.Margin = new System.Windows.Forms.Padding(4);
             this.dgvResultados.Name = "dgvResultados";
             this.dgvResultados.ReadOnly = true;
-            this.dgvResultados.Size = new System.Drawing.Size(630, 319);
+            this.dgvResultados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvResultados.Size = new System.Drawing.Size(840, 393);
             this.dgvResultados.TabIndex = 0;
             this.dgvResultados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResultados_CellDoubleClick);
             // 
             // FrmMantDocumentos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(661, 440);
+            this.ClientSize = new System.Drawing.Size(881, 542);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "FrmMantDocumentos";
             this.Text = "Mantenimiento de Entrada de Documentos";
             this.Activated += new System.EventHandler(this.FrmMantDocumentos_Activated);

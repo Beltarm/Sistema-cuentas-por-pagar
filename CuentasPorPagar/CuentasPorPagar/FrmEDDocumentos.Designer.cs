@@ -30,22 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEDDocumentos));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtNumDocumento = new System.Windows.Forms.TextBox();
-            this.txtNumFactura = new System.Windows.Forms.TextBox();
-            this.cbxConcepto = new System.Windows.Forms.ComboBox();
-            this.mtxFechaDocumento = new System.Windows.Forms.MaskedTextBox();
-            this.txtMonto = new System.Windows.Forms.TextBox();
-            this.mtxFechaRegistro = new System.Windows.Forms.MaskedTextBox();
-            this.cbxProveedor = new System.Windows.Forms.ComboBox();
             this.cbxEstado = new System.Windows.Forms.ComboBox();
+            this.cbxProveedor = new System.Windows.Forms.ComboBox();
+            this.mtxFechaRegistro = new System.Windows.Forms.MaskedTextBox();
+            this.txtMonto = new System.Windows.Forms.TextBox();
+            this.mtxFechaDocumento = new System.Windows.Forms.MaskedTextBox();
+            this.cbxConcepto = new System.Windows.Forms.ComboBox();
+            this.txtNumFactura = new System.Windows.Forms.TextBox();
+            this.txtNumDocumento = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.cmdGuardar = new System.Windows.Forms.Button();
             this.cmdEliminar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -69,146 +69,11 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(16, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(611, 332);
+            this.panel1.Size = new System.Drawing.Size(815, 409);
             this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Numero Documento";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Numero Factura";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 133);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 21);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Conceto Pago";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(4, 191);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 21);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Fecha Documento";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(4, 244);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 21);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Monto";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(330, 27);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 21);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Fecha Registro";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(298, 85);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(157, 21);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Nombre Proveedor";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(377, 136);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 21);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Estado";
-            // 
-            // txtNumDocumento
-            // 
-            this.txtNumDocumento.Location = new System.Drawing.Point(180, 31);
-            this.txtNumDocumento.Name = "txtNumDocumento";
-            this.txtNumDocumento.ReadOnly = true;
-            this.txtNumDocumento.Size = new System.Drawing.Size(100, 20);
-            this.txtNumDocumento.TabIndex = 8;
-            // 
-            // txtNumFactura
-            // 
-            this.txtNumFactura.Location = new System.Drawing.Point(163, 82);
-            this.txtNumFactura.Name = "txtNumFactura";
-            this.txtNumFactura.Size = new System.Drawing.Size(100, 20);
-            this.txtNumFactura.TabIndex = 9;
-            // 
-            // cbxConcepto
-            // 
-            this.cbxConcepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxConcepto.FormattingEnabled = true;
-            this.cbxConcepto.Location = new System.Drawing.Point(142, 133);
-            this.cbxConcepto.Name = "cbxConcepto";
-            this.cbxConcepto.Size = new System.Drawing.Size(121, 21);
-            this.cbxConcepto.TabIndex = 10;
-            // 
-            // mtxFechaDocumento
-            // 
-            this.mtxFechaDocumento.Location = new System.Drawing.Point(167, 192);
-            this.mtxFechaDocumento.Mask = "00/00/0000";
-            this.mtxFechaDocumento.Name = "mtxFechaDocumento";
-            this.mtxFechaDocumento.Size = new System.Drawing.Size(100, 20);
-            this.mtxFechaDocumento.TabIndex = 11;
-            // 
-            // txtMonto
-            // 
-            this.txtMonto.Location = new System.Drawing.Point(90, 247);
-            this.txtMonto.Name = "txtMonto";
-            this.txtMonto.Size = new System.Drawing.Size(100, 20);
-            this.txtMonto.TabIndex = 12;
-            // 
-            // mtxFechaRegistro
-            // 
-            this.mtxFechaRegistro.Location = new System.Drawing.Point(461, 29);
-            this.mtxFechaRegistro.Mask = "00/00/0000";
-            this.mtxFechaRegistro.Name = "mtxFechaRegistro";
-            this.mtxFechaRegistro.Size = new System.Drawing.Size(100, 20);
-            this.mtxFechaRegistro.TabIndex = 13;
-            // 
-            // cbxProveedor
-            // 
-            this.cbxProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxProveedor.FormattingEnabled = true;
-            this.cbxProveedor.Location = new System.Drawing.Point(471, 88);
-            this.cbxProveedor.Name = "cbxProveedor";
-            this.cbxProveedor.Size = new System.Drawing.Size(121, 21);
-            this.cbxProveedor.TabIndex = 14;
             // 
             // cbxEstado
             // 
@@ -217,10 +82,162 @@
             this.cbxEstado.Items.AddRange(new object[] {
             "Pendiente",
             "Pagado"});
-            this.cbxEstado.Location = new System.Drawing.Point(471, 136);
+            this.cbxEstado.Location = new System.Drawing.Point(628, 167);
+            this.cbxEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(121, 21);
+            this.cbxEstado.Size = new System.Drawing.Size(160, 24);
             this.cbxEstado.TabIndex = 15;
+            // 
+            // cbxProveedor
+            // 
+            this.cbxProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxProveedor.FormattingEnabled = true;
+            this.cbxProveedor.Location = new System.Drawing.Point(628, 108);
+            this.cbxProveedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxProveedor.Name = "cbxProveedor";
+            this.cbxProveedor.Size = new System.Drawing.Size(160, 24);
+            this.cbxProveedor.TabIndex = 14;
+            // 
+            // mtxFechaRegistro
+            // 
+            this.mtxFechaRegistro.Location = new System.Drawing.Point(615, 36);
+            this.mtxFechaRegistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtxFechaRegistro.Mask = "00/00/0000";
+            this.mtxFechaRegistro.Name = "mtxFechaRegistro";
+            this.mtxFechaRegistro.Size = new System.Drawing.Size(132, 22);
+            this.mtxFechaRegistro.TabIndex = 13;
+            // 
+            // txtMonto
+            // 
+            this.txtMonto.Location = new System.Drawing.Point(120, 304);
+            this.txtMonto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.Size = new System.Drawing.Size(132, 22);
+            this.txtMonto.TabIndex = 12;
+            // 
+            // mtxFechaDocumento
+            // 
+            this.mtxFechaDocumento.Location = new System.Drawing.Point(223, 236);
+            this.mtxFechaDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtxFechaDocumento.Mask = "00/00/0000";
+            this.mtxFechaDocumento.Name = "mtxFechaDocumento";
+            this.mtxFechaDocumento.Size = new System.Drawing.Size(132, 22);
+            this.mtxFechaDocumento.TabIndex = 11;
+            // 
+            // cbxConcepto
+            // 
+            this.cbxConcepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxConcepto.FormattingEnabled = true;
+            this.cbxConcepto.Location = new System.Drawing.Point(189, 164);
+            this.cbxConcepto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxConcepto.Name = "cbxConcepto";
+            this.cbxConcepto.Size = new System.Drawing.Size(160, 24);
+            this.cbxConcepto.TabIndex = 10;
+            // 
+            // txtNumFactura
+            // 
+            this.txtNumFactura.Location = new System.Drawing.Point(217, 101);
+            this.txtNumFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumFactura.Name = "txtNumFactura";
+            this.txtNumFactura.Size = new System.Drawing.Size(132, 22);
+            this.txtNumFactura.TabIndex = 9;
+            // 
+            // txtNumDocumento
+            // 
+            this.txtNumDocumento.Location = new System.Drawing.Point(240, 38);
+            this.txtNumDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumDocumento.Name = "txtNumDocumento";
+            this.txtNumDocumento.ReadOnly = true;
+            this.txtNumDocumento.Size = new System.Drawing.Size(132, 22);
+            this.txtNumDocumento.TabIndex = 8;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(503, 167);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 23);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Estado";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(397, 105);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(199, 23);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Nombre Proveedor";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(440, 33);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(153, 23);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Fecha Registro";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(5, 300);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 23);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Monto";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(5, 235);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(195, 23);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Fecha Documento";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(5, 164);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(155, 23);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Conceto Pago";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(5, 97);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(170, 23);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Numero Factura";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(5, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(211, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Numero Documento";
             // 
             // cmdGuardar
             // 
@@ -231,10 +248,10 @@
             this.cmdGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
             this.cmdGuardar.Image = ((System.Drawing.Image)(resources.GetObject("cmdGuardar.Image")));
             this.cmdGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdGuardar.Location = new System.Drawing.Point(143, 365);
-            this.cmdGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.cmdGuardar.Location = new System.Drawing.Point(191, 449);
+            this.cmdGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmdGuardar.Name = "cmdGuardar";
-            this.cmdGuardar.Size = new System.Drawing.Size(112, 42);
+            this.cmdGuardar.Size = new System.Drawing.Size(149, 52);
             this.cmdGuardar.TabIndex = 3;
             this.cmdGuardar.Text = "Guardar";
             this.cmdGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -250,10 +267,10 @@
             this.cmdEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(83)))), ((int)(((byte)(79)))));
             this.cmdEliminar.Image = ((System.Drawing.Image)(resources.GetObject("cmdEliminar.Image")));
             this.cmdEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdEliminar.Location = new System.Drawing.Point(314, 365);
-            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.cmdEliminar.Location = new System.Drawing.Point(419, 449);
+            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmdEliminar.Name = "cmdEliminar";
-            this.cmdEliminar.Size = new System.Drawing.Size(112, 42);
+            this.cmdEliminar.Size = new System.Drawing.Size(149, 52);
             this.cmdEliminar.TabIndex = 4;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -262,12 +279,15 @@
             // 
             // FrmEDDocumentos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 418);
+            this.ClientSize = new System.Drawing.Size(859, 514);
             this.Controls.Add(this.cmdEliminar);
             this.Controls.Add(this.cmdGuardar);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
             this.Name = "FrmEDDocumentos";
             this.Text = "Agregar / Eliminar Documentos";
             this.Load += new System.EventHandler(this.FrmEDDocumentos_Load);

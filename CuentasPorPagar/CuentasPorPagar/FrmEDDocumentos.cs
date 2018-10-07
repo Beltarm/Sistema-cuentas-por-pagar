@@ -33,7 +33,6 @@ namespace CuentasPorPagar
 
             try
             {
-               
                 consultaProveedores();
                 consultaConceptos();
                 txtNumDocumento.Text = Num_Documento;
@@ -42,10 +41,12 @@ namespace CuentasPorPagar
                 mtxFechaRegistro.Text = Fecha_Registro;
                 txtMonto.Text = Monto;
                 cbxEstado.Text = Estado;
+                cbxConcepto.Text = concepto_pago;
+                cbxProveedor.Text = nombre_proveedor;
+
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show("Error al asignar valores " + ex.Message);
             }
         }
@@ -74,7 +75,6 @@ namespace CuentasPorPagar
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show("Error al cargar los datos" + ex.Message);
             }
         }
@@ -183,7 +183,7 @@ namespace CuentasPorPagar
                 else
                 {
                     sql = "UPDATE Documentos_Pagar SET";
-                    sql += " Num_Factura = " + txtNumFactura.Text + ", Id_Concepto_Pago = " + insertConceptos() + ", Fecha_Documento = '";
+                    sql += " Num_Factura = '" + txtNumFactura.Text + "', Id_Concepto_Pago = " + insertConceptos() + ", Fecha_Documento = '";
                     sql += mtxFechaDocumento.Text + "', Monto =  " + txtMonto.Text + ", Fecha_Registro = '" + mtxFechaRegistro.Text + "' , Id_Proveedor =  ";
                     sql += InsertProveedores() + ", Estado = '" + cbxEstado.SelectedItem + "' ";
                     sql += "WHERE Num_Documento = " + txtNumDocumento.Text;
