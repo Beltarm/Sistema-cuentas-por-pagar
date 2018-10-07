@@ -114,11 +114,6 @@ namespace CuentasPorPagar
             cmdAgregar.FlatAppearance.BorderColor = Color.SeaGreen;
         }
 
-        private void DgbConceptoDePago_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void cmdAgregar_MouseEnter(object sender, EventArgs e)
         {
             cmdAgregar.BackColor = Color.SeaGreen;
@@ -126,5 +121,21 @@ namespace CuentasPorPagar
             cmdAgregar.FlatAppearance.BorderColor = Color.SeaGreen;
         }
         /***************************************************************************/
+
+        /********************ANIMACION DE BOTON FILTRAR***********************/
+        private void cmdBuscar_MouseEnter(object sender, EventArgs e)
+        {
+            cmdBuscar.BackColor = Color.FromArgb(66, 139, 202);
+            cmdBuscar.ForeColor = Color.Transparent;
+            cmdBuscar.FlatAppearance.BorderColor = Color.FromArgb(66, 139, 202);
+        }
+
+        private void cmdBuscar_MouseLeave(object sender, EventArgs e)
+        {
+            cmdBuscar.BackColor = Color.Transparent;
+            cmdBuscar.ForeColor = Color.FromArgb(66, 139, 202);
+            cmdBuscar.FlatAppearance.BorderColor = Color.FromArgb(66, 139, 202);
+        }
+
     }
 }

@@ -32,12 +32,12 @@ namespace CuentasPorPagar
                 if (modo.Equals("C"))
                 {
                     sql = "INSERT INTO CONCEPTO_PAGO VALUES('";
-                    sql += txtDescripcion.Text + "', '" + txtEstado.Text + "')";
+                    sql += txtDescripcion.Text + "', '" + cmbEstado.Text + "')";
                 }
                 else
                 {
                     sql = "UPDATE CONCEPTO_PAGO SET ";
-                    sql += "DESCRIPCION = '" + txtDescripcion.Text + "', ESTADO = '" + txtEstado.Text + "'";
+                    sql += "DESCRIPCION = '" + txtDescripcion.Text + "', ESTADO = '" + cmbEstado.Text + "'";
                     sql += "WHERE ID_CONCEPTO_PAGO = " + ID;
                 }
 
@@ -58,7 +58,7 @@ namespace CuentasPorPagar
             {
                 txtID.Text = ID;
                 txtDescripcion.Text = Descripcion;
-                txtEstado.Text = Estado;
+                cmbEstado.Text = Estado;
                 txtID.Enabled = modo.Equals("C");
             }
             catch (Exception ex)
