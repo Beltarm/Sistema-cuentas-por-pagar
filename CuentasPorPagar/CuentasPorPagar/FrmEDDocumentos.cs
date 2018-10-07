@@ -78,16 +78,25 @@ namespace CuentasPorPagar
                 MessageBox.Show("Error al cargar los datos" + ex.Message);
             }
         }
+
        private int  InsertProveedores()
         {
             try
             {
                 int id_proveedor = 0;
-                var Nombre_Provedor = cbxProveedor.SelectedItem;
-                string sql = "SELECT DISTINCT Id_Proveedor from Proveedores WHERE Nombre LIKE '%" + Nombre_Provedor + "%'";
+                string Nombre_Provedor = cbxProveedor.SelectedItem.ToString();
+                string sql = "select Id_Proveedor from Proveedores where nombre like '%" + Nombre_Provedor + "%'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                id_proveedor = Convert.ToInt32(cmd);
-
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            id_proveedor = Convert.ToInt32(reader.GetValue(i));
+                        }
+                    }
+                }
                 return id_proveedor;
 
             }
@@ -101,6 +110,7 @@ namespace CuentasPorPagar
         }
         public void consultaConceptos()
         {
+            MessageBox.Show("entro");
             try
             {
 
@@ -133,15 +143,21 @@ namespace CuentasPorPagar
             try
             {
                 int id_concepto = 0;
-                var Nombre_Concepto = cbxConcepto.SelectedItem;
-                string sql = "SELECT DISTINCT Id_Concepto_Pago from Concepto_Pago WHERE Descripcion LIKE '%" + Nombre_Concepto + "%'";
+                string Nombre_Concepto = cbxConcepto.SelectedItem.ToString();
+                string sql = "select id_concepto_pago from Concepto_Pago where Descripcion like '%" + Nombre_Concepto + "%'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-
-
-                id_concepto = Convert.ToInt32(cmd);
-
-             
-
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                   while (reader.Read())
+                    {
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            id_concepto = Convert.ToInt32(reader.GetValue(i));
+                            
+                        }
+                    }
+                }      
+                
                 return id_concepto;
 
             }
@@ -155,8 +171,6 @@ namespace CuentasPorPagar
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
-            
-
             try
             {
                 string sql = "";
