@@ -110,7 +110,7 @@ namespace CuentasPorPagar
         }
         public void consultaConceptos()
         {
-            MessageBox.Show("entro");
+            
             try
             {
 
