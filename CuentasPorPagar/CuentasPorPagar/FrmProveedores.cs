@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,15 @@ namespace CuentasPorPagar
 {
     public partial class FrmProveedores : Form
     {
+        SqlConnection conn = null;
         public FrmProveedores()
         {
             InitializeComponent();
+        }
+
+        private void FrmProveedores_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

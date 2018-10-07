@@ -30,77 +30,113 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtConcepto = new System.Windows.Forms.TextBox();
+            this.cbxCriterio = new System.Windows.Forms.ComboBox();
+            this.cmdAgregar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvProveedores = new System.Windows.Forms.DataGridView();
+            this.cmdBuscar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.cmdAgregar);
+            this.panel1.Controls.Add(this.cmdBuscar);
+            this.panel1.Controls.Add(this.cbxCriterio);
+            this.panel1.Controls.Add(this.txtConcepto);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(104, 55);
+            this.panel1.Location = new System.Drawing.Point(106, 42);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(515, 100);
+            this.panel1.Size = new System.Drawing.Size(587, 100);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 45);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(66, 21);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label1.Text = "Criterio";
             // 
-            // label2
+            // txtConcepto
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(240, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.txtConcepto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConcepto.Location = new System.Drawing.Point(241, 41);
+            this.txtConcepto.Name = "txtConcepto";
+            this.txtConcepto.Size = new System.Drawing.Size(137, 27);
+            this.txtConcepto.TabIndex = 2;
             // 
-            // textBox1
+            // cbxCriterio
             // 
-            this.textBox1.Location = new System.Drawing.Point(293, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.cbxCriterio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCriterio.FormattingEnabled = true;
+            this.cbxCriterio.Items.AddRange(new object[] {
+            "ID",
+            "Nombre",
+            "Cédula",
+            "Tipo de persona",
+            "Balance",
+            "Estado"});
+            this.cbxCriterio.Location = new System.Drawing.Point(97, 41);
+            this.cbxCriterio.Name = "cbxCriterio";
+            this.cbxCriterio.Size = new System.Drawing.Size(121, 29);
+            this.cbxCriterio.TabIndex = 3;
             // 
-            // comboBox1
+            // cmdAgregar
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(97, 41);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
+            this.cmdAgregar.Location = new System.Drawing.Point(484, 43);
+            this.cmdAgregar.Name = "cmdAgregar";
+            this.cmdAgregar.Size = new System.Drawing.Size(75, 23);
+            this.cmdAgregar.TabIndex = 5;
+            this.cmdAgregar.Text = "button1";
+            this.cmdAgregar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // panel2
             // 
-            this.button1.Location = new System.Drawing.Point(435, 45);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.panel2.Controls.Add(this.dgvProveedores);
+            this.panel2.Location = new System.Drawing.Point(106, 148);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(587, 255);
+            this.panel2.TabIndex = 1;
+            // 
+            // dgvProveedores
+            // 
+            this.dgvProveedores.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvProveedores.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProveedores.Location = new System.Drawing.Point(19, 12);
+            this.dgvProveedores.Name = "dgvProveedores";
+            this.dgvProveedores.Size = new System.Drawing.Size(553, 229);
+            this.dgvProveedores.TabIndex = 0;
+            // 
+            // cmdBuscar
+            // 
+            this.cmdBuscar.Location = new System.Drawing.Point(394, 43);
+            this.cmdBuscar.Name = "cmdBuscar";
+            this.cmdBuscar.Size = new System.Drawing.Size(75, 23);
+            this.cmdBuscar.TabIndex = 4;
+            this.cmdBuscar.Text = "button1";
+            this.cmdBuscar.UseVisualStyleBackColor = true;
             // 
             // FrmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmProveedores";
-            this.Text = "FrmProveedores";
+            this.Text = "Proveedores";
+            this.Load += new System.EventHandler(this.FrmProveedores_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -108,10 +144,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbxCriterio;
+        private System.Windows.Forms.TextBox txtConcepto;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button cmdAgregar;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dgvProveedores;
+        private System.Windows.Forms.Button cmdBuscar;
     }
 }
