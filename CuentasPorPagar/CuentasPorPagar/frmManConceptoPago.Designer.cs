@@ -38,6 +38,7 @@
             this.cmdBuscar = new System.Windows.Forms.Button();
             this.cmdAgregar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgbConceptoDePago)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,7 +96,7 @@
             "ID",
             "Descripcion",
             "Estado"});
-            this.cbxCriterio.Location = new System.Drawing.Point(160, 57);
+            this.cbxCriterio.Location = new System.Drawing.Point(119, 56);
             this.cbxCriterio.Name = "cbxCriterio";
             this.cbxCriterio.Size = new System.Drawing.Size(165, 31);
             this.cbxCriterio.TabIndex = 1;
@@ -127,9 +128,9 @@
             this.cmdAgregar.ForeColor = System.Drawing.Color.SeaGreen;
             this.cmdAgregar.Image = ((System.Drawing.Image)(resources.GetObject("cmdAgregar.Image")));
             this.cmdAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdAgregar.Location = new System.Drawing.Point(735, 56);
+            this.cmdAgregar.Location = new System.Drawing.Point(726, 56);
             this.cmdAgregar.Name = "cmdAgregar";
-            this.cmdAgregar.Size = new System.Drawing.Size(149, 54);
+            this.cmdAgregar.Size = new System.Drawing.Size(149, 52);
             this.cmdAgregar.TabIndex = 4;
             this.cmdAgregar.Text = "Agregar";
             this.cmdAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -148,11 +149,22 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Criterio";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(320, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 23);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Texto";
+            // 
             // frmManConceptoPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 633);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmdAgregar);
             this.Controls.Add(this.cmdBuscar);
@@ -178,5 +190,6 @@
         private System.Windows.Forms.Button cmdBuscar;
         private System.Windows.Forms.Button cmdAgregar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
