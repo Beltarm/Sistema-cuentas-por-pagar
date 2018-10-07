@@ -22,5 +22,11 @@ namespace CuentasPorPagar
             frmManConceptoPago frm = new frmManConceptoPago();
             frm.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmProveedores frm = new FrmProveedores();
+            frm.ShowDialog();
+        }
     }
 }
