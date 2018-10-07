@@ -18,7 +18,7 @@ namespace CuentasPorPagar
             InitializeComponent();
             Selector.Height = btnPanelPrincipal.Height;
             Selector.Top = btnPanelPrincipal.Top;
-            pnPrincipal1.BringToFront();
+            pnPrincipal.BringToFront();
         }
 
         private void panel2_MouseMove(object sender, MouseEventArgs e)
@@ -38,7 +38,7 @@ namespace CuentasPorPagar
         {
             Selector.Height = btnPanelPrincipal.Height;
             Selector.Top = btnPanelPrincipal.Top;
-            pnPrincipal1.BringToFront();
+            pnPrincipal.BringToFront();
         }
 
         private void btnPanelMantenimientos_Click(object sender, EventArgs e)

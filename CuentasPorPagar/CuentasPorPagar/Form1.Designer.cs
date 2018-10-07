@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pnPrincipal1 = new CuentasPorPagar.pnPrincipal();
+            this.pnPrincipal = new CuentasPorPagar.pnPrincipal();
             this.btnPanelMantenimientos = new System.Windows.Forms.Button();
             this.Selector = new System.Windows.Forms.Panel();
             this.btnPanelPrincipal = new System.Windows.Forms.Button();
@@ -71,11 +71,11 @@
             // 
             // pnPrincipal1
             // 
-            this.pnPrincipal1.BackColor = System.Drawing.Color.Transparent;
-            this.pnPrincipal1.Location = new System.Drawing.Point(263, 147);
-            this.pnPrincipal1.Name = "pnPrincipal1";
-            this.pnPrincipal1.Size = new System.Drawing.Size(891, 572);
-            this.pnPrincipal1.TabIndex = 5;
+            this.pnPrincipal.BackColor = System.Drawing.Color.Transparent;
+            this.pnPrincipal.Location = new System.Drawing.Point(263, 147);
+            this.pnPrincipal.Name = "pnPrincipal1";
+            this.pnPrincipal.Size = new System.Drawing.Size(891, 572);
+            this.pnPrincipal.TabIndex = 5;
             // 
             // btnPanelMantenimientos
             // 
@@ -186,7 +186,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1166, 731);
-            this.Controls.Add(this.pnPrincipal1);
+            this.Controls.Add(this.pnPrincipal);
             this.Controls.Add(this.pnMantenimientos1);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.panel3);
@@ -215,7 +215,7 @@
         private System.Windows.Forms.Button btnPanelPrincipal;
         private System.Windows.Forms.Button btnCerrar;
         private PnMantenimientos pnMantenimientos1;
-        private pnPrincipal pnPrincipal1;
+        private pnPrincipal pnPrincipal;
     }
 }
 
