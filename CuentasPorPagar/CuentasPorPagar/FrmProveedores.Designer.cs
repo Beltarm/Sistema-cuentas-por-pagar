@@ -51,23 +51,24 @@
             this.panel1.Controls.Add(this.cbxCriterio);
             this.panel1.Controls.Add(this.txtConcepto);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(88, 42);
+            this.panel1.Location = new System.Drawing.Point(75, 42);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(605, 100);
+            this.panel1.Size = new System.Drawing.Size(632, 100);
             this.panel1.TabIndex = 0;
             // 
             // cmdAgregar
             // 
-            this.cmdAgregar.Location = new System.Drawing.Point(511, 42);
+            this.cmdAgregar.Location = new System.Drawing.Point(540, 42);
             this.cmdAgregar.Name = "cmdAgregar";
             this.cmdAgregar.Size = new System.Drawing.Size(75, 23);
             this.cmdAgregar.TabIndex = 5;
             this.cmdAgregar.Text = "button1";
             this.cmdAgregar.UseVisualStyleBackColor = true;
+            this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
             // 
             // cmdBuscar
             // 
-            this.cmdBuscar.Location = new System.Drawing.Point(430, 42);
+            this.cmdBuscar.Location = new System.Drawing.Point(448, 42);
             this.cmdBuscar.Name = "cmdBuscar";
             this.cmdBuscar.Size = new System.Drawing.Size(75, 23);
             this.cmdBuscar.TabIndex = 4;
@@ -83,7 +84,6 @@
             "ID",
             "Nombre",
             "Cédula",
-            "Tipo de persona",
             "Balance",
             "Estado"});
             this.cbxCriterio.Location = new System.Drawing.Point(75, 38);
@@ -95,7 +95,7 @@
             // 
             this.txtConcepto.BackColor = System.Drawing.SystemColors.Window;
             this.txtConcepto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConcepto.Location = new System.Drawing.Point(241, 39);
+            this.txtConcepto.Location = new System.Drawing.Point(254, 38);
             this.txtConcepto.Name = "txtConcepto";
             this.txtConcepto.Size = new System.Drawing.Size(170, 27);
             this.txtConcepto.TabIndex = 2;
@@ -113,9 +113,9 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.dgvProveedores);
-            this.panel2.Location = new System.Drawing.Point(88, 148);
+            this.panel2.Location = new System.Drawing.Point(28, 148);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(605, 255);
+            this.panel2.Size = new System.Drawing.Size(736, 255);
             this.panel2.TabIndex = 1;
             // 
             // dgvProveedores
@@ -142,7 +142,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProveedores.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProveedores.EnableHeadersVisualStyles = false;
-            this.dgvProveedores.Location = new System.Drawing.Point(19, 12);
+            this.dgvProveedores.Location = new System.Drawing.Point(15, 12);
             this.dgvProveedores.Name = "dgvProveedores";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -152,8 +152,10 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvProveedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvProveedores.Size = new System.Drawing.Size(567, 229);
+            this.dgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProveedores.Size = new System.Drawing.Size(705, 229);
             this.dgvProveedores.TabIndex = 0;
+            this.dgvProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellContentClick);
             // 
             // FrmProveedores
             // 
