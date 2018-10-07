@@ -20,19 +20,6 @@ namespace CuentasPorPagar
             InitializeComponent();
         }
 
-        private void panel_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button != MouseButtons.Left)
-            {
-                xClick = e.X; yClick = e.Y;
-            }
-            else
-            {
-                this.Left = this.Left + (e.X - xClick);
-                this.Top = this.Top + (e.Y - yClick);
-            }
-        }
-
         private void ejecutarConsulta()
         {
             try
@@ -125,6 +112,11 @@ namespace CuentasPorPagar
             cmdAgregar.BackColor = Color.Transparent;
             cmdAgregar.ForeColor = Color.SeaGreen;
             cmdAgregar.FlatAppearance.BorderColor = Color.SeaGreen;
+        }
+
+        private void DgbConceptoDePago_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void cmdAgregar_MouseEnter(object sender, EventArgs e)
