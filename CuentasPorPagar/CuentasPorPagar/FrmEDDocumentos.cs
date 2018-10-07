@@ -84,22 +84,9 @@ namespace CuentasPorPagar
             {
                 int id_proveedor = 0;
                 var Nombre_Provedor = cbxProveedor.SelectedItem;
-                string sql = "SELECT Id_Proveedor from Proveedores WHERE Nombre LIKE '%" + Nombre_Provedor + "%'";
+                string sql = "SELECT DISTINCT Id_Proveedor from Proveedores WHERE Nombre LIKE '%" + Nombre_Provedor + "%'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                {
-                    
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                             id_proveedor = reader.GetInt16(0);
-                            
-                        }
-                    }
-                    reader.Close();
-
-                }
+                id_proveedor = Convert.ToInt32(cmd);
 
                 return id_proveedor;
 
@@ -147,22 +134,13 @@ namespace CuentasPorPagar
             {
                 int id_concepto = 0;
                 var Nombre_Concepto = cbxConcepto.SelectedItem;
-                string sql = "SELECT Id_Proveedor from Proveedores WHERE Nombre LIKE '%" + Nombre_Concepto + "%'";
+                string sql = "SELECT DISTINCT Id_Concepto_Pago from Concepto_Pago WHERE Descripcion LIKE '%" + Nombre_Concepto + "%'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                {
 
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            id_concepto = reader.GetInt16(0);
 
-                        }
-                    }
-                    reader.Close();
+                id_concepto = Convert.ToInt32(cmd);
 
-                }
+             
 
                 return id_concepto;
 
@@ -177,24 +155,23 @@ namespace CuentasPorPagar
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
-            InsertProveedores();
-            insertConceptos();
+            
 
             try
             {
                 string sql = "";
                 if (modo.Equals("C"))
                 {
-                    sql = "INSERT INTO Documentos_Pagar VALUES (";
-                    sql += txtNumFactura.Text + ", " + insertConceptos() + " '" + mtxFechaDocumento.Text + "', ";
-                    sql += txtMonto.Text + " '" + mtxFechaRegistro + "', " + InsertProveedores() + " '" + cbxEstado.SelectedItem + "') ";
+                    sql = "INSERT INTO Documentos_Pagar VALUES ('";
+                    sql += txtNumFactura.Text + "', " + insertConceptos() + ", '" + mtxFechaDocumento.Text + "', ";
+                    sql += txtMonto.Text + ", '" + mtxFechaRegistro.Text + "', " + InsertProveedores() + ", '" + cbxEstado.SelectedItem + "') ";
                 }
                 else
                 {
                     sql = "UPDATE Documentos_Pagar SET";
                     sql += " Num_Factura = " + txtNumFactura.Text + ", Id_Concepto_Pago = " + insertConceptos() + ", Fecha_Documento = '";
                     sql += mtxFechaDocumento.Text + "', Monto =  " + txtMonto.Text + ", Fecha_Registro = '" + mtxFechaRegistro.Text + "' , Id_Proveedor =  ";
-                    sql += InsertProveedores() + ", '" + cbxEstado.SelectedItem + "'";
+                    sql += InsertProveedores() + ", Estado = '" + cbxEstado.SelectedItem + "' ";
                     sql += "WHERE Num_Documento = " + txtNumDocumento.Text;
 
                 }

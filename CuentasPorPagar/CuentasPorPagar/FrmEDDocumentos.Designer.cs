@@ -181,7 +181,7 @@
             // mtxFechaDocumento
             // 
             this.mtxFechaDocumento.Location = new System.Drawing.Point(167, 192);
-            this.mtxFechaDocumento.Mask = "0000-00-00";
+            this.mtxFechaDocumento.Mask = "00/00/0000";
             this.mtxFechaDocumento.Name = "mtxFechaDocumento";
             this.mtxFechaDocumento.Size = new System.Drawing.Size(100, 20);
             this.mtxFechaDocumento.TabIndex = 11;
@@ -196,7 +196,7 @@
             // mtxFechaRegistro
             // 
             this.mtxFechaRegistro.Location = new System.Drawing.Point(461, 29);
-            this.mtxFechaRegistro.Mask = "0000-00-00";
+            this.mtxFechaRegistro.Mask = "00/00/0000";
             this.mtxFechaRegistro.Name = "mtxFechaRegistro";
             this.mtxFechaRegistro.Size = new System.Drawing.Size(100, 20);
             this.mtxFechaRegistro.TabIndex = 13;
