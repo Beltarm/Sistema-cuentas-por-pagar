@@ -14,7 +14,7 @@ namespace CuentasPorPagar
     public partial class FrmEdProveedores : Form
     {
         public SqlConnection conn { get; set; }
-        public String ID { get; set; }
+        public string ID { get; set; }
         public string Nombre { get; set; }
         public string Cedula { get; set; }
         public string Tipo_Persona { get; set; }
@@ -34,13 +34,14 @@ namespace CuentasPorPagar
                 if (modo.Equals("C"))
                 {
                     sql = "INSERT INTO PROVEEDORES VALUES('";
-                    sql += txtNombre.Text + "', '" + txtCedula.Text + "','"+ cbxTipo.Text + "', '" + txtBalance.Text + "', '" + cbxEstado.Text + "', '" + "')";
+                    sql += txtNombre.Text + "', '" + txtCedula.Text + "', '" + cbxTipo.Text + "', '" + 
+                    txtBalance.Text + "', '" + cbxEstado.Text + "')";
                 }
                 else
                 {
-                    sql = "UPDATE CONCEPTO_PAGO SET ";
+                    sql = "UPDATE PROVEEDORES SET ";
                     sql += "NOMBRE = '" + txtNombre.Text + "', CEDULA = '" + txtCedula.Text + "', TIPO_PERSONA = '" + cbxTipo.Text + "', BALANCE = '" + txtBalance.Text + "', ESTADO = '" + cbxEstado.Text + "'";
-                    sql += "WHERE ID_CONCEPTO_PAGO = " + ID;
+                    sql += "WHERE ID_PROVEEDOR = " + ID;
                 }
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
@@ -54,7 +55,8 @@ namespace CuentasPorPagar
             }
         }
 
-        private void cmdEliminar_Click(object sender, EventArgs e)
+   
+    private void cmdEliminar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -91,3 +93,4 @@ namespace CuentasPorPagar
         }
     }
 }
+ 

@@ -73,6 +73,8 @@ namespace CuentasPorPagar
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
             FrmEdProveedores ff = new FrmEdProveedores();
+            ff.modo = "C";
+            ff.conn = conn;
             ff.ShowDialog();
 
         }
