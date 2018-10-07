@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtConcepto = new System.Windows.Forms.TextBox();
-            this.cbxCriterio = new System.Windows.Forms.ComboBox();
             this.cmdAgregar = new System.Windows.Forms.Button();
+            this.cmdBuscar = new System.Windows.Forms.Button();
+            this.cbxCriterio = new System.Windows.Forms.ComboBox();
+            this.txtConcepto = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvProveedores = new System.Windows.Forms.DataGridView();
-            this.cmdBuscar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
@@ -53,23 +53,23 @@
             this.panel1.Size = new System.Drawing.Size(587, 100);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // cmdAgregar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Criterio";
+            this.cmdAgregar.Location = new System.Drawing.Point(484, 43);
+            this.cmdAgregar.Name = "cmdAgregar";
+            this.cmdAgregar.Size = new System.Drawing.Size(75, 23);
+            this.cmdAgregar.TabIndex = 5;
+            this.cmdAgregar.Text = "button1";
+            this.cmdAgregar.UseVisualStyleBackColor = true;
             // 
-            // txtConcepto
+            // cmdBuscar
             // 
-            this.txtConcepto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConcepto.Location = new System.Drawing.Point(241, 41);
-            this.txtConcepto.Name = "txtConcepto";
-            this.txtConcepto.Size = new System.Drawing.Size(137, 27);
-            this.txtConcepto.TabIndex = 2;
+            this.cmdBuscar.Location = new System.Drawing.Point(394, 43);
+            this.cmdBuscar.Name = "cmdBuscar";
+            this.cmdBuscar.Size = new System.Drawing.Size(75, 23);
+            this.cmdBuscar.TabIndex = 4;
+            this.cmdBuscar.Text = "button1";
+            this.cmdBuscar.UseVisualStyleBackColor = true;
             // 
             // cbxCriterio
             // 
@@ -87,14 +87,24 @@
             this.cbxCriterio.Size = new System.Drawing.Size(121, 29);
             this.cbxCriterio.TabIndex = 3;
             // 
-            // cmdAgregar
+            // txtConcepto
             // 
-            this.cmdAgregar.Location = new System.Drawing.Point(484, 43);
-            this.cmdAgregar.Name = "cmdAgregar";
-            this.cmdAgregar.Size = new System.Drawing.Size(75, 23);
-            this.cmdAgregar.TabIndex = 5;
-            this.cmdAgregar.Text = "button1";
-            this.cmdAgregar.UseVisualStyleBackColor = true;
+            this.txtConcepto.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtConcepto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConcepto.Location = new System.Drawing.Point(241, 41);
+            this.txtConcepto.Name = "txtConcepto";
+            this.txtConcepto.Size = new System.Drawing.Size(137, 27);
+            this.txtConcepto.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 21);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Criterio";
             // 
             // panel2
             // 
@@ -113,15 +123,6 @@
             this.dgvProveedores.Name = "dgvProveedores";
             this.dgvProveedores.Size = new System.Drawing.Size(553, 229);
             this.dgvProveedores.TabIndex = 0;
-            // 
-            // cmdBuscar
-            // 
-            this.cmdBuscar.Location = new System.Drawing.Point(394, 43);
-            this.cmdBuscar.Name = "cmdBuscar";
-            this.cmdBuscar.Size = new System.Drawing.Size(75, 23);
-            this.cmdBuscar.TabIndex = 4;
-            this.cmdBuscar.Text = "button1";
-            this.cmdBuscar.UseVisualStyleBackColor = true;
             // 
             // FrmProveedores
             // 
