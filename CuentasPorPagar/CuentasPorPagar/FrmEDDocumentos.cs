@@ -78,18 +78,26 @@ namespace CuentasPorPagar
                 MessageBox.Show("Error al cargar los datos" + ex.Message);
             }
         }
-       private int  InsertProveedores()
+       public int  InsertProveedores()
         {
             try
             {
                 int id_proveedor = 0;
                 var Nombre_Provedor = cbxProveedor.SelectedItem;
+                SqlDataReader reader = null;
                 string sql = "SELECT DISTINCT Id_Proveedor from Proveedores WHERE Nombre LIKE '%" + Nombre_Provedor + "%'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                id_proveedor = Convert.ToInt32(cmd);
 
+               
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    id_proveedor = Convert.ToInt32(reader);
+                    
+                }
+                
                 return id_proveedor;
-
+               
             }
             catch (Exception ex)
             {
