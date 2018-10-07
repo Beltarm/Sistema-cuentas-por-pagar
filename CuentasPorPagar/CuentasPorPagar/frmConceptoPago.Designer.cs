@@ -153,6 +153,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtID);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmConceptoPago";
             this.Text = "frmConceptoPago";
             this.Load += new System.EventHandler(this.frmConceptoPago_Load);
