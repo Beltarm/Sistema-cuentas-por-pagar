@@ -158,6 +158,7 @@
             // 
             this.txtNumDocumento.Location = new System.Drawing.Point(180, 31);
             this.txtNumDocumento.Name = "txtNumDocumento";
+            this.txtNumDocumento.ReadOnly = true;
             this.txtNumDocumento.Size = new System.Drawing.Size(100, 20);
             this.txtNumDocumento.TabIndex = 8;
             // 
@@ -238,6 +239,7 @@
             this.cmdGuardar.Text = "Guardar";
             this.cmdGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdGuardar.UseVisualStyleBackColor = true;
+            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 
             // cmdEliminar
             // 
@@ -256,6 +258,7 @@
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdEliminar.UseVisualStyleBackColor = true;
+            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
             // FrmEDDocumentos
             // 

@@ -51,21 +51,21 @@ namespace CuentasPorPagar
                 sql += " Proveedores.Nombre as [Nombre Proveedor],  Documentos_Pagar.Estado from Documentos_Pagar INNER JOIN Concepto_Pago ON";
                 sql += " Documentos_Pagar.Id_Concepto_Pago = Concepto_Pago.Id_Concepto_Pago INNER JOIN Proveedores ON Documentos_Pagar.Id_Proveedor = Proveedores.Id_Proveedor ";
 
-                if (cbxCriterio.Text.Length > 0)
-                {
-                    string criterio;
-                    if (cbxCriterio.SelectedIndex == 0)
-                    {
-                        criterio = "Num_Documento";
-                    }
-                    else
-                    {
-                        criterio = cbxCriterio.Text;
-                    }
+                //if (cbxCriterio.Text.Length > 0)
+                //{
+                //    string criterio;
+                //    if (cbxCriterio.SelectedIndex == 0)
+                //    {
+                //        criterio = "Num_Documento";
+                //    }
+                //    else
+                //    {
+                //        criterio = cbxCriterio.Text;
+                //    }
 
-                    sql += " WHERE " + "[" + cbxCriterio.Text + "]" + " LIKE '%" + txtBuscar.Text + "%' ";
-                    sql += "ORDER BY " + cbxCriterio.Text;
-                }
+                //    sql += " WHERE " + "[" + cbxCriterio.Text + "]" + " LIKE '%" + txtBuscar.Text + "%' ";
+                    //sql += "ORDER BY " + cbxCriterio.Text;
+                //}
                     
                 
                 /*******************************************/
@@ -135,11 +135,16 @@ namespace CuentasPorPagar
             FrmEDDocumentos frm = new FrmEDDocumentos();
             frm.Num_Documento = row.Cells[0].Value.ToString();
             frm.Num_Factura = row.Cells[1].Value.ToString();
+            frm.concepto_pago = row.Cells[2].Value.ToString();
             frm.Fecha_Documento = row.Cells[3].Value.ToString();
             frm.Monto = row.Cells[4].Value.ToString();
             frm.Fecha_Registro = row.Cells[5].Value.ToString();
+            frm.nombre_proveedor = row.Cells[6].Value.ToString();
             frm.Estado = row.Cells[7].Value.ToString();
-                
-                }
+            frm.modo = "U";
+            frm.conn = conn;
+            frm.ShowDialog();
+
+        }
     }
 }
