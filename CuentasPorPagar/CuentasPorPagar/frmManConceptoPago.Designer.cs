@@ -37,6 +37,7 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.cmdBuscar = new System.Windows.Forms.Button();
             this.cmdAgregar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgbConceptoDePago)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,7 +95,7 @@
             "ID",
             "Descripcion",
             "Estado"});
-            this.cbxCriterio.Location = new System.Drawing.Point(46, 56);
+            this.cbxCriterio.Location = new System.Drawing.Point(160, 57);
             this.cbxCriterio.Name = "cbxCriterio";
             this.cbxCriterio.Size = new System.Drawing.Size(165, 31);
             this.cbxCriterio.TabIndex = 1;
@@ -137,11 +138,22 @@
             this.cmdAgregar.MouseEnter += new System.EventHandler(this.cmdAgregar_MouseEnter);
             this.cmdAgregar.MouseLeave += new System.EventHandler(this.cmdAgregar_MouseLeave);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(36, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 23);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Criterio";
+            // 
             // frmManConceptoPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 633);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cmdAgregar);
             this.Controls.Add(this.cmdBuscar);
             this.Controls.Add(this.txtBuscar);
@@ -165,5 +177,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button cmdBuscar;
         private System.Windows.Forms.Button cmdAgregar;
+        private System.Windows.Forms.Label label1;
     }
 }
