@@ -127,11 +127,6 @@ namespace CuentasPorPagar
             cmdAgregar.FlatAppearance.BorderColor = Color.SeaGreen;
         }
 
-        private void frmManConceptoPago_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void cmdAgregar_MouseEnter(object sender, EventArgs e)
         {
             cmdAgregar.BackColor = Color.SeaGreen;
