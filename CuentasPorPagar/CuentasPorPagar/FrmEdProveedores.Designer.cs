@@ -184,21 +184,37 @@
             // 
             // cmdEliminar
             // 
-            this.cmdEliminar.Location = new System.Drawing.Point(277, 24);
+            this.cmdEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(83)))), ((int)(((byte)(79)))));
+            this.cmdEliminar.FlatAppearance.BorderSize = 3;
+            this.cmdEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(83)))), ((int)(((byte)(79)))));
+            this.cmdEliminar.Image = global::CuentasPorPagar.Properties.Resources.cancelar;
+            this.cmdEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdEliminar.Location = new System.Drawing.Point(260, 12);
+            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdEliminar.Name = "cmdEliminar";
-            this.cmdEliminar.Size = new System.Drawing.Size(75, 23);
-            this.cmdEliminar.TabIndex = 1;
-            this.cmdEliminar.Text = "button2";
+            this.cmdEliminar.Size = new System.Drawing.Size(132, 42);
+            this.cmdEliminar.TabIndex = 2;
+            this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = true;
             this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
             // cmdGuardar
             // 
-            this.cmdGuardar.Location = new System.Drawing.Point(77, 24);
+            this.cmdGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
+            this.cmdGuardar.FlatAppearance.BorderSize = 3;
+            this.cmdGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
+            this.cmdGuardar.Image = global::CuentasPorPagar.Properties.Resources.comprobado;
+            this.cmdGuardar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.cmdGuardar.Location = new System.Drawing.Point(34, 12);
+            this.cmdGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdGuardar.Name = "cmdGuardar";
-            this.cmdGuardar.Size = new System.Drawing.Size(75, 23);
+            this.cmdGuardar.Size = new System.Drawing.Size(144, 42);
             this.cmdGuardar.TabIndex = 0;
-            this.cmdGuardar.Text = "button1";
+            this.cmdGuardar.Text = "Guardar";
             this.cmdGuardar.UseVisualStyleBackColor = true;
             this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 

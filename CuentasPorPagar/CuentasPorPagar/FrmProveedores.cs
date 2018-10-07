@@ -84,6 +84,29 @@ namespace CuentasPorPagar
 
         }
 
+        private void dgvProveedores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = this.dgvProveedores.SelectedRows[0];
+                FrmEdProveedores frm = new FrmEdProveedores();
+                frm.ID = row.Cells[0].Value.ToString();
+                frm.Nombre = row.Cells[1].Value.ToString();
+                frm.Cedula = row.Cells[2].Value.ToString();
+                frm.Tipo_Persona = row.Cells[3].Value.ToString();
+                frm.Balance = row.Cells[4].Value.ToString();
+                frm.Estado = row.Cells[5].Value.ToString();
+                frm.modo = "U";
+                frm.conn = conn;
+
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al editar registro " + ex.Message);
+            }
+        }
+
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
             ejecutarConsulta();

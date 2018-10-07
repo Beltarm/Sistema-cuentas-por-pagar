@@ -84,7 +84,7 @@ namespace CuentasPorPagar
                 txtBalance.Text = Balance;
                 cbxEstado.Text = Estado;
 
-                txtID.Enabled = modo.Equals("C");
+            
             }
             catch (Exception ex)
             {
