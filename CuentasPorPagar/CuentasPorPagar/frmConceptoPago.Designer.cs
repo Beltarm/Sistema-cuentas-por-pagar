@@ -136,7 +136,7 @@
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdEliminar.UseVisualStyleBackColor = true;
-            this.cmdEliminar.Click += new System.EventHandler(this.cmdGuardar_Click);
+            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             this.cmdEliminar.MouseEnter += new System.EventHandler(this.cmdEliminar_MouseEnter);
             this.cmdEliminar.MouseLeave += new System.EventHandler(this.cmdEliminar_MouseLeave);
             // 
@@ -156,6 +156,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmConceptoPago";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConceptoPago";
             this.Load += new System.EventHandler(this.frmConceptoPago_Load);
             this.ResumeLayout(false);
