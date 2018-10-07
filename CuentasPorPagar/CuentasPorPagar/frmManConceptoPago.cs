@@ -90,7 +90,7 @@ namespace CuentasPorPagar
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
             frmConceptoPago frm = new frmConceptoPago();
-            frm.modo = "e";
+            frm.modo = "C";
             frm.conn = conn;
             frm.ShowDialog();
         }
