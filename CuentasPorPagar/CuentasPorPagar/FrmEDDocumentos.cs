@@ -78,26 +78,27 @@ namespace CuentasPorPagar
                 MessageBox.Show("Error al cargar los datos" + ex.Message);
             }
         }
-       public int  InsertProveedores()
+
+       private int  InsertProveedores()
         {
             try
             {
                 int id_proveedor = 0;
-                var Nombre_Provedor = cbxProveedor.SelectedItem;
-                SqlDataReader reader = null;
-                string sql = "SELECT DISTINCT Id_Proveedor from Proveedores WHERE Nombre LIKE '%" + Nombre_Provedor + "%'";
+                string Nombre_Provedor = cbxProveedor.SelectedItem.ToString();
+                string sql = "select Id_Proveedor from Proveedores where nombre like '%" + Nombre_Provedor + "%'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-
-               
-                reader = cmd.ExecuteReader();
-                while (reader.Read())
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    id_proveedor = Convert.ToInt32(reader);
-                    
+                    while (reader.Read())
+                    {
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            id_proveedor = Convert.ToInt32(reader.GetValue(i));
+                        }
+                    }
                 }
-                
                 return id_proveedor;
-               
+
             }
             catch (Exception ex)
             {
@@ -109,6 +110,7 @@ namespace CuentasPorPagar
         }
         public void consultaConceptos()
         {
+            MessageBox.Show("entro");
             try
             {
 
@@ -141,15 +143,21 @@ namespace CuentasPorPagar
             try
             {
                 int id_concepto = 0;
-                var Nombre_Concepto = cbxConcepto.SelectedItem;
-                string sql = "SELECT DISTINCT Id_Concepto_Pago from Concepto_Pago WHERE Descripcion LIKE '%" + Nombre_Concepto + "%'";
+                string Nombre_Concepto = cbxConcepto.SelectedItem.ToString();
+                string sql = "select id_concepto_pago from Concepto_Pago where Descripcion like '%" + Nombre_Concepto + "%'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-
-
-                id_concepto = Convert.ToInt32(cmd);
-
-             
-
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                   while (reader.Read())
+                    {
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            id_concepto = Convert.ToInt32(reader.GetValue(i));
+                            
+                        }
+                    }
+                }      
+                
                 return id_concepto;
 
             }
@@ -163,8 +171,6 @@ namespace CuentasPorPagar
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
-            
-
             try
             {
                 string sql = "";
