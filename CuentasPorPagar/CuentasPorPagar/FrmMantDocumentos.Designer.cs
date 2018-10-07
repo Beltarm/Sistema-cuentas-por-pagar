@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMantDocumentos));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbxCriterio = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.cmdAgregar = new System.Windows.Forms.Button();
+            this.cmdBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbxCriterio = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvResultados = new System.Windows.Forms.DataGridView();
-            this.cmdBuscar = new System.Windows.Forms.Button();
-            this.cmdAgregar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).BeginInit();
@@ -56,59 +56,23 @@
             this.panel1.Size = new System.Drawing.Size(636, 64);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // cmdAgregar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Criterio";
-            // 
-            // cbxCriterio
-            // 
-            this.cbxCriterio.FormattingEnabled = true;
-            this.cbxCriterio.Location = new System.Drawing.Point(82, 23);
-            this.cbxCriterio.Name = "cbxCriterio";
-            this.cbxCriterio.Size = new System.Drawing.Size(121, 21);
-            this.cbxCriterio.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(218, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 21);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Texto";
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(277, 23);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(100, 20);
-            this.txtBuscar.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgvResultados);
-            this.panel2.Location = new System.Drawing.Point(13, 93);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(636, 325);
-            this.panel2.TabIndex = 1;
-            // 
-            // dgvResultados
-            // 
-            this.dgvResultados.AllowUserToAddRows = false;
-            this.dgvResultados.AllowUserToDeleteRows = false;
-            this.dgvResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResultados.Location = new System.Drawing.Point(3, 3);
-            this.dgvResultados.Name = "dgvResultados";
-            this.dgvResultados.ReadOnly = true;
-            this.dgvResultados.Size = new System.Drawing.Size(630, 319);
-            this.dgvResultados.TabIndex = 0;
+            this.cmdAgregar.FlatAppearance.BorderSize = 3;
+            this.cmdAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdAgregar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdAgregar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.cmdAgregar.Image = ((System.Drawing.Image)(resources.GetObject("cmdAgregar.Image")));
+            this.cmdAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdAgregar.Location = new System.Drawing.Point(512, 9);
+            this.cmdAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.cmdAgregar.Name = "cmdAgregar";
+            this.cmdAgregar.Size = new System.Drawing.Size(112, 42);
+            this.cmdAgregar.TabIndex = 5;
+            this.cmdAgregar.Text = "Agregar";
+            this.cmdAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cmdAgregar.UseVisualStyleBackColor = true;
+            this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
             // 
             // cmdBuscar
             // 
@@ -129,23 +93,70 @@
             this.cmdBuscar.UseVisualStyleBackColor = true;
             this.cmdBuscar.Click += new System.EventHandler(this.cmdBuscar_Click);
             // 
-            // cmdAgregar
+            // txtBuscar
             // 
-            this.cmdAgregar.FlatAppearance.BorderSize = 3;
-            this.cmdAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdAgregar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdAgregar.ForeColor = System.Drawing.Color.SeaGreen;
-            this.cmdAgregar.Image = ((System.Drawing.Image)(resources.GetObject("cmdAgregar.Image")));
-            this.cmdAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdAgregar.Location = new System.Drawing.Point(512, 9);
-            this.cmdAgregar.Margin = new System.Windows.Forms.Padding(2);
-            this.cmdAgregar.Name = "cmdAgregar";
-            this.cmdAgregar.Size = new System.Drawing.Size(112, 42);
-            this.cmdAgregar.TabIndex = 5;
-            this.cmdAgregar.Text = "Agregar";
-            this.cmdAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cmdAgregar.UseVisualStyleBackColor = true;
-            this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
+            this.txtBuscar.Location = new System.Drawing.Point(277, 23);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscar.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(218, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 21);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Texto";
+            // 
+            // cbxCriterio
+            // 
+            this.cbxCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCriterio.FormattingEnabled = true;
+            this.cbxCriterio.Items.AddRange(new object[] {
+            "Numero Documento",
+            "Numero Factura",
+            "Concepto de Pago",
+            "Fecha Documento",
+            "Monto",
+            "Fecha Registro ",
+            "Nombre Proveedor",
+            "Estado"});
+            this.cbxCriterio.Location = new System.Drawing.Point(82, 23);
+            this.cbxCriterio.Name = "cbxCriterio";
+            this.cbxCriterio.Size = new System.Drawing.Size(121, 21);
+            this.cbxCriterio.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(15, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 21);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Criterio";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgvResultados);
+            this.panel2.Location = new System.Drawing.Point(13, 93);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(636, 325);
+            this.panel2.TabIndex = 1;
+            // 
+            // dgvResultados
+            // 
+            this.dgvResultados.AllowUserToAddRows = false;
+            this.dgvResultados.AllowUserToDeleteRows = false;
+            this.dgvResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResultados.Location = new System.Drawing.Point(3, 3);
+            this.dgvResultados.Name = "dgvResultados";
+            this.dgvResultados.ReadOnly = true;
+            this.dgvResultados.Size = new System.Drawing.Size(630, 319);
+            this.dgvResultados.TabIndex = 0;
+            this.dgvResultados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResultados_CellDoubleClick);
             // 
             // FrmMantDocumentos
             // 
@@ -156,6 +167,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmMantDocumentos";
             this.Text = "Mantenimiento de Entrada de Documentos";
+            this.Activated += new System.EventHandler(this.FrmMantDocumentos_Activated);
             this.Load += new System.EventHandler(this.FrmMantDocumentos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -81,6 +81,7 @@ namespace CuentasPorPagar
             frm.modo = "C";
             frm.conn = conn;
             frm.ShowDialog();
+            
         }
 
         private void frmManEstudiante_Activated(object sender, EventArgs e)

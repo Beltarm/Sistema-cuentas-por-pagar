@@ -170,6 +170,7 @@
             // 
             // cbxConcepto
             // 
+            this.cbxConcepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxConcepto.FormattingEnabled = true;
             this.cbxConcepto.Location = new System.Drawing.Point(142, 133);
             this.cbxConcepto.Name = "cbxConcepto";
@@ -201,6 +202,7 @@
             // 
             // cbxProveedor
             // 
+            this.cbxProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProveedor.FormattingEnabled = true;
             this.cbxProveedor.Location = new System.Drawing.Point(471, 88);
             this.cbxProveedor.Name = "cbxProveedor";
@@ -209,6 +211,7 @@
             // 
             // cbxEstado
             // 
+            this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEstado.FormattingEnabled = true;
             this.cbxEstado.Items.AddRange(new object[] {
             "Pendiente",
@@ -264,6 +267,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmEDDocumentos";
             this.Text = "Agregar / Eliminar Documentos";
+            this.Load += new System.EventHandler(this.FrmEDDocumentos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

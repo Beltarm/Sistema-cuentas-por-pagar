@@ -14,6 +14,7 @@ namespace CuentasPorPagar
     public partial class FrmMantDocumentos : Form
     {
         SqlConnection conn = null;
+        FrmEDDocumentos form2 = new FrmEDDocumentos();
         public FrmMantDocumentos()
         {
             InitializeComponent();
@@ -21,7 +22,11 @@ namespace CuentasPorPagar
 
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
-
+            FrmEDDocumentos frm = new FrmEDDocumentos();
+            frm.modo = "C";
+            frm.conn = conn;
+            frm.ShowDialog();
+           
         }
 
         private void cmdBuscar_Click(object sender, EventArgs e)
@@ -44,18 +49,32 @@ namespace CuentasPorPagar
                 string sql = "select Documentos_Pagar.Num_Documento as [Numero Documento],Documentos_Pagar.Num_Factura as [Numero Factura], + Concepto_Pago.Descripcion as [Concepto de pago]";
                 sql += ", Documentos_Pagar.Fecha_Documento as [Fecha Documento],  Documentos_Pagar.Monto, Documentos_Pagar.Fecha_Registro as [Fecha Registro],";
                 sql += " Proveedores.Nombre as [Nombre Proveedor],  Documentos_Pagar.Estado from Documentos_Pagar INNER JOIN Concepto_Pago ON";
-                sql += " Documentos_Pagar.Id_Concepto_Pago = Concepto_Pago.Id_Concepto_Pago INNER JOIN Proveedores ON Documentos_Pagar.Id_Proveedor = Proveedores.Id_Proveedor;";
+                sql += " Documentos_Pagar.Id_Concepto_Pago = Concepto_Pago.Id_Concepto_Pago INNER JOIN Proveedores ON Documentos_Pagar.Id_Proveedor = Proveedores.Id_Proveedor ";
 
-                if (cbxCriterio.Text.Length > 0 )
+                if (cbxCriterio.Text.Length > 0)
                 {
+                    string criterio;
+                    if (cbxCriterio.SelectedIndex == 0)
+                    {
+                        criterio = "Num_Documento";
+                    }
+                    else
+                    {
+                        criterio = cbxCriterio.Text;
+                    }
 
+                    sql += " WHERE " + "[" + cbxCriterio.Text + "]" + " LIKE '%" + txtBuscar.Text + "%' ";
+                    sql += "ORDER BY " + cbxCriterio.Text;
                 }
+                    
+                
                 /*******************************************/
                 SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvResultados.DataSource = dt;
                 dgvResultados.Refresh();
+                aplicarEstilos(dgvResultados);
             }
             catch (Exception ex)
             {
@@ -67,7 +86,7 @@ namespace CuentasPorPagar
         /****************ESTILOS PARA EL DATAGRIDVIEW********************/
         private void aplicarEstilos(DataGridView dataGrid)
         {
-            dgvResultados.Columns[0].HeaderText = "ID";
+            
             dgvResultados.ClearSelection();
             dataGrid.RowsDefaultCellStyle.BackColor = Color.White;
             dataGrid.RowHeadersDefaultCellStyle.BackColor = Color.White;
@@ -105,5 +124,22 @@ namespace CuentasPorPagar
             cmdBuscar.FlatAppearance.BorderColor = Color.FromArgb(66, 139, 202);
         }
 
+        private void FrmMantDocumentos_Activated(object sender, EventArgs e)
+        {
+            ejecutarConsulta();
+        }
+
+        private void dgvResultados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.dgvResultados.SelectedRows[0];
+            FrmEDDocumentos frm = new FrmEDDocumentos();
+            frm.Num_Documento = row.Cells[0].Value.ToString();
+            frm.Num_Factura = row.Cells[1].Value.ToString();
+            frm.Fecha_Documento = row.Cells[3].Value.ToString();
+            frm.Monto = row.Cells[4].Value.ToString();
+            frm.Fecha_Registro = row.Cells[5].Value.ToString();
+            frm.Estado = row.Cells[7].Value.ToString();
+                
+                }
     }
 }
