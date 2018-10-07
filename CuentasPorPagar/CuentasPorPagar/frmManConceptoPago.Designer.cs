@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManConceptoPago));
             this.DgbConceptoDePago = new System.Windows.Forms.DataGridView();
             this.cbxCriterio = new System.Windows.Forms.ComboBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -101,18 +102,19 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(252, 55);
+            this.txtBuscar.Location = new System.Drawing.Point(387, 56);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(167, 32);
             this.txtBuscar.TabIndex = 2;
             // 
             // cmdBuscar
             // 
-            this.cmdBuscar.Location = new System.Drawing.Point(480, 55);
+            this.cmdBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdBuscar.Location = new System.Drawing.Point(587, 57);
             this.cmdBuscar.Name = "cmdBuscar";
-            this.cmdBuscar.Size = new System.Drawing.Size(100, 32);
+            this.cmdBuscar.Size = new System.Drawing.Size(119, 39);
             this.cmdBuscar.TabIndex = 3;
-            this.cmdBuscar.Text = "button1";
+            this.cmdBuscar.Text = "Buscar";
             this.cmdBuscar.UseVisualStyleBackColor = true;
             this.cmdBuscar.Click += new System.EventHandler(this.cmdBuscar_Click);
             // 
@@ -122,11 +124,14 @@
             this.cmdAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdAgregar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdAgregar.ForeColor = System.Drawing.Color.SeaGreen;
-            this.cmdAgregar.Location = new System.Drawing.Point(620, 56);
+            this.cmdAgregar.Image = ((System.Drawing.Image)(resources.GetObject("cmdAgregar.Image")));
+            this.cmdAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdAgregar.Location = new System.Drawing.Point(735, 56);
             this.cmdAgregar.Name = "cmdAgregar";
-            this.cmdAgregar.Size = new System.Drawing.Size(119, 43);
+            this.cmdAgregar.Size = new System.Drawing.Size(149, 54);
             this.cmdAgregar.TabIndex = 4;
-            this.cmdAgregar.Text = "button1";
+            this.cmdAgregar.Text = "Agregar";
+            this.cmdAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdAgregar.UseVisualStyleBackColor = true;
             this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
             this.cmdAgregar.MouseEnter += new System.EventHandler(this.cmdAgregar_MouseEnter);

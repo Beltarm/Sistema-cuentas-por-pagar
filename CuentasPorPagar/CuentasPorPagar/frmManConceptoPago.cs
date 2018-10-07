@@ -42,10 +42,10 @@ namespace CuentasPorPagar
 
                 /***************CONSULTA*****************/
                 string sql = "SELECT * FROM CONCEPTO_PAGO";
-                string criterio;
                 if (cbxCriterio.Text.Length > 0)
                 {
-                    if(cbxCriterio.SelectedIndex == 0)
+                    string criterio;
+                    if (cbxCriterio.SelectedIndex == 0)
                     {
                         criterio = "Id_Concepto_Pago";
                     }
@@ -71,6 +71,7 @@ namespace CuentasPorPagar
             }
         }
 
+        /****************ESTILOS PARA EL DATAGRIDVIEW********************/
         private void aplicarEstilos(DataGridView dataGrid)
         {
             DgbConceptoDePago.Columns[0].HeaderText = "ID";
@@ -132,6 +133,6 @@ namespace CuentasPorPagar
             cmdAgregar.ForeColor = Color.Transparent;
             cmdAgregar.FlatAppearance.BorderColor = Color.SeaGreen;
         }
-
+        /***************************************************************************/
     }
 }
