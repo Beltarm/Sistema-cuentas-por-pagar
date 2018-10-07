@@ -66,6 +66,12 @@
     <Compile Include="frmConceptoPago.Designer.cs">
       <DependentUpon>frmConceptoPago.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEDDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEDDocumentos.Designer.cs">
+      <DependentUpon>FrmEDDocumentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEdProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConceptoPago.resx">
       <DependentUpon>frmConceptoPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEDDocumentos.resx">
+      <DependentUpon>FrmEDDocumentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEdProveedores.resx">
       <DependentUpon>FrmEdProveedores.cs</DependentUpon>
