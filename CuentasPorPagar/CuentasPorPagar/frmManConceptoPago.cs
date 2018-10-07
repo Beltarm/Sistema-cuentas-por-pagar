@@ -13,10 +13,24 @@ namespace CuentasPorPagar
 {
     public partial class frmManConceptoPago : Form
     {
+        public int xClick = 0, yClick = 0;
         SqlConnection conn = null;
         public frmManConceptoPago()
         {
             InitializeComponent();
+        }
+
+        private void panel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                xClick = e.X; yClick = e.Y;
+            }
+            else
+            {
+                this.Left = this.Left + (e.X - xClick);
+                this.Top = this.Top + (e.Y - yClick);
+            }
         }
 
         private void ejecutarConsulta()
@@ -49,7 +63,7 @@ namespace CuentasPorPagar
                 da.Fill(dt);
                 DgbConceptoDePago.DataSource = dt;
                 DgbConceptoDePago.Refresh();
-                alternarColor(DgbConceptoDePago);
+                aplicarEstilos(DgbConceptoDePago);
             }
             catch (Exception ex)
             {
@@ -57,17 +71,21 @@ namespace CuentasPorPagar
             }
         }
 
+        private void aplicarEstilos(DataGridView dataGrid)
+        {
+            DgbConceptoDePago.Columns[0].HeaderText = "ID";
+            DgbConceptoDePago.ClearSelection();
+            dataGrid.RowsDefaultCellStyle.BackColor = Color.White;
+            dataGrid.RowHeadersDefaultCellStyle.BackColor = Color.White;
+            dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(224, 224, 224);
+        }
+
+
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
             ejecutarConsulta();
         }
-
-        private void alternarColor(DataGridView dataGrid)
-        {
-            dataGrid.RowsDefaultCellStyle.BackColor = Color.White;
-            dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(234, 235, 237);
-        }
-
+       
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
             frmConceptoPago frm = new frmConceptoPago();
@@ -100,5 +118,20 @@ namespace CuentasPorPagar
                 MessageBox.Show("Error al editar registro " + ex.Message);
             }
         }
+        /********************ANIMACION DE BOTON AGREGAR***********************/
+        private void cmdAgregar_MouseLeave(object sender, EventArgs e)
+        {
+            cmdAgregar.BackColor = Color.Transparent;
+            cmdAgregar.ForeColor = Color.SeaGreen;
+            cmdAgregar.FlatAppearance.BorderColor = Color.SeaGreen;
+        }
+
+        private void cmdAgregar_MouseEnter(object sender, EventArgs e)
+        {
+            cmdAgregar.BackColor = Color.SeaGreen;
+            cmdAgregar.ForeColor = Color.Transparent;
+            cmdAgregar.FlatAppearance.BorderColor = Color.SeaGreen;
+        }
+
     }
 }

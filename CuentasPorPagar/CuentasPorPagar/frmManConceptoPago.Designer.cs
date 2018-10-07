@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DgbConceptoDePago = new System.Windows.Forms.DataGridView();
             this.cbxCriterio = new System.Windows.Forms.ComboBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -43,18 +45,40 @@
             this.DgbConceptoDePago.AllowUserToDeleteRows = false;
             this.DgbConceptoDePago.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgbConceptoDePago.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.DgbConceptoDePago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgbConceptoDePago.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DgbConceptoDePago.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.DgbConceptoDePago.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgbConceptoDePago.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DgbConceptoDePago.ColumnHeadersHeight = 35;
+            this.DgbConceptoDePago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgbConceptoDePago.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DgbConceptoDePago.Location = new System.Drawing.Point(46, 105);
+            this.DgbConceptoDePago.EnableHeadersVisualStyles = false;
+            this.DgbConceptoDePago.Location = new System.Drawing.Point(46, 131);
             this.DgbConceptoDePago.Name = "DgbConceptoDePago";
             this.DgbConceptoDePago.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgbConceptoDePago.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DgbConceptoDePago.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DgbConceptoDePago.RowTemplate.Height = 35;
             this.DgbConceptoDePago.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgbConceptoDePago.Size = new System.Drawing.Size(838, 490);
@@ -69,7 +93,7 @@
             "ID",
             "Descripcion",
             "Estado"});
-            this.cbxCriterio.Location = new System.Drawing.Point(68, 36);
+            this.cbxCriterio.Location = new System.Drawing.Point(46, 56);
             this.cbxCriterio.Name = "cbxCriterio";
             this.cbxCriterio.Size = new System.Drawing.Size(165, 31);
             this.cbxCriterio.TabIndex = 1;
@@ -77,16 +101,16 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(331, 37);
+            this.txtBuscar.Location = new System.Drawing.Point(252, 55);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(167, 32);
             this.txtBuscar.TabIndex = 2;
             // 
             // cmdBuscar
             // 
-            this.cmdBuscar.Location = new System.Drawing.Point(519, 37);
+            this.cmdBuscar.Location = new System.Drawing.Point(480, 55);
             this.cmdBuscar.Name = "cmdBuscar";
-            this.cmdBuscar.Size = new System.Drawing.Size(75, 30);
+            this.cmdBuscar.Size = new System.Drawing.Size(100, 32);
             this.cmdBuscar.TabIndex = 3;
             this.cmdBuscar.Text = "button1";
             this.cmdBuscar.UseVisualStyleBackColor = true;
@@ -94,13 +118,19 @@
             // 
             // cmdAgregar
             // 
-            this.cmdAgregar.Location = new System.Drawing.Point(652, 41);
+            this.cmdAgregar.FlatAppearance.BorderSize = 3;
+            this.cmdAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdAgregar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdAgregar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.cmdAgregar.Location = new System.Drawing.Point(620, 56);
             this.cmdAgregar.Name = "cmdAgregar";
-            this.cmdAgregar.Size = new System.Drawing.Size(75, 23);
+            this.cmdAgregar.Size = new System.Drawing.Size(119, 43);
             this.cmdAgregar.TabIndex = 4;
             this.cmdAgregar.Text = "button1";
             this.cmdAgregar.UseVisualStyleBackColor = true;
             this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
+            this.cmdAgregar.MouseEnter += new System.EventHandler(this.cmdAgregar_MouseEnter);
+            this.cmdAgregar.MouseLeave += new System.EventHandler(this.cmdAgregar_MouseLeave);
             // 
             // frmManConceptoPago
             // 
@@ -112,7 +142,9 @@
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.cbxCriterio);
             this.Controls.Add(this.DgbConceptoDePago);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmManConceptoPago";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmManConceptoPago";
             this.Activated += new System.EventHandler(this.frmManEstudiante_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.DgbConceptoDePago)).EndInit();

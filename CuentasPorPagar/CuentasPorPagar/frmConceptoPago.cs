@@ -66,5 +66,22 @@ namespace CuentasPorPagar
                 MessageBox.Show("Error al asignar valores " + ex.Message);
             }
         }
+
+        private void cmdEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string sql = "DELETE CONCEPTO_PAGO WHERE ID_CONCEPTO_PAGO = '" + ID + "'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Registro eliminado con exito");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error al guardar: " + ex.Message);
+            }
+        }
     }
 }

@@ -35,6 +35,7 @@
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmdGuardar = new System.Windows.Forms.Button();
+            this.cmdEliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtID
@@ -98,11 +99,22 @@
             this.cmdGuardar.UseVisualStyleBackColor = true;
             this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 
+            // cmdEliminar
+            // 
+            this.cmdEliminar.Location = new System.Drawing.Point(559, 268);
+            this.cmdEliminar.Name = "cmdEliminar";
+            this.cmdEliminar.Size = new System.Drawing.Size(75, 23);
+            this.cmdEliminar.TabIndex = 3;
+            this.cmdEliminar.Text = "ELIMINAR";
+            this.cmdEliminar.UseVisualStyleBackColor = true;
+            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
+            // 
             // frmConceptoPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmdEliminar);
             this.Controls.Add(this.cmdGuardar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -127,5 +139,6 @@
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button cmdGuardar;
+        private System.Windows.Forms.Button cmdEliminar;
     }
 }
