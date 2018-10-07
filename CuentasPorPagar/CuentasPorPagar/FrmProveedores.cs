@@ -70,6 +70,20 @@ namespace CuentasPorPagar
             dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(224, 224, 224);
         }
 
+        private void cmdAgregar_Click(object sender, EventArgs e)
+        {
+            FrmEdProveedores ff = new FrmEdProveedores();
+            ff.modo = "C";
+            ff.conn = conn;
+            ff.ShowDialog();
+
+        }
+
+        private void dgvProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
             ejecutarConsulta();

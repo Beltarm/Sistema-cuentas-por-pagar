@@ -59,7 +59,6 @@ namespace CuentasPorPagar
                 txtID.Text = ID;
                 txtDescripcion.Text = Descripcion;
                 cmbEstado.Text = Estado;
-                txtID.Enabled = modo.Equals("C");
             }
             catch (Exception ex)
             {
@@ -80,8 +79,38 @@ namespace CuentasPorPagar
             }
             catch (Exception ex)
             {
-                MessageBox.Show("error al guardar: " + ex.Message);
+                MessageBox.Show("error al eliminar: " + ex.Message);
             }
+        }
+
+        /********************ANIMACION DE BOTON GUARDAR***********************/
+        private void cmdGuardar_MouseLeave(object sender, EventArgs e)
+        {
+            cmdGuardar.BackColor = Color.Transparent;
+            cmdGuardar.ForeColor = Color.FromArgb(92, 184, 92);
+            cmdGuardar.FlatAppearance.BorderColor = Color.FromArgb(92, 184, 92);
+        }
+
+        private void cmdGuardar_MouseEnter(object sender, EventArgs e)
+        {
+            cmdGuardar.BackColor = Color.FromArgb(92, 184, 92);
+            cmdGuardar.ForeColor = Color.Transparent;
+            cmdGuardar.FlatAppearance.BorderColor = Color.FromArgb(92, 184, 92);
+        }
+
+        /********************ANIMACION DE BOTON ELIMINAR***********************/
+        private void cmdEliminar_MouseLeave(object sender, EventArgs e)
+        {
+            cmdEliminar.BackColor = Color.Transparent;
+            cmdEliminar.ForeColor = Color.FromArgb(217, 83, 79);
+            cmdEliminar.FlatAppearance.BorderColor = Color.FromArgb(217, 83, 79);
+        }
+
+        private void cmdEliminar_MouseEnter(object sender, EventArgs e)
+        {
+            cmdEliminar.BackColor = Color.FromArgb(217, 83, 79);
+            cmdEliminar.ForeColor = Color.Transparent;
+            cmdEliminar.FlatAppearance.BorderColor = Color.FromArgb(217, 83, 79);
         }
     }
 }

@@ -70,8 +70,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgbConceptoDePago.DefaultCellStyle = dataGridViewCellStyle2;
             this.DgbConceptoDePago.EnableHeadersVisualStyles = false;
-            this.DgbConceptoDePago.Location = new System.Drawing.Point(43, 105);
-            this.DgbConceptoDePago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DgbConceptoDePago.Location = new System.Drawing.Point(45, 130);
+            this.DgbConceptoDePago.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgbConceptoDePago.Name = "DgbConceptoDePago";
             this.DgbConceptoDePago.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -85,31 +85,32 @@
             this.DgbConceptoDePago.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DgbConceptoDePago.RowTemplate.Height = 35;
             this.DgbConceptoDePago.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgbConceptoDePago.Size = new System.Drawing.Size(628, 398);
+            this.DgbConceptoDePago.Size = new System.Drawing.Size(837, 490);
             this.DgbConceptoDePago.TabIndex = 0;
             this.DgbConceptoDePago.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgbConceptoDePago_CellDoubleClick);
             // 
             // cbxCriterio
             // 
+            this.cbxCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCriterio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCriterio.FormattingEnabled = true;
             this.cbxCriterio.Items.AddRange(new object[] {
             "ID",
             "Descripcion",
             "Estado"});
-            this.cbxCriterio.Location = new System.Drawing.Point(89, 46);
-            this.cbxCriterio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxCriterio.Location = new System.Drawing.Point(119, 57);
+            this.cbxCriterio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxCriterio.Name = "cbxCriterio";
-            this.cbxCriterio.Size = new System.Drawing.Size(125, 29);
+            this.cbxCriterio.Size = new System.Drawing.Size(165, 31);
             this.cbxCriterio.TabIndex = 1;
             // 
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(290, 46);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscar.Location = new System.Drawing.Point(387, 57);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(126, 27);
+            this.txtBuscar.Size = new System.Drawing.Size(167, 32);
             this.txtBuscar.TabIndex = 2;
             // 
             // cmdBuscar
@@ -121,10 +122,10 @@
             this.cmdBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(139)))), ((int)(((byte)(202)))));
             this.cmdBuscar.Image = ((System.Drawing.Image)(resources.GetObject("cmdBuscar.Image")));
             this.cmdBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdBuscar.Location = new System.Drawing.Point(435, 46);
-            this.cmdBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdBuscar.Location = new System.Drawing.Point(580, 57);
+            this.cmdBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmdBuscar.Name = "cmdBuscar";
-            this.cmdBuscar.Size = new System.Drawing.Size(112, 42);
+            this.cmdBuscar.Size = new System.Drawing.Size(149, 52);
             this.cmdBuscar.TabIndex = 3;
             this.cmdBuscar.Text = "Filtrar";
             this.cmdBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -141,10 +142,10 @@
             this.cmdAgregar.ForeColor = System.Drawing.Color.SeaGreen;
             this.cmdAgregar.Image = ((System.Drawing.Image)(resources.GetObject("cmdAgregar.Image")));
             this.cmdAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdAgregar.Location = new System.Drawing.Point(559, 46);
-            this.cmdAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdAgregar.Location = new System.Drawing.Point(745, 57);
+            this.cmdAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmdAgregar.Name = "cmdAgregar";
-            this.cmdAgregar.Size = new System.Drawing.Size(112, 42);
+            this.cmdAgregar.Size = new System.Drawing.Size(149, 52);
             this.cmdAgregar.TabIndex = 4;
             this.cmdAgregar.Text = "Agregar";
             this.cmdAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -157,10 +158,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 49);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(26, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 21);
+            this.label1.Size = new System.Drawing.Size(77, 23);
             this.label1.TabIndex = 5;
             this.label1.Text = "Criterio";
             // 
@@ -168,18 +168,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(240, 48);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(310, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 21);
+            this.label2.Size = new System.Drawing.Size(61, 23);
             this.label2.TabIndex = 5;
             this.label2.Text = "Texto";
             // 
             // frmManConceptoPago
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 514);
+            this.ClientSize = new System.Drawing.Size(919, 633);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmdAgregar);
@@ -188,7 +187,8 @@
             this.Controls.Add(this.cbxCriterio);
             this.Controls.Add(this.DgbConceptoDePago);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "frmManConceptoPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmManConceptoPago";

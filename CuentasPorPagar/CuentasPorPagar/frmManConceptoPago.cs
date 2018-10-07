@@ -24,6 +24,7 @@ namespace CuentasPorPagar
         {
             try
             {
+                /*Data Source=ana-alex-brian.database.windows.net;Initial Catalog=Cuentas_por_pagar;User ID=propietaria;Password=#Seguridad1*/
                 conn = new SqlConnection("Data Source=ana-alex-brian.database.windows.net;Initial Catalog=Cuentas_por_pagar;User ID=propietaria;Password=#Seguridad1");
                 conn.Open();
 

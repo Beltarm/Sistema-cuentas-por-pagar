@@ -66,6 +66,12 @@
     <Compile Include="frmConceptoPago.Designer.cs">
       <DependentUpon>frmConceptoPago.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEdProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEdProveedores.Designer.cs">
+      <DependentUpon>FrmEdProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmManConceptoPago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConceptoPago.resx">
       <DependentUpon>frmConceptoPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEdProveedores.resx">
+      <DependentUpon>FrmEdProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManConceptoPago.resx">
       <DependentUpon>frmManConceptoPago.cs</DependentUpon>
