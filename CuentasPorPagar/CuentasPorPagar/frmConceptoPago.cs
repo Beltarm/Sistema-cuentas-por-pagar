@@ -79,7 +79,7 @@ namespace CuentasPorPagar
             }
             catch (Exception ex)
             {
-                MessageBox.Show("error al guardar: " + ex.Message);
+                MessageBox.Show("error al eliminar: " + ex.Message);
             }
         }
 

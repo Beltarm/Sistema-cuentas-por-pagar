@@ -28,5 +28,11 @@ namespace CuentasPorPagar
             FrmProveedores frm = new FrmProveedores();
             frm.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmMantDocumentos frm = new FrmMantDocumentos();
+            frm.ShowDialog();
+        }
     }
 }
