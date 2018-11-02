@@ -14,12 +14,14 @@ namespace CuentasPorPagar
     {
         public int xClick = 0, yClick = 0;
         public string modo = "";
+
         public FrmMenu()
         {
             InitializeComponent();
             Selector.Height = btnPanelPrincipal.Height;
             Selector.Top = btnPanelPrincipal.Top;
             pnPrincipal.BringToFront();
+            
         }
 
         private void FrmMenu_Load(object sender, EventArgs e)
@@ -29,6 +31,7 @@ namespace CuentasPorPagar
                 MessageBox.Show(modo);
                 btnConfiguracion.Enabled = false;
                 btnPanelMantenimientos.Enabled = false;
+                pnPrincipal.modo = "user";
             }
         }
 
@@ -62,8 +65,6 @@ namespace CuentasPorPagar
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-       
+        }       
     }
 }

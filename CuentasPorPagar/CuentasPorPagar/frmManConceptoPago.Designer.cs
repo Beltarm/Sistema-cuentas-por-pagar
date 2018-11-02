@@ -193,6 +193,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmManConceptoPago";
             this.Activated += new System.EventHandler(this.frmManEstudiante_Activated);
+            this.Load += new System.EventHandler(this.frmManConceptoPago_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgbConceptoDePago)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

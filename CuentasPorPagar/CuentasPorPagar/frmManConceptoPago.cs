@@ -15,9 +15,18 @@ namespace CuentasPorPagar
     {
         public int xClick = 0, yClick = 0;
         SqlConnection conn = null;
+        public string modo = "";
         public frmManConceptoPago()
         {
             InitializeComponent();
+        }
+
+        private void frmManConceptoPago_Load(object sender, EventArgs e)
+        {
+            if (modo == "user")
+            {
+                cmdAgregar.Enabled = false;
+            }
         }
 
         private void ejecutarConsulta()
@@ -91,22 +100,26 @@ namespace CuentasPorPagar
 
         private void DgbConceptoDePago_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
+            if(modo != "user")
             {
-                DataGridViewRow row = this.DgbConceptoDePago.SelectedRows[0];
-                frmConceptoPago frm = new frmConceptoPago();
-                frm.ID = row.Cells[0].Value.ToString();
-                frm.Descripcion = row.Cells[1].Value.ToString();
-                frm.Estado = row.Cells[2].Value.ToString();
-                frm.modo = "U";
-                frm.conn = conn;
+                try
+                {
+                    DataGridViewRow row = this.DgbConceptoDePago.SelectedRows[0];
+                    frmConceptoPago frm = new frmConceptoPago();
+                    frm.ID = row.Cells[0].Value.ToString();
+                    frm.Descripcion = row.Cells[1].Value.ToString();
+                    frm.Estado = row.Cells[2].Value.ToString();
+                    frm.modo = "U";
+                    frm.conn = conn;
 
-                frm.ShowDialog();
+                    frm.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al editar registro " + ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al editar registro " + ex.Message);
-            }
+            
         }
         /********************ANIMACION DE BOTON AGREGAR***********************/
         private void cmdAgregar_MouseLeave(object sender, EventArgs e)

@@ -29,30 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pnPrincipal));
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.btnConceptos = new System.Windows.Forms.Button();
+            this.btnProveedores = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Enabled = false;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(66, 60);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 114);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "15";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -77,22 +60,6 @@
             this.label2.Size = new System.Drawing.Size(119, 23);
             this.label2.TabIndex = 8;
             this.label2.Text = "Conceptos";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(340, 60);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(225, 114);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "15";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -122,6 +89,40 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // btnConceptos
+            // 
+            this.btnConceptos.BackColor = System.Drawing.Color.White;
+            this.btnConceptos.FlatAppearance.BorderSize = 0;
+            this.btnConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConceptos.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConceptos.Image = ((System.Drawing.Image)(resources.GetObject("btnConceptos.Image")));
+            this.btnConceptos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConceptos.Location = new System.Drawing.Point(340, 60);
+            this.btnConceptos.Name = "btnConceptos";
+            this.btnConceptos.Size = new System.Drawing.Size(225, 114);
+            this.btnConceptos.TabIndex = 7;
+            this.btnConceptos.Text = "15";
+            this.btnConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConceptos.UseVisualStyleBackColor = false;
+            this.btnConceptos.Click += new System.EventHandler(this.btnConceptos_Click);
+            // 
+            // btnProveedores
+            // 
+            this.btnProveedores.BackColor = System.Drawing.Color.White;
+            this.btnProveedores.FlatAppearance.BorderSize = 0;
+            this.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProveedores.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProveedores.Image = ((System.Drawing.Image)(resources.GetObject("btnProveedores.Image")));
+            this.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProveedores.Location = new System.Drawing.Point(66, 60);
+            this.btnProveedores.Name = "btnProveedores";
+            this.btnProveedores.Size = new System.Drawing.Size(225, 114);
+            this.btnProveedores.TabIndex = 3;
+            this.btnProveedores.Text = "15";
+            this.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnProveedores.UseVisualStyleBackColor = false;
+            this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
+            // 
             // pnPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -129,9 +130,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnConceptos);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnProveedores);
             this.Name = "pnPrincipal";
             this.Size = new System.Drawing.Size(891, 572);
             this.ResumeLayout(false);
@@ -141,10 +142,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnProveedores;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnConceptos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
     }
