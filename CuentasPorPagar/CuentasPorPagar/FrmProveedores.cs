@@ -82,13 +82,10 @@ namespace CuentasPorPagar
             ff.conn = conn;
             ff.ShowDialog();
 
-        }
 
-        private void dgvProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
         }
-
+        
         private void dgvProveedores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (modo != "user")
@@ -113,6 +110,11 @@ namespace CuentasPorPagar
                     MessageBox.Show("Error al editar registro " + ex.Message);
                 }
             }          
+        }
+
+        private void FrmProveedores_Activated(object sender, EventArgs e)
+        {
+            ejecutarConsulta();
         }
 
         private void cmdBuscar_Click(object sender, EventArgs e)
