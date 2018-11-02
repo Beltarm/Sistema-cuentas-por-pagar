@@ -29,41 +29,58 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtBalance = new System.Windows.Forms.MaskedTextBox();
+            this.txtCedula = new System.Windows.Forms.MaskedTextBox();
             this.cbxEstado = new System.Windows.Forms.ComboBox();
             this.cbxTipo = new System.Windows.Forms.ComboBox();
-            this.txtBalance = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmdEliminar = new System.Windows.Forms.Button();
             this.cmdGuardar = new System.Windows.Forms.Button();
-            this.txtCedula = new System.Windows.Forms.MaskedTextBox();
+            this.cbxIdentificacion = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbxIdentificacion);
+            this.panel1.Controls.Add(this.txtBalance);
             this.panel1.Controls.Add(this.txtCedula);
             this.panel1.Controls.Add(this.cbxEstado);
             this.panel1.Controls.Add(this.cbxTipo);
-            this.panel1.Controls.Add(this.txtBalance);
             this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.txtID);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(84, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(584, 246);
             this.panel1.TabIndex = 0;
+            // 
+            // txtBalance
+            // 
+            this.txtBalance.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtBalance.Location = new System.Drawing.Point(235, 157);
+            this.txtBalance.Mask = "0000000000000";
+            this.txtBalance.Name = "txtBalance";
+            this.txtBalance.Size = new System.Drawing.Size(222, 27);
+            this.txtBalance.TabIndex = 9;
+            // 
+            // txtCedula
+            // 
+            this.txtCedula.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtCedula.Location = new System.Drawing.Point(235, 77);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(222, 27);
+            this.txtCedula.TabIndex = 12;
             // 
             // cbxEstado
             // 
@@ -91,14 +108,6 @@
             this.cbxTipo.Size = new System.Drawing.Size(222, 29);
             this.cbxTipo.TabIndex = 10;
             // 
-            // txtBalance
-            // 
-            this.txtBalance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBalance.Location = new System.Drawing.Point(235, 166);
-            this.txtBalance.Name = "txtBalance";
-            this.txtBalance.Size = new System.Drawing.Size(222, 27);
-            this.txtBalance.TabIndex = 9;
-            // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -111,7 +120,7 @@
             // 
             this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(516, 60);
+            this.txtID.Location = new System.Drawing.Point(524, 35);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(33, 27);
             this.txtID.TabIndex = 6;
@@ -146,16 +155,6 @@
             this.label4.Size = new System.Drawing.Size(134, 21);
             this.label4.TabIndex = 3;
             this.label4.Text = "Tipo de persona";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(34, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 21);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Cédula";
             // 
             // label2
             // 
@@ -212,14 +211,18 @@
             this.cmdGuardar.UseVisualStyleBackColor = true;
             this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 
-            // txtCedula
+            // cbxIdentificacion
             // 
-            this.txtCedula.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txtCedula.Location = new System.Drawing.Point(235, 77);
-            this.txtCedula.Mask = "000-0000000-0";
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(222, 27);
-            this.txtCedula.TabIndex = 12;
+            this.cbxIdentificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxIdentificacion.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.cbxIdentificacion.FormattingEnabled = true;
+            this.cbxIdentificacion.Items.AddRange(new object[] {
+            "Cédula",
+            "RNC"});
+            this.cbxIdentificacion.Location = new System.Drawing.Point(33, 77);
+            this.cbxIdentificacion.Name = "cbxIdentificacion";
+            this.cbxIdentificacion.Size = new System.Drawing.Size(121, 29);
+            this.cbxIdentificacion.TabIndex = 13;
             // 
             // FrmEdProveedores
             // 
@@ -244,16 +247,16 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox cbxEstado;
         private System.Windows.Forms.ComboBox cbxTipo;
-        private System.Windows.Forms.TextBox txtBalance;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button cmdEliminar;
         private System.Windows.Forms.Button cmdGuardar;
         private System.Windows.Forms.MaskedTextBox txtCedula;
+        private System.Windows.Forms.MaskedTextBox txtBalance;
+        private System.Windows.Forms.ComboBox cbxIdentificacion;
     }
 }
