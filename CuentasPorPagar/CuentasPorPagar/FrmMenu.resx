@@ -118,6 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnConfiguracion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA37AAAN+wELdzWbAAAAB3RJ
+        TUUH4gsCFC0sQ1zUEwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAP3SURBVFhH
+        xZdZSBVRGMc1K6WCpF2NCloppZLCemklCoKWh6yHyiIfWskkKmiB0oo2pH0li5YHE3pph4yKVmgxijaI
+        Vlts314k7Pc/fXP13rw6N4X+8GPOt8yc786cmfPdKKm8vLwT3IX9kOCctRTX6Qw58BhewQNIt3CFcGry
+        F7AcdsFnWASxlhKxOHcCfIe90A92guboaCkVwnkTcs2U3RsuwD2IMbdvcc5kKIUUsxeDJu/kEkJFYAsc
+        MjMgfG8h1UxfIj8WXkI/s3Unw08uEWwG7yHNXE7YRyDHTF8ifzoUmSlb1x1qZpDwJ8FYz5gFV6CecyDG
+        PUB3YYa5ahS5ByHLTNmHYImZAeFLBC3OUs8RA9dAC/AY9DF/CvgugrzTMNNM2aPhtplO2AnwEPKhzNx/
+        hKMbLIQP4B4JR99FkKPis82UHQclcAmyIBX0OubBQCi21GARmAgfwXcRxLwF18FcTtiNYBwUwDfYYP4V
+        sNclVSWCk8BXEfiCVjvHeBcII+K603rcyeaqWiTona62CMahkw8B5bRwCSHCnwZagPPNVb1IzIDQIh5B
+        C6hq8k8wyuxWMA1Gwmw4DFpfUxX3LU6YApWLqA81Td4G7sNl0Ct+ALQQ2yoesThxKjyBhuB38jzZdSYu
+        GA//Z3KJi/qdXBtZ4KtaJ+KCfiffCrdhs/x1Ii4W0W3nmA3HNa61uFDEz5zxWjgPG23s73GQ2BwyYTuc
+        gzMQ8YLDbg3aCffBHVBnVH0RJGjneg0nQO+rmAPtLR5u8h2yw4m4PljFEL4IAvruvwH3oQkV/iagxjJ0
+        8lt2XAo7wG1EHPWt6K+xxDh8ETjUmeg2u/aLoxpKXcxjmPndBsPRm3wTRMNKOAqnoNBytO0G7pbEWI9X
+        b0dwERhaJJts3AW+gBpJLb41oLaqucVbgibfIruy8K2HfDNlBz0yibGK0F2rKIJBEXhN5EkI6gOx1Rtu
+        t7H2hBsQ7YKVhG8ZaJdLMpd8VRWhHlSd+G7P8Q7ag3a5H9DYBUzY2rt/gT7D6XDLQn+JmDod7ZQ1FaE7
+        +RXGy7gO3UE7nP4dZVieE/ZqOG1jrY8CFwgj4l4RieaSzytiOKj/VPOqdVes4DaYZ4mDQW/DUBgEY0Bt
+        VFeLF8ICjasTOSpCjWfgbx7jAaA7rcmvgv66lSnQF55DnCWuA61WD684ten6x9NOdk0iT0WoAXVFcPR+
+        uSZvCj2hxEvOhbMKOEeI8OvVewqZ5vIl8r0i9KoHJreYGhS3uGU0gFWgV2wuqHfXQtEC1Huu1trdiUjF
+        ebqjWtz6yiZDL1Ax+kHBzSsONYx7QO+qnr3+rGiNuDXwr+L8EXARfsIz0DWZPCrqN0x+s6PZinJOAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
   <data name="btnPanelMantenimientos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN

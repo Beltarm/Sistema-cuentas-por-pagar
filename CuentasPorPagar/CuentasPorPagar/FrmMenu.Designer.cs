@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pnPrincipal = new CuentasPorPagar.pnPrincipal();
             this.btnPanelMantenimientos = new System.Windows.Forms.Button();
             this.Selector = new System.Windows.Forms.Panel();
             this.btnPanelPrincipal = new System.Windows.Forms.Button();
@@ -40,6 +39,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnConfiguracion = new System.Windows.Forms.Button();
+            this.pnPrincipal = new CuentasPorPagar.pnPrincipal();
             this.pnMantenimientos1 = new CuentasPorPagar.PnMantenimientos();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -60,6 +61,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.panel5.Controls.Add(this.btnConfiguracion);
             this.panel5.Controls.Add(this.btnPanelMantenimientos);
             this.panel5.Controls.Add(this.Selector);
             this.panel5.Controls.Add(this.btnPanelPrincipal);
@@ -68,14 +70,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(257, 731);
             this.panel5.TabIndex = 4;
-            // 
-            // pnPrincipal1
-            // 
-            this.pnPrincipal.BackColor = System.Drawing.Color.Transparent;
-            this.pnPrincipal.Location = new System.Drawing.Point(263, 147);
-            this.pnPrincipal.Name = "pnPrincipal1";
-            this.pnPrincipal.Size = new System.Drawing.Size(891, 572);
-            this.pnPrincipal.TabIndex = 5;
             // 
             // btnPanelMantenimientos
             // 
@@ -174,14 +168,39 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // btnConfiguracion
+            // 
+            this.btnConfiguracion.FlatAppearance.BorderSize = 0;
+            this.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfiguracion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguracion.ForeColor = System.Drawing.Color.White;
+            this.btnConfiguracion.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguracion.Image")));
+            this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfiguracion.Location = new System.Drawing.Point(12, 286);
+            this.btnConfiguracion.Name = "btnConfiguracion";
+            this.btnConfiguracion.Size = new System.Drawing.Size(245, 86);
+            this.btnConfiguracion.TabIndex = 5;
+            this.btnConfiguracion.Text = "        Configuracion";
+            this.btnConfiguracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfiguracion.UseVisualStyleBackColor = true;
+            // 
+            // pnPrincipal
+            // 
+            this.pnPrincipal.BackColor = System.Drawing.Color.Transparent;
+            this.pnPrincipal.Location = new System.Drawing.Point(263, 147);
+            this.pnPrincipal.Name = "pnPrincipal";
+            this.pnPrincipal.Size = new System.Drawing.Size(891, 572);
+            this.pnPrincipal.TabIndex = 5;
+            // 
             // pnMantenimientos1
             // 
             this.pnMantenimientos1.Location = new System.Drawing.Point(263, 147);
+            this.pnMantenimientos1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnMantenimientos1.Name = "pnMantenimientos1";
             this.pnMantenimientos1.Size = new System.Drawing.Size(891, 572);
             this.pnMantenimientos1.TabIndex = 4;
             // 
-            // Form1
+            // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -193,9 +212,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -216,6 +236,7 @@
         private System.Windows.Forms.Button btnCerrar;
         private PnMantenimientos pnMantenimientos1;
         private pnPrincipal pnPrincipal;
+        private System.Windows.Forms.Button btnConfiguracion;
     }
 }
 
