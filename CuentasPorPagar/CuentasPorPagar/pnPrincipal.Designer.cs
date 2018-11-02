@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnDocumentosPendientes = new System.Windows.Forms.Button();
             this.btnConceptos = new System.Windows.Forms.Button();
             this.btnProveedores = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -73,21 +73,22 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Pendientes";
             // 
-            // button3
+            // btnDocumentosPendientes
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(620, 60);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(225, 114);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "15";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnDocumentosPendientes.BackColor = System.Drawing.Color.White;
+            this.btnDocumentosPendientes.FlatAppearance.BorderSize = 0;
+            this.btnDocumentosPendientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDocumentosPendientes.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDocumentosPendientes.Image = ((System.Drawing.Image)(resources.GetObject("btnDocumentosPendientes.Image")));
+            this.btnDocumentosPendientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDocumentosPendientes.Location = new System.Drawing.Point(620, 60);
+            this.btnDocumentosPendientes.Name = "btnDocumentosPendientes";
+            this.btnDocumentosPendientes.Size = new System.Drawing.Size(225, 114);
+            this.btnDocumentosPendientes.TabIndex = 9;
+            this.btnDocumentosPendientes.Text = "15";
+            this.btnDocumentosPendientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDocumentosPendientes.UseVisualStyleBackColor = false;
+            this.btnDocumentosPendientes.Click += new System.EventHandler(this.btnDocumentosPendientes_Click);
             // 
             // btnConceptos
             // 
@@ -128,7 +129,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnDocumentosPendientes);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnConceptos);
             this.Controls.Add(this.label1);
@@ -147,6 +148,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnConceptos;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnDocumentosPendientes;
     }
 }

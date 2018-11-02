@@ -31,5 +31,12 @@ namespace CuentasPorPagar
             frm.modo = modo;
             frm.ShowDialog();
         }
+
+        private void btnDocumentosPendientes_Click(object sender, EventArgs e)
+        {
+            FrmMantDocumentos frm = new FrmMantDocumentos();
+            frm.modo = modo;
+            frm.ShowDialog();
+        }
     }
 }

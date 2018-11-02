@@ -28,7 +28,6 @@ namespace CuentasPorPagar
         {
             if (modo == "user")
             {
-                MessageBox.Show(modo);
                 btnConfiguracion.Enabled = false;
                 btnPanelMantenimientos.Enabled = false;
                 pnPrincipal.modo = "user";

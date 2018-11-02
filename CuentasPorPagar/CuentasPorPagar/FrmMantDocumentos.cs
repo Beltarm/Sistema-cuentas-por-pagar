@@ -15,6 +15,7 @@ namespace CuentasPorPagar
     {
         SqlConnection conn = null;
         FrmEDDocumentos form2 = new FrmEDDocumentos();
+        public string modo = "";
         public FrmMantDocumentos()
         {
             InitializeComponent();
@@ -37,6 +38,10 @@ namespace CuentasPorPagar
         private void FrmMantDocumentos_Load(object sender, EventArgs e)
         {
             ejecutarConsulta();
+            if(modo == "user")
+            {
+                cmdAgregar.Enabled = false;
+            }
         }
 
         private void ejecutarConsulta()
@@ -127,20 +132,22 @@ namespace CuentasPorPagar
 
         private void dgvResultados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = this.dgvResultados.SelectedRows[0];
-            FrmEDDocumentos frm = new FrmEDDocumentos();
-            frm.Num_Documento = row.Cells[0].Value.ToString();
-            frm.Num_Factura = row.Cells[1].Value.ToString();
-            frm.concepto_pago = row.Cells[2].Value.ToString();
-            frm.Fecha_Documento = row.Cells[3].Value.ToString();
-            frm.Monto = row.Cells[4].Value.ToString();
-            frm.Fecha_Registro = row.Cells[5].Value.ToString();
-            frm.nombre_proveedor = row.Cells[6].Value.ToString();
-            frm.Estado = row.Cells[7].Value.ToString();
-            frm.modo = "U";
-            frm.conn = conn;
-            frm.ShowDialog();
-
+            if(modo != "user")
+            {
+                DataGridViewRow row = this.dgvResultados.SelectedRows[0];
+                FrmEDDocumentos frm = new FrmEDDocumentos();
+                frm.Num_Documento = row.Cells[0].Value.ToString();
+                frm.Num_Factura = row.Cells[1].Value.ToString();
+                frm.concepto_pago = row.Cells[2].Value.ToString();
+                frm.Fecha_Documento = row.Cells[3].Value.ToString();
+                frm.Monto = row.Cells[4].Value.ToString();
+                frm.Fecha_Registro = row.Cells[5].Value.ToString();
+                frm.nombre_proveedor = row.Cells[6].Value.ToString();
+                frm.Estado = row.Cells[7].Value.ToString();
+                frm.modo = "U";
+                frm.conn = conn;
+                frm.ShowDialog();
+            }    
         }
     }
 }
