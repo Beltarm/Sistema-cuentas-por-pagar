@@ -13,12 +13,23 @@ namespace CuentasPorPagar
     public partial class FrmMenu : Form
     {
         public int xClick = 0, yClick = 0;
+        public string modo = "";
         public FrmMenu()
         {
             InitializeComponent();
             Selector.Height = btnPanelPrincipal.Height;
             Selector.Top = btnPanelPrincipal.Top;
             pnPrincipal.BringToFront();
+        }
+
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+            if (modo == "user")
+            {
+                MessageBox.Show(modo);
+                btnConfiguracion.Enabled = false;
+                btnPanelMantenimientos.Enabled = false;
+            }
         }
 
         private void panel2_MouseMove(object sender, MouseEventArgs e)
@@ -50,8 +61,7 @@ namespace CuentasPorPagar
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
-
+            Application.Exit();
         }
 
        

@@ -13,10 +13,10 @@ namespace CuentasPorPagar
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Cuentas_por_pagarEntities : DbContext
+    public partial class Cuentas_por_pagarEntities1 : DbContext
     {
-        public Cuentas_por_pagarEntities()
-            : base("name=Cuentas_por_pagarEntities")
+        public Cuentas_por_pagarEntities1()
+            : base("name=Cuentas_por_pagarEntities1")
         {
         }
     
@@ -25,6 +25,7 @@ namespace CuentasPorPagar
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<ROL> ROL { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
     }
 }

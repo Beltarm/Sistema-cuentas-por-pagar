@@ -12,7 +12,7 @@ namespace CuentasPorPagar
 {
     public partial class FrmLogin : Form
     {
-        Cuentas_por_pagarEntities entities = new Cuentas_por_pagarEntities();
+        Cuentas_por_pagarEntities1 entities = new Cuentas_por_pagarEntities1();
         public FrmLogin()
         {
             InitializeComponent();
@@ -37,10 +37,10 @@ namespace CuentasPorPagar
             {
                 MessageBox.Show("Bienvenido " + txtUsuario.Text);
                 FrmMenu frm = new FrmMenu();
-                frm.ShowDialog();
-                
+                frm.modo = usuario.ROL.First().NOMBRE_ROL;
+                this.Hide();
+                frm.ShowDialog();            
             }
-            
         }
     }
 }
