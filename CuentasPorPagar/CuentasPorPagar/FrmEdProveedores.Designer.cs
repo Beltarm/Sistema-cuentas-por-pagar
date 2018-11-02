@@ -60,16 +60,15 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(84, 25);
+            this.panel1.Location = new System.Drawing.Point(34, 23);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(584, 246);
+            this.panel1.Size = new System.Drawing.Size(548, 265);
             this.panel1.TabIndex = 0;
             // 
             // txtBalance
             // 
             this.txtBalance.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txtBalance.Location = new System.Drawing.Point(235, 157);
-            this.txtBalance.Mask = "0000000000000";
+            this.txtBalance.Location = new System.Drawing.Point(235, 166);
             this.txtBalance.Name = "txtBalance";
             this.txtBalance.Size = new System.Drawing.Size(222, 27);
             this.txtBalance.TabIndex = 9;
@@ -90,7 +89,7 @@
             this.cbxEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cbxEstado.Location = new System.Drawing.Point(235, 200);
+            this.cbxEstado.Location = new System.Drawing.Point(235, 208);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(222, 29);
             this.cbxEstado.TabIndex = 11;
@@ -120,7 +119,7 @@
             // 
             this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(524, 35);
+            this.txtID.Location = new System.Drawing.Point(492, 32);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(33, 27);
             this.txtID.TabIndex = 6;
@@ -130,7 +129,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(34, 208);
+            this.label6.Location = new System.Drawing.Point(34, 211);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 21);
             this.label6.TabIndex = 5;
@@ -170,7 +169,7 @@
             // 
             this.panel2.Controls.Add(this.cmdEliminar);
             this.panel2.Controls.Add(this.cmdGuardar);
-            this.panel2.Location = new System.Drawing.Point(167, 286);
+            this.panel2.Location = new System.Drawing.Point(98, 309);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(431, 70);
             this.panel2.TabIndex = 1;
@@ -228,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(621, 415);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmEdProveedores";

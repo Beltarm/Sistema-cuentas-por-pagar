@@ -52,7 +52,7 @@ namespace CuentasPorPagar
 
                         SqlCommand cnd = new SqlCommand(sql, conn);
                         cnd.ExecuteNonQuery();
-                        MessageBox.Show("Datos guardados con exito");
+                        MessageBox.Show("Datos guardados con éxito");
                         this.Close();
                     }
                     else
@@ -68,7 +68,7 @@ namespace CuentasPorPagar
 
                         SqlCommand cnd = new SqlCommand(sql, conn);
                         cnd.ExecuteNonQuery();
-                        MessageBox.Show("Datos guardados con exito");
+                        MessageBox.Show("Datos guardados con éxito");
                         this.Close();
                     }
                     else

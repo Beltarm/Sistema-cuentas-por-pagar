@@ -71,82 +71,90 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(611, 332);
+            this.panel1.Size = new System.Drawing.Size(688, 332);
             this.panel1.TabIndex = 0;
             // 
             // cbxEstado
             // 
             this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxEstado.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cbxEstado.FormattingEnabled = true;
             this.cbxEstado.Items.AddRange(new object[] {
             "Pendiente",
             "Pagado"});
-            this.cbxEstado.Location = new System.Drawing.Point(471, 136);
+            this.cbxEstado.Location = new System.Drawing.Point(180, 249);
             this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(121, 21);
+            this.cbxEstado.Size = new System.Drawing.Size(158, 29);
             this.cbxEstado.TabIndex = 15;
             // 
             // cbxProveedor
             // 
             this.cbxProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxProveedor.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cbxProveedor.FormattingEnabled = true;
-            this.cbxProveedor.Location = new System.Drawing.Point(471, 88);
+            this.cbxProveedor.Location = new System.Drawing.Point(521, 82);
             this.cbxProveedor.Name = "cbxProveedor";
-            this.cbxProveedor.Size = new System.Drawing.Size(121, 21);
+            this.cbxProveedor.Size = new System.Drawing.Size(148, 29);
             this.cbxProveedor.TabIndex = 14;
             // 
             // mtxFechaRegistro
             // 
-            this.mtxFechaRegistro.Location = new System.Drawing.Point(461, 29);
+            this.mtxFechaRegistro.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.mtxFechaRegistro.Location = new System.Drawing.Point(521, 25);
             this.mtxFechaRegistro.Mask = "00/00/0000";
             this.mtxFechaRegistro.Name = "mtxFechaRegistro";
-            this.mtxFechaRegistro.Size = new System.Drawing.Size(100, 20);
+            this.mtxFechaRegistro.Size = new System.Drawing.Size(148, 27);
             this.mtxFechaRegistro.TabIndex = 13;
             // 
             // txtMonto
             // 
-            this.txtMonto.Location = new System.Drawing.Point(90, 247);
+            this.txtMonto.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtMonto.Location = new System.Drawing.Point(521, 135);
             this.txtMonto.Name = "txtMonto";
-            this.txtMonto.Size = new System.Drawing.Size(100, 20);
+            this.txtMonto.Size = new System.Drawing.Size(148, 27);
             this.txtMonto.TabIndex = 12;
             // 
             // mtxFechaDocumento
             // 
-            this.mtxFechaDocumento.Location = new System.Drawing.Point(167, 192);
+            this.mtxFechaDocumento.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.mtxFechaDocumento.Location = new System.Drawing.Point(180, 188);
             this.mtxFechaDocumento.Mask = "00/00/0000";
             this.mtxFechaDocumento.Name = "mtxFechaDocumento";
-            this.mtxFechaDocumento.Size = new System.Drawing.Size(100, 20);
+            this.mtxFechaDocumento.Size = new System.Drawing.Size(158, 27);
             this.mtxFechaDocumento.TabIndex = 11;
             // 
             // cbxConcepto
             // 
             this.cbxConcepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxConcepto.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cbxConcepto.FormattingEnabled = true;
-            this.cbxConcepto.Location = new System.Drawing.Point(142, 133);
+            this.cbxConcepto.Location = new System.Drawing.Point(180, 130);
             this.cbxConcepto.Name = "cbxConcepto";
-            this.cbxConcepto.Size = new System.Drawing.Size(121, 21);
+            this.cbxConcepto.Size = new System.Drawing.Size(158, 29);
             this.cbxConcepto.TabIndex = 10;
             // 
             // txtNumFactura
             // 
-            this.txtNumFactura.Location = new System.Drawing.Point(163, 82);
+            this.txtNumFactura.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtNumFactura.Location = new System.Drawing.Point(180, 76);
             this.txtNumFactura.Name = "txtNumFactura";
-            this.txtNumFactura.Size = new System.Drawing.Size(100, 20);
+            this.txtNumFactura.Size = new System.Drawing.Size(158, 27);
             this.txtNumFactura.TabIndex = 9;
             // 
             // txtNumDocumento
             // 
-            this.txtNumDocumento.Location = new System.Drawing.Point(180, 31);
+            this.txtNumDocumento.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtNumDocumento.Location = new System.Drawing.Point(180, 25);
             this.txtNumDocumento.Name = "txtNumDocumento";
             this.txtNumDocumento.ReadOnly = true;
-            this.txtNumDocumento.Size = new System.Drawing.Size(100, 20);
+            this.txtNumDocumento.Size = new System.Drawing.Size(158, 27);
             this.txtNumDocumento.TabIndex = 8;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(377, 136);
+            this.label8.Location = new System.Drawing.Point(4, 257);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 21);
             this.label8.TabIndex = 7;
@@ -156,7 +164,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(298, 85);
+            this.label7.Location = new System.Drawing.Point(356, 85);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(157, 21);
             this.label7.TabIndex = 6;
@@ -166,7 +174,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(330, 27);
+            this.label6.Location = new System.Drawing.Point(356, 28);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(125, 21);
             this.label6.TabIndex = 5;
@@ -176,7 +184,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(4, 244);
+            this.label5.Location = new System.Drawing.Point(356, 138);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 21);
             this.label5.TabIndex = 4;
@@ -206,7 +214,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 79);
+            this.label2.Location = new System.Drawing.Point(4, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 21);
             this.label2.TabIndex = 1;
@@ -216,7 +224,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 28);
+            this.label1.Location = new System.Drawing.Point(4, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 21);
             this.label1.TabIndex = 0;
@@ -231,8 +239,8 @@
             this.cmdGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
             this.cmdGuardar.Image = ((System.Drawing.Image)(resources.GetObject("cmdGuardar.Image")));
             this.cmdGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdGuardar.Location = new System.Drawing.Point(143, 365);
-            this.cmdGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdGuardar.Location = new System.Drawing.Point(238, 365);
+            this.cmdGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(112, 42);
             this.cmdGuardar.TabIndex = 3;
@@ -250,8 +258,8 @@
             this.cmdEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(83)))), ((int)(((byte)(79)))));
             this.cmdEliminar.Image = ((System.Drawing.Image)(resources.GetObject("cmdEliminar.Image")));
             this.cmdEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdEliminar.Location = new System.Drawing.Point(314, 365);
-            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdEliminar.Location = new System.Drawing.Point(400, 365);
+            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(112, 42);
             this.cmdEliminar.TabIndex = 4;
@@ -264,14 +272,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 418);
+            this.ClientSize = new System.Drawing.Size(712, 431);
             this.Controls.Add(this.cmdEliminar);
             this.Controls.Add(this.cmdGuardar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "FrmEDDocumentos";
-            this.Text = "Agregar / Eliminar Documentos";
+            this.Text = "Editar Documentos";
             this.Load += new System.EventHandler(this.FrmEDDocumentos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
