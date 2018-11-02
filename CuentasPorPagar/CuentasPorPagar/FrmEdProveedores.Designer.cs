@@ -32,7 +32,6 @@
             this.cbxEstado = new System.Windows.Forms.ComboBox();
             this.cbxTipo = new System.Windows.Forms.ComboBox();
             this.txtBalance = new System.Windows.Forms.TextBox();
-            this.txtCedula = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,16 +42,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmdEliminar = new System.Windows.Forms.Button();
             this.cmdGuardar = new System.Windows.Forms.Button();
+            this.txtCedula = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtCedula);
             this.panel1.Controls.Add(this.cbxEstado);
             this.panel1.Controls.Add(this.cbxTipo);
             this.panel1.Controls.Add(this.txtBalance);
-            this.panel1.Controls.Add(this.txtCedula);
             this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.txtID);
             this.panel1.Controls.Add(this.label6);
@@ -67,6 +67,7 @@
             // 
             // cbxEstado
             // 
+            this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEstado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEstado.FormattingEnabled = true;
             this.cbxEstado.Items.AddRange(new object[] {
@@ -79,6 +80,7 @@
             // 
             // cbxTipo
             // 
+            this.cbxTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTipo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxTipo.FormattingEnabled = true;
             this.cbxTipo.Items.AddRange(new object[] {
@@ -96,14 +98,6 @@
             this.txtBalance.Name = "txtBalance";
             this.txtBalance.Size = new System.Drawing.Size(222, 27);
             this.txtBalance.TabIndex = 9;
-            // 
-            // txtCedula
-            // 
-            this.txtCedula.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCedula.Location = new System.Drawing.Point(235, 77);
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(222, 27);
-            this.txtCedula.TabIndex = 8;
             // 
             // txtNombre
             // 
@@ -218,6 +212,15 @@
             this.cmdGuardar.UseVisualStyleBackColor = true;
             this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 
+            // txtCedula
+            // 
+            this.txtCedula.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtCedula.Location = new System.Drawing.Point(235, 77);
+            this.txtCedula.Mask = "000-0000000-0";
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(222, 27);
+            this.txtCedula.TabIndex = 12;
+            // 
             // FrmEdProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,7 +245,6 @@
         private System.Windows.Forms.ComboBox cbxEstado;
         private System.Windows.Forms.ComboBox cbxTipo;
         private System.Windows.Forms.TextBox txtBalance;
-        private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label6;
@@ -252,5 +254,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button cmdEliminar;
         private System.Windows.Forms.Button cmdGuardar;
+        private System.Windows.Forms.MaskedTextBox txtCedula;
     }
 }

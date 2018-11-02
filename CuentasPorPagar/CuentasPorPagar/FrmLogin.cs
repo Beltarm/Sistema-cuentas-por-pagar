@@ -38,7 +38,9 @@ namespace CuentasPorPagar
                 MessageBox.Show("Bienvenido " + txtUsuario.Text);
                 FrmMenu frm = new FrmMenu();
                 frm.ShowDialog();
+                
             }
+            
         }
     }
 }
