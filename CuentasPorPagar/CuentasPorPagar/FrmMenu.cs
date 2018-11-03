@@ -61,6 +61,13 @@ namespace CuentasPorPagar
             pnMantenimientos1.BringToFront();
         }
 
+        private void btnConfiguracion_Click(object sender, EventArgs e)
+        {
+            Selector.Height = btnConfiguracion.Height;
+            Selector.Top = btnConfiguracion.Top;
+            pnConfiguracion1.BringToFront();
+        }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();

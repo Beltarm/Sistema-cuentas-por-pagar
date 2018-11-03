@@ -29,7 +29,7 @@ namespace CuentasPorPagar
             {
                 MessageBox.Show("Datos incorrectos");
             }
-            else if (!usuario.ESTADO_USUARIO.Equals("A"))
+            else if (!usuario.ESTADO_USUARIO.Equals("Activo"))
             {
                 MessageBox.Show("Datos incorrectos");
             }
