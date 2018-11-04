@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbxIdentificacion = new System.Windows.Forms.ComboBox();
             this.txtBalance = new System.Windows.Forms.MaskedTextBox();
             this.txtCedula = new System.Windows.Forms.MaskedTextBox();
             this.cbxEstado = new System.Windows.Forms.ComboBox();
@@ -42,7 +43,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmdEliminar = new System.Windows.Forms.Button();
             this.cmdGuardar = new System.Windows.Forms.Button();
-            this.cbxIdentificacion = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,19 @@
             this.panel1.Size = new System.Drawing.Size(548, 265);
             this.panel1.TabIndex = 0;
             // 
+            // cbxIdentificacion
+            // 
+            this.cbxIdentificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxIdentificacion.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.cbxIdentificacion.FormattingEnabled = true;
+            this.cbxIdentificacion.Items.AddRange(new object[] {
+            "Cédula",
+            "RNC"});
+            this.cbxIdentificacion.Location = new System.Drawing.Point(33, 77);
+            this.cbxIdentificacion.Name = "cbxIdentificacion";
+            this.cbxIdentificacion.Size = new System.Drawing.Size(121, 29);
+            this.cbxIdentificacion.TabIndex = 13;
+            // 
             // txtBalance
             // 
             this.txtBalance.Font = new System.Drawing.Font("Century Gothic", 12F);
@@ -72,6 +85,7 @@
             this.txtBalance.Name = "txtBalance";
             this.txtBalance.Size = new System.Drawing.Size(222, 27);
             this.txtBalance.TabIndex = 9;
+            this.txtBalance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBalance_KeyPress);
             // 
             // txtCedula
             // 
@@ -80,6 +94,7 @@
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(222, 27);
             this.txtCedula.TabIndex = 12;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // cbxEstado
             // 
@@ -114,6 +129,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(222, 27);
             this.txtNombre.TabIndex = 7;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtID
             // 
@@ -209,19 +225,6 @@
             this.cmdGuardar.Text = "Guardar";
             this.cmdGuardar.UseVisualStyleBackColor = true;
             this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
-            // 
-            // cbxIdentificacion
-            // 
-            this.cbxIdentificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxIdentificacion.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.cbxIdentificacion.FormattingEnabled = true;
-            this.cbxIdentificacion.Items.AddRange(new object[] {
-            "Cédula",
-            "RNC"});
-            this.cbxIdentificacion.Location = new System.Drawing.Point(33, 77);
-            this.cbxIdentificacion.Name = "cbxIdentificacion";
-            this.cbxIdentificacion.Size = new System.Drawing.Size(121, 29);
-            this.cbxIdentificacion.TabIndex = 13;
             // 
             // FrmEdProveedores
             // 
