@@ -81,5 +81,10 @@ namespace CuentasPorPagar
             FrmUsuarios frm = new FrmUsuarios();
             frm.ShowDialog();
         }
+
+        private void FrmMantUsuarios_Activated(object sender, EventArgs e)
+        {
+            consultarUsuarios();
+        }
     }
 }

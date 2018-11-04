@@ -107,7 +107,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(387, 57);
+            this.txtBuscar.Location = new System.Drawing.Point(376, 57);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(173, 32);

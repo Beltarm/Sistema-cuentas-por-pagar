@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -32,23 +33,46 @@ namespace CuentasPorPagar
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
-            //var buscarRol = (from r in entities.ROL
-            //                 where r.NOMBRE_ROL == cmbRol.SelectedValue.ToString()
-            //                 select r);
-
             var rol = entities.ROL.FirstOrDefault(r => r.NOMBRE_ROL == cmbRol.Text);
-            entities.Usuario.Add(new Usuario
+            if (usuario != null)
             {
-                ID_USUARIO = 0,
-                NOMBRE_USUARIO = txtNombre.Text,
-                ESTADO_USUARIO = cmbEstado.Text,
-                CLAVE_USUARIO = txtClave.Text,
-                ROL = {rol}
-            });
+                Usuario usuarioAGuardar = entities.Usuario.Find(Int32.Parse(txtID.Text));
+                usuarioAGuardar.NOMBRE_USUARIO = txtNombre.Text;
+                usuarioAGuardar.ESTADO_USUARIO = cmbEstado.Text;
+
+                usuarioAGuardar.ROL.Clear();
+                usuarioAGuardar.ROL.Add(rol);
+
+            }
+            else
+            {
+                entities.Usuario.Add(new Usuario
+                {
+                    NOMBRE_USUARIO = txtNombre.Text,
+                    ESTADO_USUARIO = cmbEstado.Text,
+                    CLAVE_USUARIO = txtClave.Text,
+                    ROL = { rol }
+                });
+            }
 
             entities.SaveChanges();
             MessageBox.Show("Datos guardados con exito");
             this.Close();
+        }
+
+        private void cmdEliminar_Click(object sender, EventArgs e)
+        {
+            Usuario usuario = entities.Usuario.Find(Int32.Parse(txtID.Text));
+            if (usuario != null)
+            {
+                entities.Usuario.Remove(usuario);
+                entities.SaveChanges();
+                MessageBox.Show("Empleado eliminado con exito");
+            }
+            else
+            {
+                MessageBox.Show("Empleado no existe");
+            }
         }
     }
 }

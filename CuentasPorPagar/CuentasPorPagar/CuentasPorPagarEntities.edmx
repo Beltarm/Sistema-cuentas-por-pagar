@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Cuentas_por_pagarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Cuentas_por_pagarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ROL">
           <Key>
             <PropertyRef Name="ID_ROL" />
@@ -19,7 +19,7 @@
           <Property Name="ID_USUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NOMBRE_USUARIO" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="CLAVE_USUARIO" Type="varchar" MaxLength="32" Nullable="false" />
-          <Property Name="ESTADO_USUARIO" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ESTADO_USUARIO" Type="varchar" MaxLength="8" Nullable="false" />
         </EntityType>
         <EntityType Name="USUARIO_ROL">
           <Key>
@@ -66,8 +66,7 @@
             <End Role="USUARIO_ROL" EntitySet="USUARIO_ROL" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Cuentas_por_pagarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -86,7 +85,7 @@
           <Property Name="ID_USUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NOMBRE_USUARIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="CLAVE_USUARIO" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ESTADO_USUARIO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ESTADO_USUARIO" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="ROL" Relationship="Self.USUARIO_ROL" FromRole="Usuario" ToRole="ROL" />
         </EntityType>
         <Association Name="USUARIO_ROL">
