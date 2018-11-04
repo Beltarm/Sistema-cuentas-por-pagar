@@ -68,7 +68,7 @@
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(159, 27);
-            this.txtDescripcion.TabIndex = 0;
+            this.txtDescripcion.TabIndex = 1;
             // 
             // label1
             // 
@@ -105,7 +105,7 @@
             this.cmdGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(112, 42);
-            this.cmdGuardar.TabIndex = 2;
+            this.cmdGuardar.TabIndex = 3;
             this.cmdGuardar.Text = "Guardar";
             this.cmdGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdGuardar.UseVisualStyleBackColor = true;
@@ -125,7 +125,7 @@
             this.cmbEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(159, 29);
-            this.cmbEstado.TabIndex = 4;
+            this.cmbEstado.TabIndex = 2;
             // 
             // cmdEliminar
             // 
@@ -140,7 +140,7 @@
             this.cmdEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(112, 42);
-            this.cmdEliminar.TabIndex = 2;
+            this.cmdEliminar.TabIndex = 4;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdEliminar.UseVisualStyleBackColor = true;
@@ -166,7 +166,7 @@
             this.MaximizeBox = false;
             this.Name = "frmConceptoPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Concepto de pago";
+            this.Text = "Documento por pagar";
             this.Load += new System.EventHandler(this.frmConceptoPago_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

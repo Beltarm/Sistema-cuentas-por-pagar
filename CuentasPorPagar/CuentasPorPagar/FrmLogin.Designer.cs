@@ -85,7 +85,7 @@
             this.cmdLogin.Margin = new System.Windows.Forms.Padding(2);
             this.cmdLogin.Name = "cmdLogin";
             this.cmdLogin.Size = new System.Drawing.Size(105, 38);
-            this.cmdLogin.TabIndex = 4;
+            this.cmdLogin.TabIndex = 2;
             this.cmdLogin.Text = "&Entrar";
             this.cmdLogin.UseVisualStyleBackColor = true;
             this.cmdLogin.Click += new System.EventHandler(this.cmdLogin_Click);

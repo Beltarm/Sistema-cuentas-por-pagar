@@ -76,7 +76,7 @@
             this.cbxIdentificacion.Location = new System.Drawing.Point(33, 77);
             this.cbxIdentificacion.Name = "cbxIdentificacion";
             this.cbxIdentificacion.Size = new System.Drawing.Size(121, 29);
-            this.cbxIdentificacion.TabIndex = 13;
+            this.cbxIdentificacion.TabIndex = 1;
             // 
             // txtBalance
             // 
@@ -84,7 +84,7 @@
             this.txtBalance.Location = new System.Drawing.Point(235, 166);
             this.txtBalance.Name = "txtBalance";
             this.txtBalance.Size = new System.Drawing.Size(222, 27);
-            this.txtBalance.TabIndex = 9;
+            this.txtBalance.TabIndex = 4;
             this.txtBalance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBalance_KeyPress);
             // 
             // txtCedula
@@ -93,7 +93,7 @@
             this.txtCedula.Location = new System.Drawing.Point(235, 77);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(222, 27);
-            this.txtCedula.TabIndex = 12;
+            this.txtCedula.TabIndex = 2;
             this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // cbxEstado
@@ -107,7 +107,7 @@
             this.cbxEstado.Location = new System.Drawing.Point(235, 208);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(222, 29);
-            this.cbxEstado.TabIndex = 11;
+            this.cbxEstado.TabIndex = 5;
             // 
             // cbxTipo
             // 
@@ -120,7 +120,7 @@
             this.cbxTipo.Location = new System.Drawing.Point(235, 122);
             this.cbxTipo.Name = "cbxTipo";
             this.cbxTipo.Size = new System.Drawing.Size(222, 29);
-            this.cbxTipo.TabIndex = 10;
+            this.cbxTipo.TabIndex = 3;
             // 
             // txtNombre
             // 
@@ -128,7 +128,7 @@
             this.txtNombre.Location = new System.Drawing.Point(235, 35);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(222, 27);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 0;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtID
@@ -203,7 +203,7 @@
             this.cmdEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(132, 42);
-            this.cmdEliminar.TabIndex = 2;
+            this.cmdEliminar.TabIndex = 7;
             this.cmdEliminar.Text = "&Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = true;
             this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
@@ -221,7 +221,7 @@
             this.cmdGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(144, 42);
-            this.cmdGuardar.TabIndex = 0;
+            this.cmdGuardar.TabIndex = 6;
             this.cmdGuardar.Text = "&Guardar";
             this.cmdGuardar.UseVisualStyleBackColor = true;
             this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);

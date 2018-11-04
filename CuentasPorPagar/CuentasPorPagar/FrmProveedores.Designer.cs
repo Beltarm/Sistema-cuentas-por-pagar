@@ -68,7 +68,7 @@
             this.cmdAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdAgregar.Name = "cmdAgregar";
             this.cmdAgregar.Size = new System.Drawing.Size(139, 42);
-            this.cmdAgregar.TabIndex = 4;
+            this.cmdAgregar.TabIndex = 3;
             this.cmdAgregar.Text = "Agregar";
             this.cmdAgregar.UseVisualStyleBackColor = true;
             this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
@@ -85,7 +85,7 @@
             this.cmdBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdBuscar.Name = "cmdBuscar";
             this.cmdBuscar.Size = new System.Drawing.Size(126, 42);
-            this.cmdBuscar.TabIndex = 3;
+            this.cmdBuscar.TabIndex = 2;
             this.cmdBuscar.Text = "Buscar";
             this.cmdBuscar.UseVisualStyleBackColor = true;
             this.cmdBuscar.Click += new System.EventHandler(this.cmdBuscar_Click);
@@ -103,7 +103,7 @@
             this.cbxCriterio.Location = new System.Drawing.Point(75, 33);
             this.cbxCriterio.Name = "cbxCriterio";
             this.cbxCriterio.Size = new System.Drawing.Size(143, 29);
-            this.cbxCriterio.TabIndex = 3;
+            this.cbxCriterio.TabIndex = 0;
             // 
             // txtConcepto
             // 
@@ -112,7 +112,7 @@
             this.txtConcepto.Location = new System.Drawing.Point(242, 33);
             this.txtConcepto.Name = "txtConcepto";
             this.txtConcepto.Size = new System.Drawing.Size(170, 27);
-            this.txtConcepto.TabIndex = 2;
+            this.txtConcepto.TabIndex = 1;
             // 
             // label1
             // 

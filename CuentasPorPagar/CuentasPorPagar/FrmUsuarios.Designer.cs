@@ -55,7 +55,7 @@
             this.cmbEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(159, 29);
-            this.cmbEstado.TabIndex = 12;
+            this.cmbEstado.TabIndex = 3;
             // 
             // label3
             // 
@@ -97,7 +97,7 @@
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(159, 27);
-            this.txtNombre.TabIndex = 5;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtID
             // 
@@ -108,7 +108,7 @@
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(159, 27);
-            this.txtID.TabIndex = 6;
+            this.txtID.TabIndex = 0;
             // 
             // cmdEliminar
             // 
@@ -123,7 +123,7 @@
             this.cmdEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(112, 42);
-            this.cmdEliminar.TabIndex = 10;
+            this.cmdEliminar.TabIndex = 6;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdEliminar.UseVisualStyleBackColor = true;
@@ -141,7 +141,7 @@
             this.cmdGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(112, 42);
-            this.cmdGuardar.TabIndex = 11;
+            this.cmdGuardar.TabIndex = 5;
             this.cmdGuardar.Text = "Guardar";
             this.cmdGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdGuardar.UseVisualStyleBackColor = true;
@@ -170,7 +170,7 @@
             this.cmbRol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(159, 29);
-            this.cmbRol.TabIndex = 12;
+            this.cmbRol.TabIndex = 4;
             // 
             // txtClave
             // 
@@ -179,7 +179,7 @@
             this.txtClave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(159, 27);
-            this.txtClave.TabIndex = 5;
+            this.txtClave.TabIndex = 2;
             // 
             // label5
             // 
@@ -211,7 +211,6 @@
             this.Controls.Add(this.txtID);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmUsuarios";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmUsuarios";
             this.Load += new System.EventHandler(this.FrmUsuarios_Load);
             this.ResumeLayout(false);

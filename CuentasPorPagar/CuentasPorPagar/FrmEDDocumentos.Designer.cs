@@ -85,7 +85,7 @@
             this.cbxEstado.Location = new System.Drawing.Point(180, 249);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(158, 29);
-            this.cbxEstado.TabIndex = 15;
+            this.cbxEstado.TabIndex = 4;
             // 
             // cbxProveedor
             // 
@@ -95,7 +95,7 @@
             this.cbxProveedor.Location = new System.Drawing.Point(521, 82);
             this.cbxProveedor.Name = "cbxProveedor";
             this.cbxProveedor.Size = new System.Drawing.Size(148, 29);
-            this.cbxProveedor.TabIndex = 14;
+            this.cbxProveedor.TabIndex = 6;
             // 
             // mtxFechaRegistro
             // 
@@ -104,7 +104,7 @@
             this.mtxFechaRegistro.Mask = "00/00/0000";
             this.mtxFechaRegistro.Name = "mtxFechaRegistro";
             this.mtxFechaRegistro.Size = new System.Drawing.Size(148, 27);
-            this.mtxFechaRegistro.TabIndex = 13;
+            this.mtxFechaRegistro.TabIndex = 5;
             // 
             // txtMonto
             // 
@@ -112,7 +112,7 @@
             this.txtMonto.Location = new System.Drawing.Point(521, 135);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(148, 27);
-            this.txtMonto.TabIndex = 12;
+            this.txtMonto.TabIndex = 7;
             // 
             // mtxFechaDocumento
             // 
@@ -121,7 +121,7 @@
             this.mtxFechaDocumento.Mask = "00/00/0000";
             this.mtxFechaDocumento.Name = "mtxFechaDocumento";
             this.mtxFechaDocumento.Size = new System.Drawing.Size(158, 27);
-            this.mtxFechaDocumento.TabIndex = 11;
+            this.mtxFechaDocumento.TabIndex = 3;
             // 
             // cbxConcepto
             // 
@@ -131,7 +131,7 @@
             this.cbxConcepto.Location = new System.Drawing.Point(180, 130);
             this.cbxConcepto.Name = "cbxConcepto";
             this.cbxConcepto.Size = new System.Drawing.Size(158, 29);
-            this.cbxConcepto.TabIndex = 10;
+            this.cbxConcepto.TabIndex = 2;
             // 
             // txtNumFactura
             // 
@@ -139,7 +139,7 @@
             this.txtNumFactura.Location = new System.Drawing.Point(180, 76);
             this.txtNumFactura.Name = "txtNumFactura";
             this.txtNumFactura.Size = new System.Drawing.Size(158, 27);
-            this.txtNumFactura.TabIndex = 9;
+            this.txtNumFactura.TabIndex = 1;
             // 
             // txtNumDocumento
             // 
@@ -148,7 +148,7 @@
             this.txtNumDocumento.Name = "txtNumDocumento";
             this.txtNumDocumento.ReadOnly = true;
             this.txtNumDocumento.Size = new System.Drawing.Size(158, 27);
-            this.txtNumDocumento.TabIndex = 8;
+            this.txtNumDocumento.TabIndex = 0;
             // 
             // label8
             // 
@@ -243,7 +243,7 @@
             this.cmdGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(112, 42);
-            this.cmdGuardar.TabIndex = 3;
+            this.cmdGuardar.TabIndex = 8;
             this.cmdGuardar.Text = "Guardar";
             this.cmdGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdGuardar.UseVisualStyleBackColor = true;
@@ -262,7 +262,7 @@
             this.cmdEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(112, 42);
-            this.cmdEliminar.TabIndex = 4;
+            this.cmdEliminar.TabIndex = 9;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdEliminar.UseVisualStyleBackColor = true;

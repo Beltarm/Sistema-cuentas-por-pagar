@@ -45,7 +45,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(17, 39);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(163, 245);
             this.button1.TabIndex = 1;
@@ -68,7 +68,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(35, 46);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(0, 0);
             this.panel2.TabIndex = 0;
@@ -79,10 +79,10 @@
             this.btnManConceptoPago.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManConceptoPago.Image = ((System.Drawing.Image)(resources.GetObject("btnManConceptoPago.Image")));
             this.btnManConceptoPago.Location = new System.Drawing.Point(232, 57);
-            this.btnManConceptoPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnManConceptoPago.Margin = new System.Windows.Forms.Padding(2);
             this.btnManConceptoPago.Name = "btnManConceptoPago";
             this.btnManConceptoPago.Size = new System.Drawing.Size(188, 257);
-            this.btnManConceptoPago.TabIndex = 1;
+            this.btnManConceptoPago.TabIndex = 2;
             this.btnManConceptoPago.Text = "Conceptos";
             this.btnManConceptoPago.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnManConceptoPago.UseVisualStyleBackColor = true;
@@ -94,10 +94,10 @@
             this.button4.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(439, 56);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(188, 257);
-            this.button4.TabIndex = 1;
+            this.button4.TabIndex = 3;
             this.button4.Text = "Documentos por pagar";
             this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button4.UseVisualStyleBackColor = true;
@@ -109,7 +109,7 @@
             this.button2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(28, 57);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(188, 257);
             this.button2.TabIndex = 1;
@@ -126,7 +126,7 @@
             this.Controls.Add(this.btnManConceptoPago);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PnMantenimientos";
             this.Size = new System.Drawing.Size(668, 465);
             this.panel2.ResumeLayout(false);
