@@ -25,7 +25,7 @@ namespace CuentasPorPagar
         {
             InitializeComponent();
             cbxIdentificacion.SelectedIndex = 0;
- 
+
 
         }
 
@@ -47,41 +47,50 @@ namespace CuentasPorPagar
                     sql += "WHERE ID_PROVEEDOR = " + ID;
                 }
 
-                if (cbxIdentificacion.SelectedItem.Equals("Cédula"))
+                if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtBalance.Text) || string.IsNullOrEmpty(txtCedula.Text) || string.IsNullOrEmpty(cbxEstado.Text) || string.IsNullOrEmpty(cbxTipo.Text))
                 {
-                    validaCedula(txtCedula.Text);
-                    if (validaCedula(txtCedula.Text))
-                    {
-
-                        SqlCommand cnd = new SqlCommand(sql, conn);
-                        cnd.ExecuteNonQuery();
-                        MessageBox.Show("Datos guardados con éxito");
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Cédula incorrecta");
-                    }
+                    MessageBox.Show("Debe llenar todos los campos");
                 }
                 else
                 {
-                    esUnRNCValido(txtCedula.Text);
-                    if (esUnRNCValido(txtCedula.Text))
+                    if (cbxIdentificacion.SelectedItem.Equals("Cédula"))
                     {
+                        validaCedula(txtCedula.Text);
+                        if (validaCedula(txtCedula.Text))
+                        {
 
-                        SqlCommand cnd = new SqlCommand(sql, conn);
-                        cnd.ExecuteNonQuery();
-                        MessageBox.Show("Datos guardados con éxito");
-                        this.Close();
+                            SqlCommand cnd = new SqlCommand(sql, conn);
+                            cnd.ExecuteNonQuery();
+                            MessageBox.Show("Datos guardados con éxito");
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cédula incorrecta");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("RNC incorrecto");
+                        esUnRNCValido(txtCedula.Text);
+                        if (esUnRNCValido(txtCedula.Text))
+                        {
+
+                            SqlCommand cnd = new SqlCommand(sql, conn);
+                            cnd.ExecuteNonQuery();
+                            MessageBox.Show("Datos guardados con éxito");
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("RNC incorrecto");
+                        }
                     }
                 }
 
-               
                 
+
+
+
             }
             catch (Exception ex)
             {
@@ -90,8 +99,8 @@ namespace CuentasPorPagar
 
         }
 
-   
-    private void cmdEliminar_Click(object sender, EventArgs e)
+
+        private void cmdEliminar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -99,7 +108,7 @@ namespace CuentasPorPagar
                 string sql = "DELETE PROVEEDORES WHERE ID_PROVEEDOR = '" + ID + "'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Registro eliminado con exito");
+                MessageBox.Show("Registro eliminado con éxito");
                 this.Close();
             }
             catch (Exception ex)
@@ -110,7 +119,7 @@ namespace CuentasPorPagar
 
         private void FrmEdProveedores_Load(object sender, EventArgs e)
         {
-        
+
             try
             {
                 txtID.Text = ID;
@@ -120,7 +129,7 @@ namespace CuentasPorPagar
                 txtBalance.Text = Balance;
                 cbxEstado.Text = Estado;
 
-            
+
             }
             catch (Exception ex)
             {
@@ -274,7 +283,7 @@ namespace CuentasPorPagar
             {
                 e.Handled = true;
             }
-        }
+        } 
     }
 }
 

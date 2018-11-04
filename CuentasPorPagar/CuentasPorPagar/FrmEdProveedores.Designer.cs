@@ -204,7 +204,7 @@
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(132, 42);
             this.cmdEliminar.TabIndex = 2;
-            this.cmdEliminar.Text = "Eliminar";
+            this.cmdEliminar.Text = "&Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = true;
             this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
@@ -222,7 +222,7 @@
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(144, 42);
             this.cmdGuardar.TabIndex = 0;
-            this.cmdGuardar.Text = "Guardar";
+            this.cmdGuardar.Text = "&Guardar";
             this.cmdGuardar.UseVisualStyleBackColor = true;
             this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 

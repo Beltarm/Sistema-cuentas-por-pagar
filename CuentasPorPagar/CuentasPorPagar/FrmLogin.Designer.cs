@@ -39,7 +39,7 @@
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtUsuario.Location = new System.Drawing.Point(160, 52);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(190, 27);
             this.txtUsuario.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             this.txtClave.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtClave.Location = new System.Drawing.Point(160, 110);
-            this.txtClave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtClave.Margin = new System.Windows.Forms.Padding(2);
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(190, 27);
@@ -82,11 +82,11 @@
             this.cmdLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.cmdLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
             this.cmdLogin.Location = new System.Drawing.Point(144, 177);
-            this.cmdLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdLogin.Margin = new System.Windows.Forms.Padding(2);
             this.cmdLogin.Name = "cmdLogin";
             this.cmdLogin.Size = new System.Drawing.Size(105, 38);
             this.cmdLogin.TabIndex = 4;
-            this.cmdLogin.Text = "Entrar";
+            this.cmdLogin.Text = "&Entrar";
             this.cmdLogin.UseVisualStyleBackColor = true;
             this.cmdLogin.Click += new System.EventHandler(this.cmdLogin_Click);
             // 
@@ -101,7 +101,7 @@
             this.Controls.Add(this.txtClave);
             this.Controls.Add(this.txtUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmLogin";
             this.Text = "Ingresar al sistema";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
