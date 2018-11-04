@@ -164,6 +164,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "FrmMantDocumentos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento de Entrada de Documentos";
             this.Activated += new System.EventHandler(this.FrmMantDocumentos_Activated);
             this.Load += new System.EventHandler(this.FrmMantDocumentos_Load);
