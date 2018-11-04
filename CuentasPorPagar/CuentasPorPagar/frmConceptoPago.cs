@@ -41,10 +41,17 @@ namespace CuentasPorPagar
                     sql += "WHERE ID_CONCEPTO_PAGO = " + ID;
                 }
 
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Registro guardado con exito");
-                this.Close();
+                if (string.IsNullOrEmpty(txtDescripcion.Text) || string.IsNullOrEmpty(cmbEstado.Text))
+                {
+                    MessageBox.Show("Debe llenar todos los campos");
+                }
+                else
+                {
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Registro guardado con exito");
+                    this.Close();
+                }
             }
             catch (Exception ex)
             {

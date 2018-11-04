@@ -102,7 +102,7 @@
             this.cbxCriterio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxCriterio.Name = "cbxCriterio";
             this.cbxCriterio.Size = new System.Drawing.Size(125, 29);
-            this.cbxCriterio.TabIndex = 0;
+            this.cbxCriterio.TabIndex = 1;
             // 
             // txtBuscar
             // 
@@ -111,7 +111,7 @@
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(126, 27);
-            this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.TabIndex = 2;
             // 
             // cmdBuscar
             // 
@@ -126,7 +126,7 @@
             this.cmdBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdBuscar.Name = "cmdBuscar";
             this.cmdBuscar.Size = new System.Drawing.Size(112, 42);
-            this.cmdBuscar.TabIndex = 2;
+            this.cmdBuscar.TabIndex = 3;
             this.cmdBuscar.Text = "Filtrar";
             this.cmdBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdBuscar.UseVisualStyleBackColor = true;
@@ -146,7 +146,7 @@
             this.cmdAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdAgregar.Name = "cmdAgregar";
             this.cmdAgregar.Size = new System.Drawing.Size(112, 42);
-            this.cmdAgregar.TabIndex = 3;
+            this.cmdAgregar.TabIndex = 4;
             this.cmdAgregar.Text = "Agregar";
             this.cmdAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdAgregar.UseVisualStyleBackColor = true;
@@ -193,7 +193,7 @@
             this.MaximizeBox = false;
             this.Name = "frmManConceptoPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmManConceptoPago";
+            this.Text = "Concepto de pago";
             this.Activated += new System.EventHandler(this.frmManEstudiante_Activated);
             this.Load += new System.EventHandler(this.frmManConceptoPago_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgbConceptoDePago)).EndInit();
