@@ -44,7 +44,7 @@
             this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(125, 44);
-            this.txtID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(159, 27);
@@ -65,7 +65,8 @@
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(125, 93);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescripcion.MaxLength = 50;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(159, 27);
             this.txtDescripcion.TabIndex = 1;
@@ -102,7 +103,7 @@
             this.cmdGuardar.Image = ((System.Drawing.Image)(resources.GetObject("cmdGuardar.Image")));
             this.cmdGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdGuardar.Location = new System.Drawing.Point(310, 44);
-            this.cmdGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(112, 42);
             this.cmdGuardar.TabIndex = 3;
@@ -122,7 +123,7 @@
             "Activo",
             "Inactivo"});
             this.cmbEstado.Location = new System.Drawing.Point(125, 146);
-            this.cmbEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(159, 29);
             this.cmbEstado.TabIndex = 2;
@@ -137,7 +138,7 @@
             this.cmdEliminar.Image = ((System.Drawing.Image)(resources.GetObject("cmdEliminar.Image")));
             this.cmdEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdEliminar.Location = new System.Drawing.Point(310, 130);
-            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(112, 42);
             this.cmdEliminar.TabIndex = 4;
@@ -162,7 +163,7 @@
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmConceptoPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

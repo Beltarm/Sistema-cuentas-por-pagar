@@ -164,6 +164,7 @@
     <Compile Include="Usuario.cs">
       <DependentUpon>CuentasPorPagarEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Validaciones.cs" />
     <EmbeddedResource Include="FrmMantUsuarios.resx">
       <DependentUpon>FrmMantUsuarios.cs</DependentUpon>
     </EmbeddedResource>

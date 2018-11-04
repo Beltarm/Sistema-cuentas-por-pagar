@@ -12,6 +12,7 @@ namespace CuentasPorPagar
 {
     public partial class FrmEDDocumentos : Form
     {
+        Validaciones v = new Validaciones();
         public string modo { get; set; }
         public SqlConnection conn { get; set; }
         public string Num_Documento { get; set; }
@@ -171,35 +172,39 @@ namespace CuentasPorPagar
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
-            try
+            if (validarVacio() == "")
             {
-                string sql = "";
-                if (modo.Equals("C"))
+                try
                 {
-                    sql = "INSERT INTO Documentos_Pagar VALUES ('";
-                    sql += txtNumFactura.Text + "', " + insertConceptos() + ", '" + mtxFechaDocumento.Text + "', ";
-                    sql += txtMonto.Text + ", '" + mtxFechaRegistro.Text + "', " + InsertProveedores() + ", '" + cbxEstado.SelectedItem + "') ";
+                    string sql = "";
+                    if (modo.Equals("C"))
+                    {
+                        sql = "INSERT INTO Documentos_Pagar VALUES ('";
+                        sql += txtNumFactura.Text + "', " + insertConceptos() + ", '" + mtxFechaDocumento.Text + "', ";
+                        sql += txtMonto.Text + ", '" + mtxFechaRegistro.Text + "', " + InsertProveedores() + ", '" + cbxEstado.SelectedItem + "') ";
+                    }
+                    else
+                    {
+                        sql = "UPDATE Documentos_Pagar SET";
+                        sql += " Num_Factura = '" + txtNumFactura.Text + "', Id_Concepto_Pago = " + insertConceptos() + ", Fecha_Documento = '";
+                        sql += mtxFechaDocumento.Text + "', Monto =  " + txtMonto.Text + ", Fecha_Registro = '" + mtxFechaRegistro.Text + "' , Id_Proveedor =  ";
+                        sql += InsertProveedores() + ", Estado = '" + cbxEstado.SelectedItem + "' ";
+                        sql += "WHERE Num_Documento = " + txtNumDocumento.Text;
+
+                    }
+
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Registro guardado con exito");
+                    this.Close();
                 }
-                else
+                catch (Exception ex)
                 {
-                    sql = "UPDATE Documentos_Pagar SET";
-                    sql += " Num_Factura = '" + txtNumFactura.Text + "', Id_Concepto_Pago = " + insertConceptos() + ", Fecha_Documento = '";
-                    sql += mtxFechaDocumento.Text + "', Monto =  " + txtMonto.Text + ", Fecha_Registro = '" + mtxFechaRegistro.Text + "' , Id_Proveedor =  ";
-                    sql += InsertProveedores() + ", Estado = '" + cbxEstado.SelectedItem + "' ";
-                    sql += "WHERE Num_Documento = " + txtNumDocumento.Text;
 
+                    MessageBox.Show("Error al ingresar el registro : " + ex.Message);
                 }
-
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Registro guardado con exito");
-                this.Close();
             }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Error al ingresar el registro : " + ex.Message);
-            }
+            
         }
 
         private void cmdEliminar_Click(object sender, EventArgs e)
@@ -225,6 +230,35 @@ namespace CuentasPorPagar
 
                 throw;
             }
+        }
+
+        private string validarVacio()
+        {
+            var emptyornull = Controls.OfType<TextBox>().Where(box => box.Name.StartsWith("txt")).OrderBy(box => box.TabIndex);
+
+            foreach (var test in emptyornull)
+            {
+                if (string.IsNullOrEmpty(test.Text))
+                {
+                    this.errorProvider.SetError((Control)test,"Campo vacío");
+                    return "vacio";
+                }
+
+                this.errorProvider.SetError((Control)test,(string)null);
+                return "";
+            }
+
+            return "";
+        }
+
+        private void txtNumFactura_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.SoloNumeros(e);
+        }
+
+        private void txtMonto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.SoloNumeros(e);
         }
     }
 

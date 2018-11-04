@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEDDocumentos));
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbxEstado = new System.Windows.Forms.ComboBox();
@@ -48,7 +49,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmdGuardar = new System.Windows.Forms.Button();
             this.cmdEliminar = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,9 +113,11 @@
             // 
             this.txtMonto.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtMonto.Location = new System.Drawing.Point(521, 135);
+            this.txtMonto.MaxLength = 7;
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(148, 27);
             this.txtMonto.TabIndex = 7;
+            this.txtMonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMonto_KeyPress);
             // 
             // mtxFechaDocumento
             // 
@@ -137,9 +142,11 @@
             // 
             this.txtNumFactura.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtNumFactura.Location = new System.Drawing.Point(180, 76);
+            this.txtNumFactura.MaxLength = 20;
             this.txtNumFactura.Name = "txtNumFactura";
             this.txtNumFactura.Size = new System.Drawing.Size(158, 27);
             this.txtNumFactura.TabIndex = 1;
+            this.txtNumFactura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumFactura_KeyPress);
             // 
             // txtNumDocumento
             // 
@@ -268,6 +275,10 @@
             this.cmdEliminar.UseVisualStyleBackColor = true;
             this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // FrmEDDocumentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,6 +294,7 @@
             this.Load += new System.EventHandler(this.FrmEDDocumentos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -308,5 +320,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cmdGuardar;
         private System.Windows.Forms.Button cmdEliminar;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
