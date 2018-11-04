@@ -235,6 +235,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmEdProveedores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar proveedores";
             this.Load += new System.EventHandler(this.FrmEdProveedores_Load);
             this.panel1.ResumeLayout(false);

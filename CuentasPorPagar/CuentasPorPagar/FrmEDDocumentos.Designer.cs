@@ -279,6 +279,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "FrmEDDocumentos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Documentos";
             this.Load += new System.EventHandler(this.FrmEDDocumentos_Load);
             this.panel1.ResumeLayout(false);

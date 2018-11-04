@@ -180,6 +180,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmProveedores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proveedores";
             this.Activated += new System.EventHandler(this.FrmProveedores_Activated);
             this.Load += new System.EventHandler(this.FrmProveedores_Load);

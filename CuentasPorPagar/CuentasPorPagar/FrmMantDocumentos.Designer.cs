@@ -63,7 +63,7 @@
             this.cmdAgregar.Image = ((System.Drawing.Image)(resources.GetObject("cmdAgregar.Image")));
             this.cmdAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdAgregar.Location = new System.Drawing.Point(732, 9);
-            this.cmdAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdAgregar.Name = "cmdAgregar";
             this.cmdAgregar.Size = new System.Drawing.Size(112, 42);
             this.cmdAgregar.TabIndex = 5;
@@ -82,7 +82,7 @@
             this.cmdBuscar.Image = ((System.Drawing.Image)(resources.GetObject("cmdBuscar.Image")));
             this.cmdBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdBuscar.Location = new System.Drawing.Point(594, 8);
-            this.cmdBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdBuscar.Name = "cmdBuscar";
             this.cmdBuscar.Size = new System.Drawing.Size(112, 42);
             this.cmdBuscar.TabIndex = 4;
@@ -164,6 +164,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "FrmMantDocumentos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento de Entrada de Documentos";
             this.Activated += new System.EventHandler(this.FrmMantDocumentos_Activated);
             this.Load += new System.EventHandler(this.FrmMantDocumentos_Load);
