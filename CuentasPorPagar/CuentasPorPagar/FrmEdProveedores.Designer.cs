@@ -233,6 +233,7 @@
             this.ClientSize = new System.Drawing.Size(621, 415);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmEdProveedores";
             this.Text = "Editar proveedores";
             this.Load += new System.EventHandler(this.FrmEdProveedores_Load);
