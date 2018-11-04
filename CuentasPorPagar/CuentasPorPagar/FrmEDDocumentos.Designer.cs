@@ -108,6 +108,7 @@
             this.mtxFechaRegistro.Name = "mtxFechaRegistro";
             this.mtxFechaRegistro.Size = new System.Drawing.Size(148, 27);
             this.mtxFechaRegistro.TabIndex = 5;
+            this.mtxFechaRegistro.Click += new System.EventHandler(this.mtxFechaRegistro_Click);
             // 
             // txtMonto
             // 
@@ -127,6 +128,7 @@
             this.mtxFechaDocumento.Name = "mtxFechaDocumento";
             this.mtxFechaDocumento.Size = new System.Drawing.Size(158, 27);
             this.mtxFechaDocumento.TabIndex = 3;
+            this.mtxFechaDocumento.Click += new System.EventHandler(this.mtxFechaDocumento_Click);
             // 
             // cbxConcepto
             // 

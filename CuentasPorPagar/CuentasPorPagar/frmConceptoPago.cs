@@ -77,12 +77,27 @@ namespace CuentasPorPagar
         {
             try
             {
-
-                string sql = "DELETE CONCEPTO_PAGO WHERE ID_CONCEPTO_PAGO = '" + ID + "'";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Registro eliminado con exito");
-                this.Close();
+                if (string.IsNullOrEmpty(txtDescripcion.Text) || string.IsNullOrEmpty(cmbEstado.Text))
+                {
+                    MessageBox.Show("Debe llenar todos los campos");
+                }
+                else
+                {
+                    
+                    var confirmResult = MessageBox.Show("¿Estás seguro(a) que quieres eliminar este registro?", "Confirme", MessageBoxButtons.YesNo);
+                    if (confirmResult == DialogResult.Yes)
+                    {
+                        string sql = "DELETE CONCEPTO_PAGO WHERE ID_CONCEPTO_PAGO = '" + ID + "'";
+                        SqlCommand cmd = new SqlCommand(sql, conn);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Registro eliminado con exito");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Datos intactos");
+                    }  
+                } 
             }
             catch (Exception ex)
             {

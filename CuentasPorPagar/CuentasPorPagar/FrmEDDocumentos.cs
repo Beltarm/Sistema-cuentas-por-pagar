@@ -172,10 +172,11 @@ namespace CuentasPorPagar
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
-            if (validarVacio() == "")
+            if (validarVacio() != "1")
             {
                 try
                 {
+
                     string sql = "";
                     if (modo.Equals("C"))
                     {
@@ -192,60 +193,75 @@ namespace CuentasPorPagar
                         sql += "WHERE Num_Documento = " + txtNumDocumento.Text;
 
                     }
-
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Registro guardado con exito");
                     this.Close();
                 }
+                
                 catch (Exception ex)
                 {
-
-                    MessageBox.Show("Error al ingresar el registro : " + ex.Message);
+                    MessageBox.Show("Error al ingresar el registro : " + " "+ ex.Message);
                 }
             }
-            
+            else
+            {
+                MessageBox.Show("Existen campos vacíos");
+            }
+
+
         }
 
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
             try
             {
-                var confirmResult = MessageBox.Show("¿Estás seguro(a) que quieres eliminar este registro?", "Confirme", MessageBoxButtons.YesNo);
-                if (confirmResult == DialogResult.Yes)
+                if (validarVacio() != "1")
                 {
-                    string sql = "DELETE Documentos_Pagar WHERE Num_Documento = '" + Num_Documento + "'";
-                    SqlCommand cmd = new SqlCommand(sql, conn);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Registro eliminado con exito");
-                    this.Close();
+                    var confirmResult = MessageBox.Show("¿Estás seguro(a) que quieres eliminar este registro?", "Confirme", MessageBoxButtons.YesNo);
+                    if (confirmResult == DialogResult.Yes)
+                    {
+                        string sql = "DELETE Documentos_Pagar WHERE Num_Documento = '" + Num_Documento + "'";
+
+                        SqlCommand cmd = new SqlCommand(sql, conn);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Registro eliminado con exito");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Datos intactos");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Datos intactos");
-                }
+               
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
 
         private string validarVacio()
         {
-            var emptyornull = Controls.OfType<TextBox>().Where(box => box.Name.StartsWith("txt")).OrderBy(box => box.TabIndex);
-
-            foreach (var test in emptyornull)
+            foreach (Control c in this.Controls)
             {
-                if (string.IsNullOrEmpty(test.Text))
+                if (c is TextBox)
                 {
-                    this.errorProvider.SetError((Control)test,"Campo vacío");
-                    return "vacio";
+                    if (c.Text == "")
+                    {
+                        return "1";
+                    }
                 }
 
-                this.errorProvider.SetError((Control)test,(string)null);
-                return "";
+                else if(c is MaskedTextBox)
+                {
+                    MaskedTextBox aux = (MaskedTextBox)c;
+                    if (!aux.MaskFull)
+                    {
+                        return "1";
+                    }
+                }
+                    
             }
 
             return "";
@@ -259,6 +275,16 @@ namespace CuentasPorPagar
         private void txtMonto_KeyPress(object sender, KeyPressEventArgs e)
         {
             v.SoloNumeros(e);
+        }
+
+        private void mtxFechaDocumento_Click(object sender, EventArgs e)
+        {
+            v.validar_mask(mtxFechaDocumento);
+        }
+
+        private void mtxFechaRegistro_Click(object sender, EventArgs e)
+        {
+            v.validar_mask(mtxFechaRegistro);
         }
     }
 

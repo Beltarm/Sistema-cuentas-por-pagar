@@ -100,16 +100,31 @@ namespace CuentasPorPagar
         {
             try
             {
+                if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtBalance.Text) || string.IsNullOrEmpty(txtCedula.Text) || string.IsNullOrEmpty(cbxEstado.Text) || string.IsNullOrEmpty(cbxTipo.Text))
+                {
+                    MessageBox.Show("Debe llenar todos los campos");
+                }
+                else
+                {
 
-                string sql = "DELETE PROVEEDORES WHERE ID_PROVEEDOR = '" + ID + "'";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Registro eliminado con éxito");
-                this.Close();
+                    var confirmResult = MessageBox.Show("¿Estás seguro(a) que quieres eliminar este registro?", "Confirme", MessageBoxButtons.YesNo);
+                    if (confirmResult == DialogResult.Yes)
+                    {
+                        string sql = "DELETE PROVEEDORES WHERE ID_PROVEEDOR = '" + ID + "'";
+                        SqlCommand cmd = new SqlCommand(sql, conn);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Registro eliminado con exito");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Datos intactos");
+                    }
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al eliminar: " + ex.Message);
+                MessageBox.Show("error al eliminar: " + ex.Message);
             }
         }
 
