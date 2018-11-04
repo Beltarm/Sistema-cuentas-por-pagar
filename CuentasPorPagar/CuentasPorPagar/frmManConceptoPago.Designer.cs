@@ -101,7 +101,7 @@
             this.cbxCriterio.Location = new System.Drawing.Point(89, 46);
             this.cbxCriterio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxCriterio.Name = "cbxCriterio";
-            this.cbxCriterio.Size = new System.Drawing.Size(125, 29);
+            this.cbxCriterio.Size = new System.Drawing.Size(165, 31);
             this.cbxCriterio.TabIndex = 1;
             // 
             // txtBuscar
@@ -110,7 +110,7 @@
             this.txtBuscar.Location = new System.Drawing.Point(290, 46);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(126, 27);
+            this.txtBuscar.Size = new System.Drawing.Size(167, 32);
             this.txtBuscar.TabIndex = 2;
             // 
             // cmdBuscar
@@ -125,7 +125,7 @@
             this.cmdBuscar.Location = new System.Drawing.Point(435, 46);
             this.cmdBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdBuscar.Name = "cmdBuscar";
-            this.cmdBuscar.Size = new System.Drawing.Size(112, 42);
+            this.cmdBuscar.Size = new System.Drawing.Size(149, 52);
             this.cmdBuscar.TabIndex = 3;
             this.cmdBuscar.Text = "Filtrar";
             this.cmdBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -145,7 +145,7 @@
             this.cmdAgregar.Location = new System.Drawing.Point(559, 46);
             this.cmdAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdAgregar.Name = "cmdAgregar";
-            this.cmdAgregar.Size = new System.Drawing.Size(112, 42);
+            this.cmdAgregar.Size = new System.Drawing.Size(149, 52);
             this.cmdAgregar.TabIndex = 4;
             this.cmdAgregar.Text = "Agregar";
             this.cmdAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
