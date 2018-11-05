@@ -1,0 +1,10 @@
+Alexander Batista 20170393
+
+Brian Correa  20170343
+
+Ana Scarla Carela 20170482
+
+
+Cuenta de administrador: user: admin password: admin
+
+Cuenta de usuario:  user: Juan password: propietaria
