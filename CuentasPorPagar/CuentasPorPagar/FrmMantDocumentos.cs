@@ -51,22 +51,50 @@ namespace CuentasPorPagar
                 /****************CONSULTA********************/
                 conn = new SqlConnection("Data Source=ana-alex-brian.database.windows.net;Initial Catalog=Cuentas_por_pagar;User ID=propietaria;Password=#Seguridad1");
                 conn.Open();
-                string sql = "select Documentos_Pagar.Num_Documento as [Numero Documento], Documentos_Pagar.Num_Factura as [Numero Factura], + Concepto_Pago.Descripcion as [Concepto pago]";
-                sql += ", Documentos_Pagar.Fecha_Documento as [Fecha Documento],  Documentos_Pagar.Monto, Documentos_Pagar.Fecha_Registro as [Fecha Registro],";
-                sql += " Proveedores.Nombre as [Nombre Proveedor],  Documentos_Pagar.Estado from Documentos_Pagar INNER JOIN Concepto_Pago ON";
+                string sql = "select Documentos_Pagar.Num_Documento as [Numero Documento], Documentos_Pagar.Num_Factura as [Numero Factura], + Concepto_Pago.Descripcion as [Concepto Pago]";
+                sql += ", Documentos_Pagar.Fecha_Documento as [Fecha Documento],  Documentos_Pagar.Monto as Monto, Documentos_Pagar.Fecha_Registro as [Fecha Registro],";
+                sql += " Proveedores.Nombre as [Nombre Proveedor],  Documentos_Pagar.Estado as Estado from Documentos_Pagar INNER JOIN Concepto_Pago ON";
                 sql += " Documentos_Pagar.Id_Concepto_Pago = Concepto_Pago.Id_Concepto_Pago INNER JOIN Proveedores ON Documentos_Pagar.Id_Proveedor = Proveedores.Id_Proveedor ";
 
+                string criterio = "";
                 if (cbxCriterio.Text.Length > 0)
                 {
-                    string criterio;
-                        
-                    criterio = cbxCriterio.Text.Replace(' ', '_');
-                    MessageBox.Show(criterio);
                     
+                    switch (cbxCriterio.Text)
+                    {
+                        case "Numero Documento":
+                            criterio = "Num_Documento";
+                            break;
+                        case "Numero Factura":
+                            criterio = "Num_Factura";
+                            break;
+                        case "Concepto Pago":
+                            criterio = "Concepto_Pago.Descripcion";
+                            break;
+                        case "Fecha Documento":
+                            criterio = "Documentos_Pagar.Fecha_Documento";
+                            break;
+                        case "Monto":
+                            criterio = "Documentos_Pagar.Monto";
+                            break;
+                        case "Fecha Registro":
+                            criterio = "Documentos_Pagar.Fecha_Registro";
+                            break;
+                        case "Nombre Proveedor":
+                            criterio = "Proveedores.Nombre";
+                            break;
+                        case "Estado":
+                            criterio = "Documentos_Pagar.Estado";
+                            break;
 
-                    sql += "WHERE " + cbxCriterio + " LIKE '%" + txtBuscar.Text + "%' ";
-                    sql += "ORDER BY " + cbxCriterio.Text;
+                        default:
+                            break;
+                    }
+                 
+                    sql += "where " + criterio + " like '%" + txtBuscar.Text + "%'";
+                    sql += "order by " +  criterio;
                 }
+              
 
 
                 /*******************************************/

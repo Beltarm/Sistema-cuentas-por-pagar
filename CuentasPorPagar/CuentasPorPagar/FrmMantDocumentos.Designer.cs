@@ -107,7 +107,7 @@
             this.cbxCriterio.Items.AddRange(new object[] {
             "Numero Documento",
             "Numero Factura",
-            "Concepto de Pago",
+            "Concepto Pago",
             "Fecha Documento",
             "Monto",
             "Fecha Registro ",
