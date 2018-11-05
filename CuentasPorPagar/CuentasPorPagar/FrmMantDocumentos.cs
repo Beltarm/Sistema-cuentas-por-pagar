@@ -59,40 +59,71 @@ namespace CuentasPorPagar
                 string criterio = "";
                 if (cbxCriterio.Text.Length > 0)
                 {
-                    
-                    switch (cbxCriterio.Text)
+
+                    //switch (cbxCriterio.Text)
+                    //{
+                    //    case "Numero Documento":
+                    //        criterio = "Num_Documento";
+                    //        break;
+                    //    case "Numero Factura":
+                    //        criterio = "Num_Factura";
+                    //        break;
+                    //    case "Concepto Pago":
+                    //        criterio = "Concepto_Pago.Descripcion";
+                    //        break;
+                    //    case "Fecha Documento":
+                    //        criterio = "Documentos_Pagar.Fecha_Documento";
+                    //        break;
+                    //    case "Monto":
+                    //        criterio = "Documentos_Pagar.Monto";
+                    //        break;
+                    //    case "Fecha Registro":
+                    //        criterio = "Documentos_Pagar.Fecha_Registro";
+                    //        break;
+                    //    case "Nombre Proveedor":
+                    //        criterio = "Proveedores.Nombre";
+                    //        break;
+                    //    case "Estado":
+                    //        criterio = "Documentos_Pagar.Estado";
+                    //        break;
+
+                    //    default:
+                    //        break;
+                    //}
+
+                    switch (cbxCriterio.SelectedIndex)
                     {
-                        case "Numero Documento":
+                        case 0:
                             criterio = "Num_Documento";
                             break;
-                        case "Numero Factura":
+                        case 1:
                             criterio = "Num_Factura";
                             break;
-                        case "Concepto Pago":
+                        case 2:
                             criterio = "Concepto_Pago.Descripcion";
                             break;
-                        case "Fecha Documento":
+                        case 3:
                             criterio = "Documentos_Pagar.Fecha_Documento";
                             break;
-                        case "Monto":
+                        case 4:
                             criterio = "Documentos_Pagar.Monto";
                             break;
-                        case "Fecha Registro":
+                        case 5:
                             criterio = "Documentos_Pagar.Fecha_Registro";
                             break;
-                        case "Nombre Proveedor":
+                        case 6:
                             criterio = "Proveedores.Nombre";
                             break;
-                        case "Estado":
+                        case 7:
                             criterio = "Documentos_Pagar.Estado";
                             break;
 
                         default:
                             break;
                     }
-                 
+                    
                     sql += "where " + criterio + " like '%" + txtBuscar.Text + "%'";
-                    sql += "order by " +  criterio;
+                    sql += " order by " +  criterio;
                 }
               
 
