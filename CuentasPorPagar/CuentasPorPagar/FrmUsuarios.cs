@@ -63,16 +63,22 @@ namespace CuentasPorPagar
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
             Usuario usuario = entities.Usuario.Find(Int32.Parse(txtID.Text));
+            //var rolesVinculados = (from r in entities.ROL
+            //                       where r.Usuario == usuario
+            //                       select r);
             if (usuario != null)
             {
+                usuario.ROL.Clear();
                 entities.Usuario.Remove(usuario);
                 entities.SaveChanges();
                 MessageBox.Show("Empleado eliminado con exito");
+                this.Close();                
             }
             else
             {
-                MessageBox.Show("Empleado no existe");
+                MessageBox.Show("Empleado no existe");              
             }
+            
         }
     }
 }
