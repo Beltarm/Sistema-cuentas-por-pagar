@@ -31,6 +31,7 @@ namespace CuentasPorPagar
                 btnConfiguracion.Enabled = false;
                 btnPanelMantenimientos.Enabled = false;
                 pnPrincipal.modo = "user";
+                
             }
         }
 
@@ -66,6 +67,21 @@ namespace CuentasPorPagar
             Selector.Height = btnConfiguracion.Height;
             Selector.Top = btnConfiguracion.Top;
             pnConfiguracion1.BringToFront();
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            Selector.Height = btnReportes.Height;
+            Selector.Top = btnReportes.Top;
+            pnReportes1.BringToFront();
+            
+        }
+
+        private void btnReportes_Click_1(object sender, EventArgs e)
+        {
+            Selector.Height = btnReportes.Height;
+            Selector.Top = btnReportes.Top;
+            pnReportes1.BringToFront();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

@@ -59,38 +59,6 @@ namespace CuentasPorPagar
                 string criterio = "";
                 if (cbxCriterio.Text.Length > 0)
                 {
-
-                    //switch (cbxCriterio.Text)
-                    //{
-                    //    case "Numero Documento":
-                    //        criterio = "Num_Documento";
-                    //        break;
-                    //    case "Numero Factura":
-                    //        criterio = "Num_Factura";
-                    //        break;
-                    //    case "Concepto Pago":
-                    //        criterio = "Concepto_Pago.Descripcion";
-                    //        break;
-                    //    case "Fecha Documento":
-                    //        criterio = "Documentos_Pagar.Fecha_Documento";
-                    //        break;
-                    //    case "Monto":
-                    //        criterio = "Documentos_Pagar.Monto";
-                    //        break;
-                    //    case "Fecha Registro":
-                    //        criterio = "Documentos_Pagar.Fecha_Registro";
-                    //        break;
-                    //    case "Nombre Proveedor":
-                    //        criterio = "Proveedores.Nombre";
-                    //        break;
-                    //    case "Estado":
-                    //        criterio = "Documentos_Pagar.Estado";
-                    //        break;
-
-                    //    default:
-                    //        break;
-                    //}
-
                     switch (cbxCriterio.SelectedIndex)
                     {
                         case 0:
@@ -125,9 +93,6 @@ namespace CuentasPorPagar
                     sql += "where " + criterio + " like '%" + txtBuscar.Text + "%'";
                     sql += " order by " +  criterio;
                 }
-              
-
-
                 /*******************************************/
                 SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                 DataTable dt = new DataTable();

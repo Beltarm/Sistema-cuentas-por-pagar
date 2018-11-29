@@ -56,7 +56,7 @@ namespace CuentasPorPagar
             }
 
             entities.SaveChanges();
-            MessageBox.Show("Datos guardados con exito");
+            MessageBox.Show("Datos guardados con éxito");
             this.Close();
         }
 
@@ -67,7 +67,7 @@ namespace CuentasPorPagar
             {
                 entities.Usuario.Remove(usuario);
                 entities.SaveChanges();
-                MessageBox.Show("Empleado eliminado con exito");
+                MessageBox.Show("Empleado eliminado con éxito");
             }
             else
             {

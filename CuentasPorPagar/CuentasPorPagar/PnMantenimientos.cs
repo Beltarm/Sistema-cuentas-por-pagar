@@ -34,5 +34,10 @@ namespace CuentasPorPagar
             FrmMantDocumentos frm = new FrmMantDocumentos();
             frm.ShowDialog();
         }
+
+        private void PnMantenimientos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
