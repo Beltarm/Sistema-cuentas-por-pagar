@@ -8,6 +8,9 @@
         <EntityTypeShape EntityType="Cuentas_por_pagarModel.ROL" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="Cuentas_por_pagarModel.Usuario" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
         <AssociationConnector Association="Cuentas_por_pagarModel.USUARIO_ROL" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Cuentas_por_pagarModel.Solicitud_Pago_Proveedor" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Cuentas_por_pagarModel.Documentos_Pagar" Width="1.5" PointX="0.75" PointY="7.5" />
+        <AssociationConnector Association="Cuentas_por_pagarModel.FK_Solicitud_Pago_Proveedor_Documentos_Pagar" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
