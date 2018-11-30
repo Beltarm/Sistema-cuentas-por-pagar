@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.bntPagos = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnConfiguracion = new System.Windows.Forms.Button();
             this.btnPanelMantenimientos = new System.Windows.Forms.Button();
@@ -41,12 +42,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.bntPagos = new System.Windows.Forms.Button();
             this.pnReportes1 = new CuentasPorPagar.pnReportes();
             this.pnConfiguracion1 = new CuentasPorPagar.pnConfiguracion();
             this.pnPrincipal = new CuentasPorPagar.pnPrincipal();
             this.pnMantenimientos1 = new CuentasPorPagar.PnMantenimientos();
-            this.pnPagos1 = new CuentasPorPagar.pnPagos();
+            this.pnPago1 = new CuentasPorPagar.pnPago();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,24 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(257, 731);
             this.panel5.TabIndex = 4;
+            // 
+            // bntPagos
+            // 
+            this.bntPagos.FlatAppearance.BorderSize = 0;
+            this.bntPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntPagos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntPagos.ForeColor = System.Drawing.Color.White;
+            this.bntPagos.Image = ((System.Drawing.Image)(resources.GetObject("bntPagos.Image")));
+            this.bntPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntPagos.Location = new System.Drawing.Point(12, 192);
+            this.bntPagos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bntPagos.Name = "bntPagos";
+            this.bntPagos.Size = new System.Drawing.Size(245, 86);
+            this.bntPagos.TabIndex = 7;
+            this.bntPagos.Text = "        Pagos";
+            this.bntPagos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntPagos.UseVisualStyleBackColor = true;
+            this.bntPagos.Click += new System.EventHandler(this.bntPagos_Click);
             // 
             // btnReportes
             // 
@@ -221,24 +239,6 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // bntPagos
-            // 
-            this.bntPagos.FlatAppearance.BorderSize = 0;
-            this.bntPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntPagos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntPagos.ForeColor = System.Drawing.Color.White;
-            this.bntPagos.Image = ((System.Drawing.Image)(resources.GetObject("bntPagos.Image")));
-            this.bntPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntPagos.Location = new System.Drawing.Point(12, 192);
-            this.bntPagos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bntPagos.Name = "bntPagos";
-            this.bntPagos.Size = new System.Drawing.Size(245, 86);
-            this.bntPagos.TabIndex = 7;
-            this.bntPagos.Text = "        Pagos";
-            this.bntPagos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntPagos.UseVisualStyleBackColor = true;
-            this.bntPagos.Click += new System.EventHandler(this.bntPagos_Click);
-            // 
             // pnReportes1
             // 
             this.pnReportes1.Location = new System.Drawing.Point(263, 146);
@@ -272,19 +272,19 @@
             this.pnMantenimientos1.Size = new System.Drawing.Size(891, 572);
             this.pnMantenimientos1.TabIndex = 4;
             // 
-            // pnPagos1
+            // pnPago1
             // 
-            this.pnPagos1.Location = new System.Drawing.Point(263, 147);
-            this.pnPagos1.Name = "pnPagos1";
-            this.pnPagos1.Size = new System.Drawing.Size(891, 572);
-            this.pnPagos1.TabIndex = 8;
+            this.pnPago1.Location = new System.Drawing.Point(263, 147);
+            this.pnPago1.Name = "pnPago1";
+            this.pnPago1.Size = new System.Drawing.Size(891, 572);
+            this.pnPago1.TabIndex = 8;
             // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1165, 731);
-            this.Controls.Add(this.pnPagos1);
+            this.Controls.Add(this.pnPago1);
             this.Controls.Add(this.pnReportes1);
             this.Controls.Add(this.pnConfiguracion1);
             this.Controls.Add(this.pnPrincipal);
@@ -324,7 +324,7 @@
         private System.Windows.Forms.Button btnReportes;
         private pnReportes pnReportes1;
         private System.Windows.Forms.Button bntPagos;
-        private pnPagos pnPagos1;
+        private pnPago pnPago1;
     }
 }
 

@@ -12,26 +12,22 @@ namespace CuentasPorPagar
     using System;
     using System.Collections.Generic;
     
-    public partial class Documentos_Pagar
+    public partial class Proveedores
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Documentos_Pagar()
+        public Proveedores()
         {
-            this.Solicitud_Pago_Proveedor = new HashSet<Solicitud_Pago_Proveedor>();
+            this.Documentos_Pagar = new HashSet<Documentos_Pagar>();
         }
     
-        public int Num_Documento { get; set; }
-        public string Num_Factura { get; set; }
-        public int Id_Concepto_Pago { get; set; }
-        public System.DateTime Fecha_Documento { get; set; }
-        public int Monto { get; set; }
-        public System.DateTime Fecha_Registro { get; set; }
         public int Id_Proveedor { get; set; }
+        public string Nombre { get; set; }
+        public string Cedula { get; set; }
+        public string Tipo_Persona { get; set; }
+        public decimal Balance { get; set; }
         public string Estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Solicitud_Pago_Proveedor> Solicitud_Pago_Proveedor { get; set; }
-        public virtual Concepto_Pago Concepto_Pago { get; set; }
-        public virtual Proveedores Proveedores { get; set; }
+        public virtual ICollection<Documentos_Pagar> Documentos_Pagar { get; set; }
     }
 }

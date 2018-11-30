@@ -11,6 +11,10 @@
         <EntityTypeShape EntityType="Cuentas_por_pagarModel.Solicitud_Pago_Proveedor" Width="1.5" PointX="0.75" PointY="3.75" />
         <EntityTypeShape EntityType="Cuentas_por_pagarModel.Documentos_Pagar" Width="1.5" PointX="0.75" PointY="7.5" />
         <AssociationConnector Association="Cuentas_por_pagarModel.FK_Solicitud_Pago_Proveedor_Documentos_Pagar" />
+        <EntityTypeShape EntityType="Cuentas_por_pagarModel.Concepto_Pago" Width="1.5" PointX="0.75" PointY="14.75" />
+        <EntityTypeShape EntityType="Cuentas_por_pagarModel.Proveedores" Width="1.5" PointX="0.75" PointY="11.625" />
+        <AssociationConnector Association="Cuentas_por_pagarModel.FK_Documentos_Pagar_Concepto_Pago" />
+        <AssociationConnector Association="Cuentas_por_pagarModel.FK_Documentos_Pagar_Proveedores" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

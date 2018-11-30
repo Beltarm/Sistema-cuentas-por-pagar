@@ -88,7 +88,7 @@ namespace CuentasPorPagar
         {
             Selector.Height = bntPagos.Height;
             Selector.Top = bntPagos.Top;
-            pnPagos1.BringToFront();
+            pnPago1.BringToFront();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

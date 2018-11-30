@@ -5,6 +5,14 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="Cuentas_por_pagarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Concepto_Pago">
+          <Key>
+            <PropertyRef Name="Id_Concepto_Pago" />
+          </Key>
+          <Property Name="Id_Concepto_Pago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Estado" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
         <EntityType Name="Documentos_Pagar">
           <Key>
             <PropertyRef Name="Num_Documento" />
@@ -16,6 +24,17 @@
           <Property Name="Monto" Type="int" Nullable="false" />
           <Property Name="Fecha_Registro" Type="date" Nullable="false" />
           <Property Name="Id_Proveedor" Type="int" Nullable="false" />
+          <Property Name="Estado" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Proveedores">
+          <Key>
+            <PropertyRef Name="Id_Proveedor" />
+          </Key>
+          <Property Name="Id_Proveedor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="Cedula" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Tipo_Persona" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Balance" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="Estado" Type="varchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="ROL">
@@ -53,6 +72,30 @@
           <Property Name="ID_USUARIO" Type="int" Nullable="false" />
           <Property Name="ID_ROL" Type="int" Nullable="false" />
         </EntityType>
+        <Association Name="FK_Documentos_Pagar_Concepto_Pago">
+          <End Role="Concepto_Pago" Type="Self.Concepto_Pago" Multiplicity="1" />
+          <End Role="Documentos_Pagar" Type="Self.Documentos_Pagar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Concepto_Pago">
+              <PropertyRef Name="Id_Concepto_Pago" />
+            </Principal>
+            <Dependent Role="Documentos_Pagar">
+              <PropertyRef Name="Id_Concepto_Pago" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Documentos_Pagar_Proveedores">
+          <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
+          <End Role="Documentos_Pagar" Type="Self.Documentos_Pagar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Proveedores">
+              <PropertyRef Name="Id_Proveedor" />
+            </Principal>
+            <Dependent Role="Documentos_Pagar">
+              <PropertyRef Name="Id_Proveedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Solicitud_Pago_Proveedor_Documentos_Pagar">
           <End Role="Documentos_Pagar" Type="Self.Documentos_Pagar" Multiplicity="1" />
           <End Role="Solicitud_Pago_Proveedor" Type="Self.Solicitud_Pago_Proveedor" Multiplicity="*" />
@@ -90,11 +133,21 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="Cuentas_por_pagarModelStoreContainer">
+          <EntitySet Name="Concepto_Pago" EntityType="Self.Concepto_Pago" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Documentos_Pagar" EntityType="Self.Documentos_Pagar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Proveedores" EntityType="Self.Proveedores" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ROL" EntityType="Self.ROL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Solicitud_Pago_Proveedor" EntityType="Self.Solicitud_Pago_Proveedor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="USUARIO_ROL" EntityType="Self.USUARIO_ROL" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Documentos_Pagar_Concepto_Pago" Association="Self.FK_Documentos_Pagar_Concepto_Pago">
+            <End Role="Concepto_Pago" EntitySet="Concepto_Pago" />
+            <End Role="Documentos_Pagar" EntitySet="Documentos_Pagar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Documentos_Pagar_Proveedores" Association="Self.FK_Documentos_Pagar_Proveedores">
+            <End Role="Proveedores" EntitySet="Proveedores" />
+            <End Role="Documentos_Pagar" EntitySet="Documentos_Pagar" />
+          </AssociationSet>
           <AssociationSet Name="FK_Solicitud_Pago_Proveedor_Documentos_Pagar" Association="Self.FK_Solicitud_Pago_Proveedor_Documentos_Pagar">
             <End Role="Documentos_Pagar" EntitySet="Documentos_Pagar" />
             <End Role="Solicitud_Pago_Proveedor" EntitySet="Solicitud_Pago_Proveedor" />
@@ -147,6 +200,16 @@
             <End Role="Documentos_Pagar" EntitySet="Documentos_Pagar" />
             <End Role="Solicitud_Pago_Proveedor" EntitySet="Solicitud_Pago_Proveedor" />
           </AssociationSet>
+          <EntitySet Name="Concepto_Pago" EntityType="Cuentas_por_pagarModel.Concepto_Pago" />
+          <EntitySet Name="Proveedores" EntityType="Cuentas_por_pagarModel.Proveedores" />
+          <AssociationSet Name="FK_Documentos_Pagar_Concepto_Pago" Association="Cuentas_por_pagarModel.FK_Documentos_Pagar_Concepto_Pago">
+            <End Role="Concepto_Pago" EntitySet="Concepto_Pago" />
+            <End Role="Documentos_Pagar" EntitySet="Documentos_Pagar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Documentos_Pagar_Proveedores" Association="Cuentas_por_pagarModel.FK_Documentos_Pagar_Proveedores">
+            <End Role="Proveedores" EntitySet="Proveedores" />
+            <End Role="Documentos_Pagar" EntitySet="Documentos_Pagar" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Solicitud_Pago_Proveedor">
           <Key>
@@ -173,6 +236,8 @@
           <Property Name="Id_Proveedor" Type="Int32" Nullable="false" />
           <Property Name="Estado" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Solicitud_Pago_Proveedor" Relationship="Cuentas_por_pagarModel.FK_Solicitud_Pago_Proveedor_Documentos_Pagar" FromRole="Documentos_Pagar" ToRole="Solicitud_Pago_Proveedor" />
+          <NavigationProperty Name="Concepto_Pago" Relationship="Cuentas_por_pagarModel.FK_Documentos_Pagar_Concepto_Pago" FromRole="Documentos_Pagar" ToRole="Concepto_Pago" />
+          <NavigationProperty Name="Proveedores" Relationship="Cuentas_por_pagarModel.FK_Documentos_Pagar_Proveedores" FromRole="Documentos_Pagar" ToRole="Proveedores" />
         </EntityType>
         <Association Name="FK_Solicitud_Pago_Proveedor_Documentos_Pagar">
           <End Type="Cuentas_por_pagarModel.Documentos_Pagar" Role="Documentos_Pagar" Multiplicity="1" />
@@ -183,6 +248,51 @@
             </Principal>
             <Dependent Role="Solicitud_Pago_Proveedor">
               <PropertyRef Name="Num_Documento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Concepto_Pago">
+          <Key>
+            <PropertyRef Name="Id_Concepto_Pago" />
+          </Key>
+          <Property Name="Id_Concepto_Pago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Documentos_Pagar" Relationship="Cuentas_por_pagarModel.FK_Documentos_Pagar_Concepto_Pago" FromRole="Concepto_Pago" ToRole="Documentos_Pagar" />
+        </EntityType>
+        <EntityType Name="Proveedores">
+          <Key>
+            <PropertyRef Name="Id_Proveedor" />
+          </Key>
+          <Property Name="Id_Proveedor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="Cedula" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Tipo_Persona" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Balance" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="Estado" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Documentos_Pagar" Relationship="Cuentas_por_pagarModel.FK_Documentos_Pagar_Proveedores" FromRole="Proveedores" ToRole="Documentos_Pagar" />
+        </EntityType>
+        <Association Name="FK_Documentos_Pagar_Concepto_Pago">
+          <End Type="Cuentas_por_pagarModel.Concepto_Pago" Role="Concepto_Pago" Multiplicity="1" />
+          <End Type="Cuentas_por_pagarModel.Documentos_Pagar" Role="Documentos_Pagar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Concepto_Pago">
+              <PropertyRef Name="Id_Concepto_Pago" />
+            </Principal>
+            <Dependent Role="Documentos_Pagar">
+              <PropertyRef Name="Id_Concepto_Pago" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Documentos_Pagar_Proveedores">
+          <End Type="Cuentas_por_pagarModel.Proveedores" Role="Proveedores" Multiplicity="1" />
+          <End Type="Cuentas_por_pagarModel.Documentos_Pagar" Role="Documentos_Pagar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Proveedores">
+              <PropertyRef Name="Id_Proveedor" />
+            </Principal>
+            <Dependent Role="Documentos_Pagar">
+              <PropertyRef Name="Id_Proveedor" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -241,6 +351,27 @@
                 <ScalarProperty Name="Id_Concepto_Pago" ColumnName="Id_Concepto_Pago" />
                 <ScalarProperty Name="Num_Factura" ColumnName="Num_Factura" />
                 <ScalarProperty Name="Num_Documento" ColumnName="Num_Documento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Concepto_Pago">
+            <EntityTypeMapping TypeName="Cuentas_por_pagarModel.Concepto_Pago">
+              <MappingFragment StoreEntitySet="Concepto_Pago">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Id_Concepto_Pago" ColumnName="Id_Concepto_Pago" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Proveedores">
+            <EntityTypeMapping TypeName="Cuentas_por_pagarModel.Proveedores">
+              <MappingFragment StoreEntitySet="Proveedores">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Tipo_Persona" ColumnName="Tipo_Persona" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Id_Proveedor" ColumnName="Id_Proveedor" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
