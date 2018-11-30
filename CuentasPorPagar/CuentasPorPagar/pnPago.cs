@@ -32,10 +32,12 @@ namespace CuentasPorPagar
                      select doc);
             FrmFactura frm = new FrmFactura();
             frm.documento = d.FirstOrDefault();
+
+            frm.FormClosed += new FormClosedEventHandler(frmPago_FormClosed);
             frm.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void frmPago_FormClosed(object sender, FormClosedEventArgs e)
         {
             cargarDeudas();
         }
