@@ -81,6 +81,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CuentasPorPagarDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CuentasPorPagarDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CuentasPorPagarEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -95,6 +100,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CuentasPorPagarEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetProveedores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProveedores.xsd</DependentUpon>
     </Compile>
     <Compile Include="FrmMantUsuarios.cs">
       <SubType>Form</SubType>
@@ -150,11 +160,35 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReporteProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteProveedores.Designer.cs">
+      <DependentUpon>FrmReporteProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportesConceptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportesConceptos.Designer.cs">
+      <DependentUpon>FrmReportesConceptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportesDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportesDocumentos.Designer.cs">
+      <DependentUpon>FrmReportesDocumentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVisorReporteProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVisorReporteProveedores.Designer.cs">
+      <DependentUpon>FrmVisorReporteProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="pnConfiguracion.cs">
       <SubType>UserControl</SubType>
@@ -217,8 +251,14 @@
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteProveedores.resx">
+      <DependentUpon>FrmReporteProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVisorReporteProveedores.resx">
+      <DependentUpon>FrmVisorReporteProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pnConfiguracion.resx">
       <DependentUpon>pnConfiguracion.cs</DependentUpon>
@@ -242,12 +282,35 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReporteProveedores.rdlc" />
     <EntityDeploy Include="CuentasPorPagarEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CuentasPorPagarEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="CuentasPorPagarDataSet.xsc">
+      <DependentUpon>CuentasPorPagarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CuentasPorPagarDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CuentasPorPagarDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CuentasPorPagarDataSet.xss">
+      <DependentUpon>CuentasPorPagarDataSet.xsd</DependentUpon>
+    </None>
     <None Include="CuentasPorPagarEntities.edmx.diagram">
       <DependentUpon>CuentasPorPagarEntities.edmx</DependentUpon>
+    </None>
+    <None Include="DataSetProveedores.xsc">
+      <DependentUpon>DataSetProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetProveedores.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProveedores.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetProveedores.xss">
+      <DependentUpon>DataSetProveedores.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
