@@ -48,7 +48,7 @@
           <Key>
             <PropertyRef Name="Id_Solicitud" />
           </Key>
-          <Property Name="Id_Solicitud" Type="int" Nullable="false" />
+          <Property Name="Id_Solicitud" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Num_Documento" Type="int" Nullable="false" />
           <Property Name="Num_Factura_Pagar" Type="varchar" MaxLength="70" Nullable="false" />
           <Property Name="Fecha" Type="date" Nullable="false" />

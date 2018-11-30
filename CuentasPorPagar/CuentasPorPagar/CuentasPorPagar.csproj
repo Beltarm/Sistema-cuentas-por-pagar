@@ -112,6 +112,12 @@
     <Compile Include="Documentos_Pagar.cs">
       <DependentUpon>CuentasPorPagarEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="FrmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFactura.Designer.cs">
+      <DependentUpon>FrmFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMantUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +248,9 @@
       <DependentUpon>CuentasPorPagarEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Validaciones.cs" />
+    <EmbeddedResource Include="FrmFactura.resx">
+      <DependentUpon>FrmFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMantUsuarios.resx">
       <DependentUpon>FrmMantUsuarios.cs</DependentUpon>
     </EmbeddedResource>

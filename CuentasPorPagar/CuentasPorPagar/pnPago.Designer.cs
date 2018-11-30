@@ -32,6 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DgbDeudas = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgbDeudas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgbDeudas.DefaultCellStyle = dataGridViewCellStyle5;
             this.DgbDeudas.EnableHeadersVisualStyles = false;
-            this.DgbDeudas.Location = new System.Drawing.Point(27, 41);
+            this.DgbDeudas.Location = new System.Drawing.Point(27, 62);
             this.DgbDeudas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgbDeudas.Name = "DgbDeudas";
             this.DgbDeudas.ReadOnly = true;
@@ -80,22 +82,46 @@
             this.DgbDeudas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgbDeudas.Size = new System.Drawing.Size(837, 490);
             this.DgbDeudas.TabIndex = 1;
+            this.DgbDeudas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgbDeudas_CellDoubleClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(90, 13);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(251, 24);
+            this.comboBox1.TabIndex = 3;
+            this.comboBox1.ValueMember = "Id_Proveedor";
             // 
             // pnPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.DgbDeudas);
             this.Name = "pnPago";
             this.Size = new System.Drawing.Size(891, 572);
             this.Load += new System.EventHandler(this.pnPago_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgbDeudas)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView DgbDeudas;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

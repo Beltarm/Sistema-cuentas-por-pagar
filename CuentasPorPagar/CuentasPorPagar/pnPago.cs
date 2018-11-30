@@ -24,8 +24,22 @@ namespace CuentasPorPagar
             {
                 ID = u.Num_Documento,
                 Factura = u.Num_Factura,
-                Proveedor = u.Proveedores.Nombre
-            }).ToList();
+                Monto = u.Monto,
+                Proveedor = u.Proveedores.Nombre,
+                Estado = u.Estado
+            }).Where(u => u.Estado == "Pendiente").ToList();
+        }
+
+        private void DgbDeudas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.DgbDeudas.SelectedRows[0];
+            int id = Int32.Parse(row.Cells[0].Value.ToString());
+            var d = (from doc in entities.Documentos_Pagar
+                     where doc.Num_Documento == id
+                     select doc);
+            FrmFactura frm = new FrmFactura();
+            frm.documento = d.FirstOrDefault();
+            frm.ShowDialog();
         }
     }
 }
