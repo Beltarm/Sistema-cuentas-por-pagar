@@ -81,6 +81,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CuentasPorPagarDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CuentasPorPagarDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CuentasPorPagarEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -96,8 +101,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CuentasPorPagarEntities.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Documentos_Pagar.cs">
-      <DependentUpon>CuentasPorPagarEntities.tt</DependentUpon>
+    <Compile Include="DataSetProveedores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProveedores.xsd</DependentUpon>
     </Compile>
     <Compile Include="FrmMantUsuarios.cs">
       <SubType>Form</SubType>
@@ -153,11 +160,35 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReporteProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteProveedores.Designer.cs">
+      <DependentUpon>FrmReporteProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportesConceptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportesConceptos.Designer.cs">
+      <DependentUpon>FrmReportesConceptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportesDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportesDocumentos.Designer.cs">
+      <DependentUpon>FrmReportesDocumentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVisorReporteProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVisorReporteProveedores.Designer.cs">
+      <DependentUpon>FrmVisorReporteProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="pnConfiguracion.cs">
       <SubType>UserControl</SubType>
@@ -170,12 +201,6 @@
     </Compile>
     <Compile Include="PnMantenimientos.Designer.cs">
       <DependentUpon>PnMantenimientos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="pnPagos.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="pnPagos.Designer.cs">
-      <DependentUpon>pnPagos.cs</DependentUpon>
     </Compile>
     <Compile Include="pnPrincipal.cs">
       <SubType>UserControl</SubType>
@@ -192,15 +217,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ROL.cs">
-      <DependentUpon>CuentasPorPagarEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SolicitudPago.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SolicitudPago.Designer.cs">
-      <DependentUpon>SolicitudPago.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Solicitud_Pago_Proveedor.cs">
       <DependentUpon>CuentasPorPagarEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -235,17 +251,20 @@
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteProveedores.resx">
+      <DependentUpon>FrmReporteProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVisorReporteProveedores.resx">
+      <DependentUpon>FrmVisorReporteProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pnConfiguracion.resx">
       <DependentUpon>pnConfiguracion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PnMantenimientos.resx">
       <DependentUpon>PnMantenimientos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="pnPagos.resx">
-      <DependentUpon>pnPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pnPrincipal.resx">
       <DependentUpon>pnPrincipal.cs</DependentUpon>
@@ -263,15 +282,35 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SolicitudPago.resx">
-      <DependentUpon>SolicitudPago.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteProveedores.rdlc" />
     <EntityDeploy Include="CuentasPorPagarEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CuentasPorPagarEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="CuentasPorPagarDataSet.xsc">
+      <DependentUpon>CuentasPorPagarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CuentasPorPagarDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CuentasPorPagarDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CuentasPorPagarDataSet.xss">
+      <DependentUpon>CuentasPorPagarDataSet.xsd</DependentUpon>
+    </None>
     <None Include="CuentasPorPagarEntities.edmx.diagram">
       <DependentUpon>CuentasPorPagarEntities.edmx</DependentUpon>
+    </None>
+    <None Include="DataSetProveedores.xsc">
+      <DependentUpon>DataSetProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetProveedores.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProveedores.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetProveedores.xss">
+      <DependentUpon>DataSetProveedores.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

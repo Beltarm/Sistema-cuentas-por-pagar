@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace CuentasPorPagar
 {
-    public partial class pnReportes : UserControl
+    public partial class FrmReportesConceptos : Form
     {
-        public pnReportes()
+        public FrmReportesConceptos()
         {
             InitializeComponent();
-        }
-
-        private void cmdProveedores_Click(object sender, EventArgs e)
-        {
-            FrmReporteProveedores frm = new FrmReporteProveedores();
-            frm.ShowDialog();
         }
     }
 }
