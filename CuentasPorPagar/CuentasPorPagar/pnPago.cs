@@ -20,14 +20,7 @@ namespace CuentasPorPagar
 
         private void pnPago_Load(object sender, EventArgs e)
         {
-            DgbDeudas.DataSource = entities.Documentos_Pagar.Select(u => new
-            {
-                ID = u.Num_Documento,
-                Factura = u.Num_Factura,
-                Monto = u.Monto,
-                Proveedor = u.Proveedores.Nombre,
-                Estado = u.Estado
-            }).Where(u => u.Estado == "Pendiente").ToList();
+            cargarDeudas();
         }
 
         private void DgbDeudas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -40,6 +33,23 @@ namespace CuentasPorPagar
             FrmFactura frm = new FrmFactura();
             frm.documento = d.FirstOrDefault();
             frm.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cargarDeudas();
+        }
+
+        private void cargarDeudas()
+        {
+            DgbDeudas.DataSource = entities.Documentos_Pagar.Select(u => new
+            {
+                ID = u.Num_Documento,
+                Factura = u.Num_Factura,
+                Monto = u.Monto,
+                Proveedor = u.Proveedores.Nombre,
+                Estado = u.Estado
+            }).Where(u => u.Estado == "Pendiente").ToList();
         }
     }
 }
