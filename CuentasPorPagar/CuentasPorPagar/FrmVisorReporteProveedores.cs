@@ -31,20 +31,29 @@ namespace CuentasPorPagar
 
             SqlConnection ocon = new SqlConnection("Data Source=ana-alex-brian.database.windows.net;Initial Catalog=Cuentas_por_pagar;Persist Security Info=True;User ID=propietaria;Password=#Seguridad1");
             ocon.Open();
-            string sSQL = "select * from Proveedores ";
-            sSQL += "where 1 = 1 ";
+            string sSQL = "select * from Proveedores where 1 = 1";
 
             if (Nombre.Trim().Length > 0)
                 sSQL += " and Nombre LIKE '%" + Nombre + "%'";
 
             if (TipoPersona.Trim().Length > 0)
-                sSQL += " or Tipo_Persona like '" + TipoPersona + "%'";
+                sSQL += " and Tipo_Persona = '" + TipoPersona + "'";
 
             if (Estado.Trim().Length > 0)
-                sSQL += " or Estado like '" + Estado + "%'";
+                sSQL += " and Estado = '" + Estado + "'";
 
-            /* if (BalanceDesde.ToString().Trim().Length > 0 && BalanceHasta.ToString().Trim().Length > 0)
-                 sSQL += " or Balance between '" + BalanceDesde + "' and '" + BalanceHasta + "'";*/
+            if (BalanceDesde > 0 && BalanceHasta > 0)
+            {
+                sSQL += " and Balance between " + BalanceDesde + " and " + BalanceHasta;
+            }
+            else if(BalanceDesde > 0)
+            {
+                sSQL += " and Balance > " + BalanceDesde;
+            }
+            else
+            {
+                sSQL += " and Balance < " + BalanceHasta;
+            }
 
             DataTable odt = new DataTable();
             SqlDataAdapter oda = new SqlDataAdapter(sSQL, ocon);

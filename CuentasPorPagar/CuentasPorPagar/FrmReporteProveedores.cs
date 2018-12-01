@@ -17,41 +17,38 @@ namespace CuentasPorPagar
             InitializeComponent();
         }
 
-        private void FrmReporteProveedores_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void cmdReporte_Click(object sender, EventArgs e)
         {
             FrmVisorReporteProveedores frm = new FrmVisorReporteProveedores();
             frm.Nombre = txtNombre.Text;
-            if(txtBalanceDesde.TextLength > 0)
+            if (txtBalanceDesde.TextLength > 0)
             {
                 frm.BalanceDesde = double.Parse(txtBalanceDesde.Text);
             }
-            if(txtBalanceHasta.TextLength > 0)
+            if (txtBalanceHasta.TextLength > 0)
             {
                 frm.BalanceHasta = double.Parse(txtBalanceHasta.Text);
             }
+
             frm.TipoPersona = "";
             if (rbtFisica.Checked)
             {
-                frm.TipoPersona = "F";
+                frm.TipoPersona = "Física";
             }
             if (rbtJuridica.Checked)
             {
-                frm.TipoPersona = "J";
+                frm.TipoPersona = "Jurídica";
             }
               
             frm.Estado = "";
             if (rbtActivo.Checked)
             {
-                frm.Estado = "A";
+                frm.Estado = "Activo";
             }
             if (rbtInactivo.Checked)
             {
-                frm.Estado = "I";
+                frm.Estado = "Inactivo";
             }
                 
             frm.ShowDialog();
