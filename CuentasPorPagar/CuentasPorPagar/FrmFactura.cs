@@ -22,8 +22,6 @@ namespace CuentasPorPagar
 
         private void FrmFactura_Load(object sender, EventArgs e)
         {
-            txtIdSolicitud.Text = "ID";
-            txtIdDocumento.Text = documento.Num_Documento.ToString();
             txtNumFactura.Text = documento.Num_Factura;
             txtFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
