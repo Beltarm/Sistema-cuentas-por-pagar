@@ -65,7 +65,7 @@ namespace CuentasPorPagar
             rpvReporteProveedores.LocalReport.DataSources.Clear();
             rpvReporteProveedores.LocalReport.DataSources.Add(rds);
             rpvReporteProveedores.LocalReport.ReportEmbeddedResource = "ReporteProveedores.rdlc";
-            rpvReporteProveedores.LocalReport.ReportPath = @"ReporteProveedores.rdlc";
+            rpvReporteProveedores.LocalReport.ReportPath = @"../../ReporteProveedores.rdlc";
             rpvReporteProveedores.RefreshReport();
 
             // TODO: This line of code loads data into the 'CuentasPorPagarDataSet.Proveedores' table. You can move, or remove it, as needed.
