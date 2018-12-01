@@ -50,7 +50,7 @@ namespace CuentasPorPagar
             {
                 sSQL += " and Balance > " + BalanceDesde;
             }
-            else
+            else if (BalanceHasta > 0)
             {
                 sSQL += " and Balance < " + BalanceHasta;
             }
