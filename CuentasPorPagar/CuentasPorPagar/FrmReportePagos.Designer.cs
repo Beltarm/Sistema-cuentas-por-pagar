@@ -377,6 +377,7 @@
             this.Controls.Add(this.cmdLimpiar);
             this.Controls.Add(this.panel1);
             this.Name = "FrmReportePagos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Parámetros de pago";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

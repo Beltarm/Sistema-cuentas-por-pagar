@@ -272,6 +272,7 @@
             this.Controls.Add(this.cmdReporte);
             this.Controls.Add(this.panel1);
             this.Name = "FrmReporteProveedores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmReporteProveedores";
             this.Load += new System.EventHandler(this.FrmReporteProveedores_Load);
             this.panel1.ResumeLayout(false);

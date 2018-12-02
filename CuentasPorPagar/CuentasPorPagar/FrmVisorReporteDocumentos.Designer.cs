@@ -72,6 +72,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.rpvDocumentos);
             this.Name = "FrmVisorReporteDocumentos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte de Documentos";
             this.Load += new System.EventHandler(this.FrmVisorReporteDocumentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Reporte_DocumentosBindingSource)).EndInit();

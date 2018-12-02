@@ -59,7 +59,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(193, 594);
             this.panel1.TabIndex = 0;
@@ -75,7 +75,7 @@
             this.panel5.Controls.Add(this.btnPanelPrincipal);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(193, 594);
             this.panel5.TabIndex = 4;
@@ -89,7 +89,7 @@
             this.bntPagos.Image = ((System.Drawing.Image)(resources.GetObject("bntPagos.Image")));
             this.bntPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntPagos.Location = new System.Drawing.Point(9, 156);
-            this.bntPagos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bntPagos.Margin = new System.Windows.Forms.Padding(2);
             this.bntPagos.Name = "bntPagos";
             this.bntPagos.Size = new System.Drawing.Size(184, 70);
             this.bntPagos.TabIndex = 1;
@@ -107,7 +107,7 @@
             this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportes.Location = new System.Drawing.Point(7, 302);
-            this.btnReportes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(2);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(184, 70);
             this.btnReportes.TabIndex = 3;
@@ -125,7 +125,7 @@
             this.btnConfiguracion.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguracion.Image")));
             this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfiguracion.Location = new System.Drawing.Point(9, 375);
-            this.btnConfiguracion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfiguracion.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfiguracion.Name = "btnConfiguracion";
             this.btnConfiguracion.Size = new System.Drawing.Size(184, 70);
             this.btnConfiguracion.TabIndex = 4;
@@ -143,7 +143,7 @@
             this.btnPanelMantenimientos.Image = ((System.Drawing.Image)(resources.GetObject("btnPanelMantenimientos.Image")));
             this.btnPanelMantenimientos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPanelMantenimientos.Location = new System.Drawing.Point(7, 229);
-            this.btnPanelMantenimientos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPanelMantenimientos.Margin = new System.Windows.Forms.Padding(2);
             this.btnPanelMantenimientos.Name = "btnPanelMantenimientos";
             this.btnPanelMantenimientos.Size = new System.Drawing.Size(184, 70);
             this.btnPanelMantenimientos.TabIndex = 2;
@@ -156,7 +156,7 @@
             // 
             this.Selector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.Selector.Location = new System.Drawing.Point(0, 83);
-            this.Selector.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Selector.Margin = new System.Windows.Forms.Padding(2);
             this.Selector.Name = "Selector";
             this.Selector.Size = new System.Drawing.Size(11, 70);
             this.Selector.TabIndex = 3;
@@ -170,7 +170,7 @@
             this.btnPanelPrincipal.Image = ((System.Drawing.Image)(resources.GetObject("btnPanelPrincipal.Image")));
             this.btnPanelPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPanelPrincipal.Location = new System.Drawing.Point(9, 83);
-            this.btnPanelPrincipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPanelPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.btnPanelPrincipal.Name = "btnPanelPrincipal";
             this.btnPanelPrincipal.Size = new System.Drawing.Size(184, 70);
             this.btnPanelPrincipal.TabIndex = 0;
@@ -183,7 +183,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.panel4.Location = new System.Drawing.Point(0, 83);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(11, 70);
             this.panel4.TabIndex = 3;
@@ -197,7 +197,7 @@
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(9, 83);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(184, 70);
             this.button1.TabIndex = 0;
@@ -210,7 +210,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(193, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(681, 17);
             this.panel2.TabIndex = 1;
@@ -220,7 +220,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.panel3.Location = new System.Drawing.Point(237, 6);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(85, 108);
             this.panel3.TabIndex = 2;
@@ -232,7 +232,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.Location = new System.Drawing.Point(803, 29);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(44, 41);
             this.btnCerrar.TabIndex = 3;
@@ -242,7 +242,7 @@
             // pnReportes1
             // 
             this.pnReportes1.Location = new System.Drawing.Point(197, 119);
-            this.pnReportes1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnReportes1.Margin = new System.Windows.Forms.Padding(4);
             this.pnReportes1.Name = "pnReportes1";
             this.pnReportes1.Size = new System.Drawing.Size(668, 465);
             this.pnReportes1.TabIndex = 7;
@@ -259,7 +259,7 @@
             // 
             this.pnPrincipal.BackColor = System.Drawing.Color.Transparent;
             this.pnPrincipal.Location = new System.Drawing.Point(197, 119);
-            this.pnPrincipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.pnPrincipal.Name = "pnPrincipal";
             this.pnPrincipal.Size = new System.Drawing.Size(668, 465);
             this.pnPrincipal.TabIndex = 5;
@@ -267,7 +267,7 @@
             // pnMantenimientos1
             // 
             this.pnMantenimientos1.Location = new System.Drawing.Point(197, 119);
-            this.pnMantenimientos1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnMantenimientos1.Margin = new System.Windows.Forms.Padding(2);
             this.pnMantenimientos1.Name = "pnMantenimientos1";
             this.pnMantenimientos1.Size = new System.Drawing.Size(668, 465);
             this.pnMantenimientos1.TabIndex = 4;
@@ -295,7 +295,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

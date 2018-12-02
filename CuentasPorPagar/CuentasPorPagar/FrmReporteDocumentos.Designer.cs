@@ -425,6 +425,7 @@
             this.Controls.Add(this.cmdLimpiar);
             this.Controls.Add(this.panel1);
             this.Name = "FrmReporteDocumentos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Parámetros reporte de documentos";
             this.Load += new System.EventHandler(this.FrmReporteDocumentos_Load);
             this.panel1.ResumeLayout(false);

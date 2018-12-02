@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.rpvPagos = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataSetPagos = new CuentasPorPagar.DataSetPagos();
             this.Solicitud_Pago_ProveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSetPagos = new CuentasPorPagar.DataSetPagos();
+            this.rpvPagos = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Solicitud_Pago_ProveedorTableAdapter = new CuentasPorPagar.DataSetPagosTableAdapters.Solicitud_Pago_ProveedorTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetPagos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Solicitud_Pago_ProveedorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetPagos)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Solicitud_Pago_ProveedorBindingSource
+            // 
+            this.Solicitud_Pago_ProveedorBindingSource.DataMember = "Solicitud_Pago_Proveedor";
+            this.Solicitud_Pago_ProveedorBindingSource.DataSource = this.DataSetPagos;
+            // 
+            // DataSetPagos
+            // 
+            this.DataSetPagos.DataSetName = "DataSetPagos";
+            this.DataSetPagos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rpvPagos
             // 
@@ -51,16 +61,6 @@
             this.rpvPagos.Size = new System.Drawing.Size(800, 450);
             this.rpvPagos.TabIndex = 0;
             // 
-            // DataSetPagos
-            // 
-            this.DataSetPagos.DataSetName = "DataSetPagos";
-            this.DataSetPagos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Solicitud_Pago_ProveedorBindingSource
-            // 
-            this.Solicitud_Pago_ProveedorBindingSource.DataMember = "Solicitud_Pago_Proveedor";
-            this.Solicitud_Pago_ProveedorBindingSource.DataSource = this.DataSetPagos;
-            // 
             // Solicitud_Pago_ProveedorTableAdapter
             // 
             this.Solicitud_Pago_ProveedorTableAdapter.ClearBeforeFill = true;
@@ -72,10 +72,11 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.rpvPagos);
             this.Name = "FrmVisorReportesPagos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte de Pagos";
             this.Load += new System.EventHandler(this.FrmVisorReportesPagos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetPagos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Solicitud_Pago_ProveedorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetPagos)).EndInit();
             this.ResumeLayout(false);
 
         }
