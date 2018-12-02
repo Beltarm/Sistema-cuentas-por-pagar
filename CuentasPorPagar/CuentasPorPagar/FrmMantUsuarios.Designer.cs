@@ -46,9 +46,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(309, 38);
+            this.label2.Location = new System.Drawing.Point(232, 31);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 23);
+            this.label2.Size = new System.Drawing.Size(53, 21);
             this.label2.TabIndex = 11;
             this.label2.Text = "Texto";
             // 
@@ -56,19 +57,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 38);
+            this.label1.Location = new System.Drawing.Point(19, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 23);
+            this.label1.Size = new System.Drawing.Size(66, 21);
             this.label1.TabIndex = 12;
             this.label1.Text = "Criterio";
             // 
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(387, 34);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBuscar.Location = new System.Drawing.Point(290, 28);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(167, 32);
+            this.txtBuscar.Size = new System.Drawing.Size(126, 27);
             this.txtBuscar.TabIndex = 1;
             // 
             // cbxCriterio
@@ -80,10 +82,10 @@
             "ID",
             "Nombre",
             "Estado"});
-            this.cbxCriterio.Location = new System.Drawing.Point(117, 34);
-            this.cbxCriterio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxCriterio.Location = new System.Drawing.Point(88, 28);
+            this.cbxCriterio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxCriterio.Name = "cbxCriterio";
-            this.cbxCriterio.Size = new System.Drawing.Size(165, 31);
+            this.cbxCriterio.Size = new System.Drawing.Size(125, 29);
             this.cbxCriterio.TabIndex = 0;
             // 
             // DgbUsuarios
@@ -114,8 +116,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgbUsuarios.DefaultCellStyle = dataGridViewCellStyle2;
             this.DgbUsuarios.EnableHeadersVisualStyles = false;
-            this.DgbUsuarios.Location = new System.Drawing.Point(44, 108);
-            this.DgbUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DgbUsuarios.Location = new System.Drawing.Point(33, 88);
+            this.DgbUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DgbUsuarios.Name = "DgbUsuarios";
             this.DgbUsuarios.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -129,7 +131,7 @@
             this.DgbUsuarios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DgbUsuarios.RowTemplate.Height = 35;
             this.DgbUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgbUsuarios.Size = new System.Drawing.Size(837, 490);
+            this.DgbUsuarios.Size = new System.Drawing.Size(628, 398);
             this.DgbUsuarios.TabIndex = 6;
             this.DgbUsuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgbUsuarios_CellDoubleClick);
             // 
@@ -141,10 +143,10 @@
             this.cmdAgregar.ForeColor = System.Drawing.Color.SeaGreen;
             this.cmdAgregar.Image = ((System.Drawing.Image)(resources.GetObject("cmdAgregar.Image")));
             this.cmdAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdAgregar.Location = new System.Drawing.Point(744, 34);
-            this.cmdAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmdAgregar.Location = new System.Drawing.Point(558, 28);
+            this.cmdAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdAgregar.Name = "cmdAgregar";
-            this.cmdAgregar.Size = new System.Drawing.Size(149, 52);
+            this.cmdAgregar.Size = new System.Drawing.Size(112, 42);
             this.cmdAgregar.TabIndex = 3;
             this.cmdAgregar.Text = "Agregar";
             this.cmdAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -160,10 +162,10 @@
             this.cmdBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(139)))), ((int)(((byte)(202)))));
             this.cmdBuscar.Image = ((System.Drawing.Image)(resources.GetObject("cmdBuscar.Image")));
             this.cmdBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdBuscar.Location = new System.Drawing.Point(579, 34);
-            this.cmdBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmdBuscar.Location = new System.Drawing.Point(434, 28);
+            this.cmdBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdBuscar.Name = "cmdBuscar";
-            this.cmdBuscar.Size = new System.Drawing.Size(149, 52);
+            this.cmdBuscar.Size = new System.Drawing.Size(112, 42);
             this.cmdBuscar.TabIndex = 2;
             this.cmdBuscar.Text = "Filtrar";
             this.cmdBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -172,9 +174,9 @@
             // 
             // FrmMantUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 633);
+            this.ClientSize = new System.Drawing.Size(689, 514);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmdAgregar);
@@ -182,9 +184,9 @@
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.cbxCriterio);
             this.Controls.Add(this.DgbUsuarios);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmMantUsuarios";
-            this.Text = "FrmMantUsuarios";
+            this.Text = "Mantenimiento de usuarios";
             this.Activated += new System.EventHandler(this.FrmMantUsuarios_Activated);
             this.Load += new System.EventHandler(this.FrmMantUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgbUsuarios)).EndInit();

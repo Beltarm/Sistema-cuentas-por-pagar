@@ -75,5 +75,10 @@ namespace CuentasPorPagar
 
 
         }
+
+        private void rpvReporteProveedores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

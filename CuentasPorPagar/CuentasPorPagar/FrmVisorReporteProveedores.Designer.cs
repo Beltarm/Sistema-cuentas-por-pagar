@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.rpvReporteProveedores = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.CuentasPorPagarDataSet = new CuentasPorPagar.CuentasPorPagarDataSet();
             this.ProveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CuentasPorPagarDataSet = new CuentasPorPagar.CuentasPorPagarDataSet();
+            this.rpvReporteProveedores = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ProveedoresTableAdapter = new CuentasPorPagar.CuentasPorPagarDataSetTableAdapters.ProveedoresTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.CuentasPorPagarDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProveedoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CuentasPorPagarDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ProveedoresBindingSource
+            // 
+            this.ProveedoresBindingSource.DataMember = "Proveedores";
+            this.ProveedoresBindingSource.DataSource = this.CuentasPorPagarDataSet;
+            // 
+            // CuentasPorPagarDataSet
+            // 
+            this.CuentasPorPagarDataSet.DataSetName = "CuentasPorPagarDataSet";
+            this.CuentasPorPagarDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rpvReporteProveedores
             // 
@@ -50,16 +60,7 @@
             this.rpvReporteProveedores.ServerReport.BearerToken = null;
             this.rpvReporteProveedores.Size = new System.Drawing.Size(800, 450);
             this.rpvReporteProveedores.TabIndex = 0;
-            // 
-            // CuentasPorPagarDataSet
-            // 
-            this.CuentasPorPagarDataSet.DataSetName = "CuentasPorPagarDataSet";
-            this.CuentasPorPagarDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ProveedoresBindingSource
-            // 
-            this.ProveedoresBindingSource.DataMember = "Proveedores";
-            this.ProveedoresBindingSource.DataSource = this.CuentasPorPagarDataSet;
+            this.rpvReporteProveedores.Load += new System.EventHandler(this.rpvReporteProveedores_Load);
             // 
             // ProveedoresTableAdapter
             // 
@@ -74,8 +75,8 @@
             this.Name = "FrmVisorReporteProveedores";
             this.Text = "Reporte de Proveedores";
             this.Load += new System.EventHandler(this.FrmVisorReporteProveedores_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.CuentasPorPagarDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProveedoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CuentasPorPagarDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
