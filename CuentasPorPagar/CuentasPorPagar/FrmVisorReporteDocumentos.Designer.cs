@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.rpvDocumentos = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataSetDocumentos = new CuentasPorPagar.DataSetDocumentos();
             this.Reporte_DocumentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSetDocumentos = new CuentasPorPagar.DataSetDocumentos();
+            this.rpvDocumentos = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Reporte_DocumentosTableAdapter = new CuentasPorPagar.DataSetDocumentosTableAdapters.Reporte_DocumentosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetDocumentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Reporte_DocumentosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetDocumentos)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Reporte_DocumentosBindingSource
+            // 
+            this.Reporte_DocumentosBindingSource.DataMember = "Reporte_Documentos";
+            this.Reporte_DocumentosBindingSource.DataSource = this.DataSetDocumentos;
+            // 
+            // DataSetDocumentos
+            // 
+            this.DataSetDocumentos.DataSetName = "DataSetDocumentos";
+            this.DataSetDocumentos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rpvDocumentos
             // 
@@ -51,16 +61,6 @@
             this.rpvDocumentos.Size = new System.Drawing.Size(800, 450);
             this.rpvDocumentos.TabIndex = 0;
             // 
-            // DataSetDocumentos
-            // 
-            this.DataSetDocumentos.DataSetName = "DataSetDocumentos";
-            this.DataSetDocumentos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Reporte_DocumentosBindingSource
-            // 
-            this.Reporte_DocumentosBindingSource.DataMember = "Reporte_Documentos";
-            this.Reporte_DocumentosBindingSource.DataSource = this.DataSetDocumentos;
-            // 
             // Reporte_DocumentosTableAdapter
             // 
             this.Reporte_DocumentosTableAdapter.ClearBeforeFill = true;
@@ -74,8 +74,8 @@
             this.Name = "FrmVisorReporteDocumentos";
             this.Text = "Reporte de Documentos";
             this.Load += new System.EventHandler(this.FrmVisorReporteDocumentos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetDocumentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Reporte_DocumentosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetDocumentos)).EndInit();
             this.ResumeLayout(false);
 
         }

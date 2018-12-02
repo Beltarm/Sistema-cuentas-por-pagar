@@ -109,6 +109,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetDocumentos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetPagos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPagos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetProveedores.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -165,6 +170,12 @@
     <Compile Include="FrmMantDocumentos.Designer.cs">
       <DependentUpon>FrmMantDocumentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReportePagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportePagos.Designer.cs">
+      <DependentUpon>FrmReportePagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +223,12 @@
     </Compile>
     <Compile Include="FrmVisorReporteProveedores.Designer.cs">
       <DependentUpon>FrmVisorReporteProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVisorReportesPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVisorReportesPagos.Designer.cs">
+      <DependentUpon>FrmVisorReportesPagos.cs</DependentUpon>
     </Compile>
     <Compile Include="pnConfiguracion.cs">
       <SubType>UserControl</SubType>
@@ -292,6 +309,9 @@
     <EmbeddedResource Include="FrmReporteDocumentos.resx">
       <DependentUpon>FrmReporteDocumentos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportePagos.resx">
+      <DependentUpon>FrmReportePagos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteProveedores.resx">
       <DependentUpon>FrmReporteProveedores.cs</DependentUpon>
     </EmbeddedResource>
@@ -303,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVisorReporteProveedores.resx">
       <DependentUpon>FrmVisorReporteProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVisorReportesPagos.resx">
+      <DependentUpon>FrmVisorReportesPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pnConfiguracion.resx">
       <DependentUpon>pnConfiguracion.cs</DependentUpon>
@@ -330,6 +353,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ReporteDocumentos.rdlc" />
+    <EmbeddedResource Include="ReportePagos.rdlc" />
     <EmbeddedResource Include="ReporteProveedores.rdlc" />
     <EntityDeploy Include="CuentasPorPagarEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -359,6 +383,17 @@
     </None>
     <None Include="DataSetDocumentos.xss">
       <DependentUpon>DataSetDocumentos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPagos.xsc">
+      <DependentUpon>DataSetPagos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPagos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPagos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetPagos.xss">
+      <DependentUpon>DataSetPagos.xsd</DependentUpon>
     </None>
     <None Include="DataSetProveedores.xsc">
       <DependentUpon>DataSetProveedores.xsd</DependentUpon>

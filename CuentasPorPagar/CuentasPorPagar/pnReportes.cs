@@ -33,5 +33,11 @@ namespace CuentasPorPagar
             FrmReporteDocumentos frm = new FrmReporteDocumentos();
             frm.ShowDialog();
         }
+
+        private void cmdConceptos_Click(object sender, EventArgs e)
+        {
+            FrmReportePagos frm = new FrmReportePagos();
+            frm.ShowDialog();
+        }
     }
 }

@@ -44,9 +44,10 @@
             this.cmdConceptos.Name = "cmdConceptos";
             this.cmdConceptos.Size = new System.Drawing.Size(188, 257);
             this.cmdConceptos.TabIndex = 4;
-            this.cmdConceptos.Text = "Conceptos";
+            this.cmdConceptos.Text = "Pagos";
             this.cmdConceptos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.cmdConceptos.UseVisualStyleBackColor = true;
+            this.cmdConceptos.Click += new System.EventHandler(this.cmdConceptos_Click);
             // 
             // cmdDocumentos
             // 
