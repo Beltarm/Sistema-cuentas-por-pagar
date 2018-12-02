@@ -31,20 +31,29 @@ namespace CuentasPorPagar
 
             SqlConnection ocon = new SqlConnection("Data Source=ana-alex-brian.database.windows.net;Initial Catalog=Cuentas_por_pagar;Persist Security Info=True;User ID=propietaria;Password=#Seguridad1");
             ocon.Open();
-            string sSQL = "select * from Proveedores ";
-            sSQL += " where 1 =1 ";
+            string sSQL = "select * from Proveedores where 1 = 1";
 
             if (Nombre.Trim().Length > 0)
                 sSQL += " and Nombre LIKE '%" + Nombre + "%'";
 
             if (TipoPersona.Trim().Length > 0)
-                sSQL += " and Tipo_Persona like '" + TipoPersona + "%'";
+                sSQL += " and Tipo_Persona = '" + TipoPersona + "'";
 
             if (Estado.Trim().Length > 0)
-                sSQL += " and Estado like '" + Estado + "%'";
+                sSQL += " and Estado = '" + Estado + "'";
 
-            if (BalanceDesde.ToString().Trim().Length > 0 && BalanceHasta.ToString().Trim().Length > 0)
-                sSQL += " and Balance between '" + BalanceDesde + "' and '" + BalanceHasta + "'";
+            if (BalanceDesde > 0 && BalanceHasta > 0)
+            {
+                sSQL += " and Balance between " + BalanceDesde + " and " + BalanceHasta;
+            }
+            else if(BalanceDesde > 0)
+            {
+                sSQL += " and Balance > " + BalanceDesde;
+            }
+            else if (BalanceHasta > 0)
+            {
+                sSQL += " and Balance < " + BalanceHasta;
+            }
 
             DataTable odt = new DataTable();
             SqlDataAdapter oda = new SqlDataAdapter(sSQL, ocon);
@@ -56,7 +65,7 @@ namespace CuentasPorPagar
             rpvReporteProveedores.LocalReport.DataSources.Clear();
             rpvReporteProveedores.LocalReport.DataSources.Add(rds);
             rpvReporteProveedores.LocalReport.ReportEmbeddedResource = "ReporteProveedores.rdlc";
-            rpvReporteProveedores.LocalReport.ReportPath = @"ReporteProveedores.rdlc";
+            rpvReporteProveedores.LocalReport.ReportPath = @"../../ReporteProveedores.rdlc";
             rpvReporteProveedores.RefreshReport();
 
             // TODO: This line of code loads data into the 'CuentasPorPagarDataSet.Proveedores' table. You can move, or remove it, as needed.

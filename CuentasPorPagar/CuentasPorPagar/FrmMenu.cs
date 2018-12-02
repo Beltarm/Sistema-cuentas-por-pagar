@@ -84,6 +84,13 @@ namespace CuentasPorPagar
             pnReportes1.BringToFront();
         }
 
+        private void bntPagos_Click(object sender, EventArgs e)
+        {
+            Selector.Height = bntPagos.Height;
+            Selector.Top = bntPagos.Top;
+            pnPago1.BringToFront();
+        }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();

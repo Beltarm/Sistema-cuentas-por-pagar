@@ -81,6 +81,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concepto_Pago.cs">
+      <DependentUpon>CuentasPorPagarEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="CuentasPorPagarDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -105,6 +108,15 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetProveedores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Documentos_Pagar.cs">
+      <DependentUpon>CuentasPorPagarEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFactura.Designer.cs">
+      <DependentUpon>FrmFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMantUsuarios.cs">
       <SubType>Form</SubType>
@@ -214,6 +226,12 @@
     <Compile Include="PnMantenimientos.Designer.cs">
       <DependentUpon>PnMantenimientos.cs</DependentUpon>
     </Compile>
+    <Compile Include="pnPago.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pnPago.Designer.cs">
+      <DependentUpon>pnPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="pnPrincipal.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -228,7 +246,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedores.cs">
+      <DependentUpon>CuentasPorPagarEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="ROL.cs">
+      <DependentUpon>CuentasPorPagarEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitud_Pago_Proveedor.cs">
       <DependentUpon>CuentasPorPagarEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -236,6 +260,9 @@
       <DependentUpon>CuentasPorPagarEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Validaciones.cs" />
+    <EmbeddedResource Include="FrmFactura.resx">
+      <DependentUpon>FrmFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMantUsuarios.resx">
       <DependentUpon>FrmMantUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PnMantenimientos.resx">
       <DependentUpon>PnMantenimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pnPago.resx">
+      <DependentUpon>pnPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pnPrincipal.resx">
       <DependentUpon>pnPrincipal.cs</DependentUpon>
