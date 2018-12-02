@@ -12,6 +12,7 @@ namespace CuentasPorPagar
 {
     public partial class FrmReporteProveedores : Form
     {
+        Validaciones validar = new Validaciones();
         public FrmReporteProveedores()
         {
             InitializeComponent();
@@ -52,6 +53,58 @@ namespace CuentasPorPagar
             }
                 
             frm.ShowDialog();
+        }
+
+        private void FrmReporteProveedores_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar_Campos_Reportes();
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.SoloLetras(e);
+        }
+
+        private void txtBalanceDesde_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.SoloNumeros(e);
+        }
+
+        private void txtBalanceHasta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.SoloNumeros(e);
+        }
+
+        private void Limpiar_Campos_Reportes()
+        {
+            foreach (var item in panel1.Controls)
+            {
+                if (item is TextBox)
+                {
+                    ((TextBox)item).Text = String.Empty;
+                }
+
+             foreach(var  item2 in groupBox1.Controls )
+                {
+                    if (item2 is RadioButton)
+                    {
+                        ((RadioButton)item2).Checked = false;
+                    }
+                }
+
+                foreach (var item3 in groupBox2.Controls)
+                {
+                    if (item3 is RadioButton)
+                    {
+                        ((RadioButton)item3).Checked = false;
+                    }
+                }
+            }
         }
     }
 }

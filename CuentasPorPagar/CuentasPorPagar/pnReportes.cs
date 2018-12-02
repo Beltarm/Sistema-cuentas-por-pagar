@@ -22,5 +22,16 @@ namespace CuentasPorPagar
             FrmReporteProveedores frm = new FrmReporteProveedores();
             frm.ShowDialog();
         }
+
+        private void pnReportes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdDocumentos_Click(object sender, EventArgs e)
+        {
+            FrmReporteDocumentos frm = new FrmReporteDocumentos();
+            frm.ShowDialog();
+        }
     }
 }

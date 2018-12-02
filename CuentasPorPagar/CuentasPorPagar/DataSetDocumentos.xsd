@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetDocumentos" targetNamespace="http://tempuri.org/DataSetDocumentos.xsd" xmlns:mstns="http://tempuri.org/DataSetDocumentos.xsd" xmlns="http://tempuri.org/DataSetDocumentos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CuentasPorPagarConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CuentasPorPagarConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CuentasPorPagar.Properties.Settings.GlobalReference.Default.CuentasPorPagarConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Reporte_DocumentosTableAdapter" GeneratorDataComponentClassName="Reporte_DocumentosTableAdapter" Name="Reporte_Documentos" UserDataComponentName="Reporte_DocumentosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CuentasPorPagarConnectionString (Settings)" DbObjectName="Cuentas_por_pagar.dbo.Reporte_Documentos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Numero_Documento, Numero_Factura, Concepto_Pago, Fecha_Documento, Monto, Fecha_Registro, Nombre_Proveedor, Estado FROM dbo.Reporte_Documentos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Numero_Documento" DataSetColumn="Numero_Documento" />
+              <Mapping SourceColumn="Numero_Factura" DataSetColumn="Numero_Factura" />
+              <Mapping SourceColumn="Concepto_Pago" DataSetColumn="Concepto_Pago" />
+              <Mapping SourceColumn="Fecha_Documento" DataSetColumn="Fecha_Documento" />
+              <Mapping SourceColumn="Monto" DataSetColumn="Monto" />
+              <Mapping SourceColumn="Fecha_Registro" DataSetColumn="Fecha_Registro" />
+              <Mapping SourceColumn="Nombre_Proveedor" DataSetColumn="Nombre_Proveedor" />
+              <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetDocumentos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSetDocumentos" msprop:Generator_UserDSName="DataSetDocumentos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Reporte_Documentos" msprop:Generator_TableClassName="Reporte_DocumentosDataTable" msprop:Generator_TableVarName="tableReporte_Documentos" msprop:Generator_TablePropName="Reporte_Documentos" msprop:Generator_RowDeletingName="Reporte_DocumentosRowDeleting" msprop:Generator_RowChangingName="Reporte_DocumentosRowChanging" msprop:Generator_RowEvHandlerName="Reporte_DocumentosRowChangeEventHandler" msprop:Generator_RowDeletedName="Reporte_DocumentosRowDeleted" msprop:Generator_UserTableName="Reporte_Documentos" msprop:Generator_RowChangedName="Reporte_DocumentosRowChanged" msprop:Generator_RowEvArgName="Reporte_DocumentosRowChangeEvent" msprop:Generator_RowClassName="Reporte_DocumentosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Numero_Documento" msprop:Generator_ColumnVarNameInTable="columnNumero_Documento" msprop:Generator_ColumnPropNameInRow="Numero_Documento" msprop:Generator_ColumnPropNameInTable="Numero_DocumentoColumn" msprop:Generator_UserColumnName="Numero_Documento" type="xs:int" />
+              <xs:element name="Numero_Factura" msprop:Generator_ColumnVarNameInTable="columnNumero_Factura" msprop:Generator_ColumnPropNameInRow="Numero_Factura" msprop:Generator_ColumnPropNameInTable="Numero_FacturaColumn" msprop:Generator_UserColumnName="Numero_Factura">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Concepto_Pago" msprop:Generator_ColumnVarNameInTable="columnConcepto_Pago" msprop:Generator_ColumnPropNameInRow="Concepto_Pago" msprop:Generator_ColumnPropNameInTable="Concepto_PagoColumn" msprop:Generator_UserColumnName="Concepto_Pago">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha_Documento" msprop:Generator_ColumnVarNameInTable="columnFecha_Documento" msprop:Generator_ColumnPropNameInRow="Fecha_Documento" msprop:Generator_ColumnPropNameInTable="Fecha_DocumentoColumn" msprop:Generator_UserColumnName="Fecha_Documento" type="xs:dateTime" />
+              <xs:element name="Monto" msprop:Generator_ColumnVarNameInTable="columnMonto" msprop:Generator_ColumnPropNameInRow="Monto" msprop:Generator_ColumnPropNameInTable="MontoColumn" msprop:Generator_UserColumnName="Monto" type="xs:int" />
+              <xs:element name="Fecha_Registro" msprop:Generator_ColumnVarNameInTable="columnFecha_Registro" msprop:Generator_ColumnPropNameInRow="Fecha_Registro" msprop:Generator_ColumnPropNameInTable="Fecha_RegistroColumn" msprop:Generator_UserColumnName="Fecha_Registro" type="xs:dateTime" />
+              <xs:element name="Nombre_Proveedor" msprop:Generator_ColumnVarNameInTable="columnNombre_Proveedor" msprop:Generator_ColumnPropNameInRow="Nombre_Proveedor" msprop:Generator_ColumnPropNameInTable="Nombre_ProveedorColumn" msprop:Generator_UserColumnName="Nombre_Proveedor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_UserColumnName="Estado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Reporte_Documentos" />
+      <xs:field xpath="mstns:Numero_Documento" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -61,6 +61,7 @@
             this.cmdDocumentos.Text = "Documentos";
             this.cmdDocumentos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.cmdDocumentos.UseVisualStyleBackColor = true;
+            this.cmdDocumentos.Click += new System.EventHandler(this.cmdDocumentos_Click);
             // 
             // cmdProveedores
             // 
@@ -86,6 +87,7 @@
             this.Controls.Add(this.cmdProveedores);
             this.Name = "pnReportes";
             this.Size = new System.Drawing.Size(668, 465);
+            this.Load += new System.EventHandler(this.pnReportes_Load);
             this.ResumeLayout(false);
 
         }

@@ -104,6 +104,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CuentasPorPagarEntities.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DataSetDocumentos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDocumentos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetProveedores.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -189,12 +194,6 @@
     </Compile>
     <Compile Include="FrmReportesConceptos.Designer.cs">
       <DependentUpon>FrmReportesConceptos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmReportesDocumentos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmReportesDocumentos.Designer.cs">
-      <DependentUpon>FrmReportesDocumentos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUsuarios.cs">
       <SubType>Form</SubType>
@@ -330,6 +329,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReporteDocumentos.rdlc" />
     <EmbeddedResource Include="ReporteProveedores.rdlc" />
     <EntityDeploy Include="CuentasPorPagarEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -348,6 +348,17 @@
     </None>
     <None Include="CuentasPorPagarEntities.edmx.diagram">
       <DependentUpon>CuentasPorPagarEntities.edmx</DependentUpon>
+    </None>
+    <None Include="DataSetDocumentos.xsc">
+      <DependentUpon>DataSetDocumentos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetDocumentos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDocumentos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetDocumentos.xss">
+      <DependentUpon>DataSetDocumentos.xsd</DependentUpon>
     </None>
     <None Include="DataSetProveedores.xsc">
       <DependentUpon>DataSetProveedores.xsd</DependentUpon>
