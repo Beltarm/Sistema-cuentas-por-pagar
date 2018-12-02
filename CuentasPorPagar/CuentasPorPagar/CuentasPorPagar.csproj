@@ -47,6 +47,24 @@
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -63,6 +81,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concepto_Pago.cs">
+      <DependentUpon>CuentasPorPagarEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasPorPagarDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CuentasPorPagarDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CuentasPorPagarEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -77,6 +103,20 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CuentasPorPagarEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetProveedores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProveedores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Documentos_Pagar.cs">
+      <DependentUpon>CuentasPorPagarEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFactura.Designer.cs">
+      <DependentUpon>FrmFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMantUsuarios.cs">
       <SubType>Form</SubType>
@@ -132,11 +172,47 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReporteDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteDocumentos.Designer.cs">
+      <DependentUpon>FrmReporteDocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteProveedores.Designer.cs">
+      <DependentUpon>FrmReporteProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportesConceptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportesConceptos.Designer.cs">
+      <DependentUpon>FrmReportesConceptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportesDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportesDocumentos.Designer.cs">
+      <DependentUpon>FrmReportesDocumentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVisorReporteDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVisorReporteDocumentos.Designer.cs">
+      <DependentUpon>FrmVisorReporteDocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVisorReporteProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVisorReporteProveedores.Designer.cs">
+      <DependentUpon>FrmVisorReporteProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="pnConfiguracion.cs">
       <SubType>UserControl</SubType>
@@ -150,21 +226,43 @@
     <Compile Include="PnMantenimientos.Designer.cs">
       <DependentUpon>PnMantenimientos.cs</DependentUpon>
     </Compile>
+    <Compile Include="pnPago.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pnPago.Designer.cs">
+      <DependentUpon>pnPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="pnPrincipal.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="pnPrincipal.Designer.cs">
       <DependentUpon>pnPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="pnReportes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pnReportes.Designer.cs">
+      <DependentUpon>pnReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedores.cs">
+      <DependentUpon>CuentasPorPagarEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="ROL.cs">
       <DependentUpon>CuentasPorPagarEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Solicitud_Pago_Proveedor.cs">
+      <DependentUpon>CuentasPorPagarEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Usuario.cs">
       <DependentUpon>CuentasPorPagarEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Validaciones.cs" />
+    <EmbeddedResource Include="FrmFactura.resx">
+      <DependentUpon>FrmFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMantUsuarios.resx">
       <DependentUpon>FrmMantUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,8 +290,20 @@
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteDocumentos.resx">
+      <DependentUpon>FrmReporteDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteProveedores.resx">
+      <DependentUpon>FrmReporteProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVisorReporteDocumentos.resx">
+      <DependentUpon>FrmVisorReporteDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVisorReporteProveedores.resx">
+      <DependentUpon>FrmVisorReporteProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pnConfiguracion.resx">
       <DependentUpon>pnConfiguracion.cs</DependentUpon>
@@ -201,8 +311,14 @@
     <EmbeddedResource Include="PnMantenimientos.resx">
       <DependentUpon>PnMantenimientos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pnPago.resx">
+      <DependentUpon>pnPago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pnPrincipal.resx">
       <DependentUpon>pnPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pnReportes.resx">
+      <DependentUpon>pnReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -214,12 +330,35 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReporteProveedores.rdlc" />
     <EntityDeploy Include="CuentasPorPagarEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CuentasPorPagarEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="CuentasPorPagarDataSet.xsc">
+      <DependentUpon>CuentasPorPagarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CuentasPorPagarDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CuentasPorPagarDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CuentasPorPagarDataSet.xss">
+      <DependentUpon>CuentasPorPagarDataSet.xsd</DependentUpon>
+    </None>
     <None Include="CuentasPorPagarEntities.edmx.diagram">
       <DependentUpon>CuentasPorPagarEntities.edmx</DependentUpon>
+    </None>
+    <None Include="DataSetProveedores.xsc">
+      <DependentUpon>DataSetProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetProveedores.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProveedores.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetProveedores.xss">
+      <DependentUpon>DataSetProveedores.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -266,6 +405,19 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>CuentasPorPagarEntities.edmx</DependentUpon>
       <LastGenOutput>CuentasPorPagarEntities.cs</LastGenOutput>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -44,12 +44,21 @@ namespace CuentasPorPagar
                 cbxEstado.Text = Estado;
                 cbxConcepto.Text = concepto_pago;
                 cbxProveedor.Text = nombre_proveedor;
+                if (modo.Equals("C"))
+                {
+                    cbxConcepto.SelectedIndex = 0;
+                    cbxEstado.SelectedIndex = 0;
+                    cbxProveedor.SelectedIndex = 0;
+                }
+               
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al asignar valores " + ex.Message);
             }
+
+
         }
 
         private void consultaProveedores()
@@ -172,42 +181,47 @@ namespace CuentasPorPagar
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
-            if (validarVacio() != "1")
+
+            try
             {
-                try
+
+                string sql = "";
+                if (modo.Equals("C"))
                 {
+                    sql = "INSERT INTO Documentos_Pagar VALUES ('";
+                    sql += txtNumFactura.Text + "', " + insertConceptos() + ", '" + mtxFechaDocumento.Text + "', ";
+                    sql += txtMonto.Text + ", '" + mtxFechaRegistro.Text + "', " + InsertProveedores() + ", '" + cbxEstado.SelectedItem + "') ";
+                }
+                else
+                {
+                    sql = "UPDATE Documentos_Pagar SET";
+                    sql += " Num_Factura = '" + txtNumFactura.Text + "', Id_Concepto_Pago = " + insertConceptos() + ", Fecha_Documento = '";
+                    sql += mtxFechaDocumento.Text + "', Monto =  " + txtMonto.Text + ", Fecha_Registro = '" + mtxFechaRegistro.Text + "' , Id_Proveedor =  ";
+                    sql += InsertProveedores() + ", Estado = '" + cbxEstado.SelectedItem + "' ";
+                    sql += "WHERE Num_Documento = " + txtNumDocumento.Text;
 
-                    string sql = "";
-                    if (modo.Equals("C"))
-                    {
-                        sql = "INSERT INTO Documentos_Pagar VALUES ('";
-                        sql += txtNumFactura.Text + "', " + insertConceptos() + ", '" + mtxFechaDocumento.Text + "', ";
-                        sql += txtMonto.Text + ", '" + mtxFechaRegistro.Text + "', " + InsertProveedores() + ", '" + cbxEstado.SelectedItem + "') ";
-                    }
-                    else
-                    {
-                        sql = "UPDATE Documentos_Pagar SET";
-                        sql += " Num_Factura = '" + txtNumFactura.Text + "', Id_Concepto_Pago = " + insertConceptos() + ", Fecha_Documento = '";
-                        sql += mtxFechaDocumento.Text + "', Monto =  " + txtMonto.Text + ", Fecha_Registro = '" + mtxFechaRegistro.Text + "' , Id_Proveedor =  ";
-                        sql += InsertProveedores() + ", Estado = '" + cbxEstado.SelectedItem + "' ";
-                        sql += "WHERE Num_Documento = " + txtNumDocumento.Text;
+                }
+                if (string.IsNullOrEmpty(txtNumFactura.Text) || string.IsNullOrEmpty(txtMonto.Text)|| !mtxFechaDocumento.MaskFull || !mtxFechaRegistro.MaskFull )
 
-                    }
+                {
+                    MessageBox.Show("Existen campos vacíos");
+                }
+                else
+                {
+                    
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Registro guardado con exito");
                     this.Close();
+                }
+                    
                 }
                 
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error al ingresar el registro : " + " "+ ex.Message);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Existen campos vacíos");
-            }
+           
 
 
         }
@@ -216,7 +230,11 @@ namespace CuentasPorPagar
         {
             try
             {
-                if (validarVacio() != "1")
+                if (string.IsNullOrEmpty(txtNumFactura.Text) || string.IsNullOrEmpty(txtMonto.Text) || !mtxFechaDocumento.MaskFull || !mtxFechaRegistro.MaskFull)
+                {
+                    MessageBox.Show("Existen campos vacíos");
+                }
+                else
                 {
                     var confirmResult = MessageBox.Show("¿Estás seguro(a) que quieres eliminar este registro?", "Confirme", MessageBoxButtons.YesNo);
                     if (confirmResult == DialogResult.Yes)
@@ -233,7 +251,7 @@ namespace CuentasPorPagar
                         MessageBox.Show("Datos intactos");
                     }
                 }
-               
+  
             }
             catch (Exception)
             {

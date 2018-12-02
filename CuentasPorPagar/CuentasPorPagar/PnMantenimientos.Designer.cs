@@ -129,6 +129,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PnMantenimientos";
             this.Size = new System.Drawing.Size(668, 465);
+            this.Load += new System.EventHandler(this.PnMantenimientos_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

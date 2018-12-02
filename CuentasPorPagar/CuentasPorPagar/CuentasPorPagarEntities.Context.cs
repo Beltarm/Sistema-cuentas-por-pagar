@@ -27,5 +27,9 @@ namespace CuentasPorPagar
     
         public virtual DbSet<ROL> ROL { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<Solicitud_Pago_Proveedor> Solicitud_Pago_Proveedor { get; set; }
+        public virtual DbSet<Documentos_Pagar> Documentos_Pagar { get; set; }
+        public virtual DbSet<Concepto_Pago> Concepto_Pago { get; set; }
+        public virtual DbSet<Proveedores> Proveedores { get; set; }
     }
 }
