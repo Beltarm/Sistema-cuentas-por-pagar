@@ -14,6 +14,7 @@ namespace CuentasPorPagar
     public partial class FrmFactura : Form
     {
         Cuentas_por_pagarEntities1 entities = new Cuentas_por_pagarEntities1();
+        Validaciones v = new Validaciones();
         public Documentos_Pagar documento { get; set; }
         public FrmFactura()
         {
@@ -28,7 +29,13 @@ namespace CuentasPorPagar
 
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            entities.Solicitud_Pago_Proveedor.Add(new Solicitud_Pago_Proveedor
+            if (string.IsNullOrEmpty(txtMonto.Text))
+            {
+                MessageBox.Show("Debe colocar una cantidad");
+            }
+            else
+            {
+                entities.Solicitud_Pago_Proveedor.Add(new Solicitud_Pago_Proveedor
             {
                 Num_Documento = documento.Num_Documento,
                 Num_Factura_Pagar = documento.Num_Factura,
@@ -36,10 +43,14 @@ namespace CuentasPorPagar
                 Monto = Convert.ToInt32(txtMonto.Text),
                 Estado = "Activo"
             });
+           
+           
 
+            
             try
             {
-                entities.SaveChanges();
+                entities.SaveChanges(); 
+                
             }
             catch (DbEntityValidationException ex)
             {
@@ -57,9 +68,15 @@ namespace CuentasPorPagar
                 // Throw a new DbEntityValidationException with the improved exception message.
                 throw new DbEntityValidationException(exceptionMessage, ex.EntityValidationErrors);
             }
-        
-            MessageBox.Show("Proceso realizado correctamente");
+
+            MessageBox.Show("Su transacción se realizó con éxito");
             this.Close();
+        }
+        }
+
+        private void txtMonto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.SoloNumeros(e);
         }
     }
 }
