@@ -160,6 +160,12 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReporteDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteDocumentos.Designer.cs">
+      <DependentUpon>FrmReporteDocumentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmReporteProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,12 @@
     </Compile>
     <Compile Include="FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVisorReporteDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVisorReporteDocumentos.Designer.cs">
+      <DependentUpon>FrmVisorReporteDocumentos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmVisorReporteProveedores.cs">
       <SubType>Form</SubType>
@@ -251,11 +263,17 @@
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteDocumentos.resx">
+      <DependentUpon>FrmReporteDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteProveedores.resx">
       <DependentUpon>FrmReporteProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVisorReporteDocumentos.resx">
+      <DependentUpon>FrmVisorReporteDocumentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVisorReporteProveedores.resx">
       <DependentUpon>FrmVisorReporteProveedores.cs</DependentUpon>
