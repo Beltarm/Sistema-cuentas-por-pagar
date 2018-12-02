@@ -166,6 +166,7 @@
             this.txtBalanceHasta.Name = "txtBalanceHasta";
             this.txtBalanceHasta.Size = new System.Drawing.Size(120, 27);
             this.txtBalanceHasta.TabIndex = 13;
+            this.txtBalanceHasta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBalanceHasta_KeyPress);
             // 
             // txtNombre
             // 
@@ -176,6 +177,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(232, 27);
             this.txtNombre.TabIndex = 10;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label6
             // 
@@ -207,6 +209,7 @@
             this.txtBalanceDesde.Name = "txtBalanceDesde";
             this.txtBalanceDesde.Size = new System.Drawing.Size(120, 27);
             this.txtBalanceDesde.TabIndex = 2;
+            this.txtBalanceDesde.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBalanceDesde_KeyPress);
             // 
             // label2
             // 

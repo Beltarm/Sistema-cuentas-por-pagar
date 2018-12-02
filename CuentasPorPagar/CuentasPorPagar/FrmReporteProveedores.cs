@@ -12,6 +12,7 @@ namespace CuentasPorPagar
 {
     public partial class FrmReporteProveedores : Form
     {
+        Validaciones v = new Validaciones();
         public FrmReporteProveedores()
         {
             InitializeComponent();
@@ -52,6 +53,21 @@ namespace CuentasPorPagar
             }
                 
             frm.ShowDialog();
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.SoloLetras(e);
+        }
+
+        private void txtBalanceDesde_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.SoloNumeros(e);
+        }
+
+        private void txtBalanceHasta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.SoloNumeros(e);
         }
     }
 }
