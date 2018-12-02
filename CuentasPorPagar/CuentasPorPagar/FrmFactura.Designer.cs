@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFactura));
             this.txtNumFactura = new System.Windows.Forms.TextBox();
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.txtMonto = new System.Windows.Forms.TextBox();
@@ -69,13 +70,17 @@
             // 
             // btnPagar
             // 
+            this.btnPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPagar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.btnPagar.Location = new System.Drawing.Point(152, 209);
+            this.btnPagar.Image = ((System.Drawing.Image)(resources.GetObject("btnPagar.Image")));
+            this.btnPagar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPagar.Location = new System.Drawing.Point(144, 182);
             this.btnPagar.Margin = new System.Windows.Forms.Padding(2);
             this.btnPagar.Name = "btnPagar";
-            this.btnPagar.Size = new System.Drawing.Size(104, 37);
+            this.btnPagar.Size = new System.Drawing.Size(128, 96);
             this.btnPagar.TabIndex = 12;
             this.btnPagar.Text = "Pagar";
+            this.btnPagar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPagar.UseVisualStyleBackColor = true;
             this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
@@ -123,6 +128,7 @@
             this.Controls.Add(this.txtNumFactura);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmFactura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Plataforma de pago";
             this.Load += new System.EventHandler(this.FrmFactura_Load);
             this.ResumeLayout(false);
